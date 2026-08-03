@@ -49,10 +49,11 @@ No configuration is missing from any window for any model.
 
 ## Data
 
-News and financial-report content is licensed from its providers (Alpha Vantage, NYT)
-and **is not redistributed here**, consistent with the manuscript's Data and Code
-Availability statement. What is included: the prompts, the evaluation-window list, the
-per-run outputs (tickers, weights, dates), and the analysis scripts — enough to
+News articles come from the New York Times Article Search API; company financial reports
+come from the Alpha Vantage company-report endpoints. Both corpora are licensed from
+their providers and **are not redistributed here**, consistent with the manuscript's Data
+and Code Availability statement. What is included: the prompts, the evaluation-window
+list, the per-run outputs (tickers, weights, dates), and the analysis scripts — enough to
 reconstruct every reported statistic. The retrieval queries and date conventions needed
 to rebuild the corpora are documented in the manuscript's Methods.
 

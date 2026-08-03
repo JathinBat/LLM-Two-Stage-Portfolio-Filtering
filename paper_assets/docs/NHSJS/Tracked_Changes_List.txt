@@ -1,4 +1,6 @@
-﻿p1   Delete             Driven by the rapid progress of
+﻿p1   Property           Improving the Performance of Long-Term Stock Investments with a Two-Stage LLM Filtering Framework
+p1   ParagraphProperty  Abstract
+p1   Delete             Driven by the rapid progress of
 p1   Delete             Language Models
 p1   Insert             language models
 p1   Delete             such as ChatGPT, Gemini, and Claude, researchers
@@ -55,6 +57,7 @@ p1   Delete             and can significantly improve long-term investment perfo
 p1   Property           Keywords:
 p1   Delete             GPT-5.1
 p1   Insert             information structuring
+p1   ParagraphProperty  Introduction Background and Context
 p1   Insert             ,2
 p1   Delete             filings2,3
 p1   Insert             filings3
@@ -73,8 +76,7 @@ p2   Delete             the time of each
 p2   Insert             that
 p2   Delete             and avoiding any
 p2   Insert             date, with no
-p2   Delete             .
-p2   Insert             (the specific models tested were not themselves available at the earliest simulated dates).
+p2   Insert             . The models themselves postdate the earliest simulated decision dates, so it is the protocol, not the specific model, that transfers
 p2   Delete             summarization9
 p2   Insert             summarization8
 p2   Insert             ,2
@@ -86,7 +88,10 @@ p2   Delete             decisions7
 p2   Insert             decisions10,12
 p2   Delete             frameworks8
 p2   Insert             frameworks1,13
-p2   Property           Existing research work has demonstrated the proficiency of LLMs in synthesizing heterogeneous financial data to extract predictive market
+p2   ParagraphProperty  Large Language Models in Financial Forecasting
+p2   Property           Existing research
+p2   Delete             work
+p2   Property           has demonstrated the proficiency of LLMs in synthesizing heterogeneous financial data to extract predictive market
 p2   Delete             signals10,11,12.
 p2   Insert             signals3,5,14.
 p2   Delete             movements13
@@ -95,6 +100,7 @@ p2   Delete             conditions10,11.
 p2   Insert             conditions14,16.
 p2   Delete             pipelines12,13. Researchers have further combined LLMs with established quantitative frameworks—for example, integrating LLM-generated sentiment scores with LSTM networks and Black-Litterman portfolio optimization models—and report performance improvements over conventional approaches alone
 p2   Insert             pipelines14,16
+p2   ParagraphProperty  Multi-Agent LLM Systems for Trading
 p2   Delete             strategies16
 p2   Insert             strategies4
 p2   Delete             backtests22,23.
@@ -103,14 +109,20 @@ p2   Delete             LLMs16,24
 p2   Insert             LLMs4,17,23
 p2   Delete             Trader25, AlphaAgents26, FinRobot27
 p2   Insert             Trader24, AlphaAgents25, FinRobot26
-p2   Delete             agents28
-p2   Insert             agents27
+p3   Delete             agents28
+p3   Insert             agents27
 p3   Delete             weekly
+p3   ParagraphProperty  Sentiment Analysis and Market Dynamics
 p3   Delete             data6,29,30
 p3   Insert             data3,14,28
 p3   Property           By leveraging pre-training on large-scale financial datasets, LLMs can discern specialized terminology and complex rhetorical structures, providing an effective framework for mapping textual information to market price movements
 p3   Delete             31
 p3   Insert             29
+p3   Insert             also
+p3   Delete             shown
+p3   Insert             reported
+p3   Delete             reversals, offering potential informational advantages for trading decisions
+p3   Insert             reversals3,28
 p3   Property           enable the development
 p3   Property           agile
 p3   Delete             time32,33,34
@@ -118,6 +130,7 @@ p3   Insert             time1,23
 p3   Delete             prices7
 p3   Insert             prices3,28
 p3   Delete             Reinforcement Learning
+p3   ParagraphProperty  Reinforcement LearningSelf-Improving and Feedback-Driven Financial LLMs
 p3   Insert             Self-Improving
 p3   Insert             Feedback-Driven
 p3   Delete             Integrating LLMs with reinforcement learning (RL) has
@@ -133,6 +146,7 @@ p3   Delete             ones, improving risk-adjusted returns40,41.
 p3   Insert             ones30.
 p3   Delete             42,43
 p3   Insert             21
+p3   ParagraphProperty  Benchmarks, Evaluation, and Bias
 p3   Delete             LLMs16,18,44
 p3   Insert             LLMs29,31,32
 p3   Delete             optimization20,21,24.
@@ -141,32 +155,43 @@ p3   Delete             23,29
 p3   Insert             19,32
 p3   Delete             30,31
 p3   Insert             6,32
-p3   Delete             FINSABER
-p3   Insert             FINSABER6
+p3   Delete             A 2025 study by Li et al. created a
+p3   Insert             A
+p3   Delete             called FINSABER
+p3   Insert             , FINSABER6, was introduced
+p3   Delete             they re-tested
+p3   Insert             were re-tested
+p3   Delete             The study
+p3   Insert             That work
+p3   Delete             This highlights the need for long-term, rigorous testing and strategies that can adapt to changing market conditions
+p3   Insert             Those findings motivate the evaluation design used here: long horizons, matched comparisons, and explicit controls for the three biases named above
+p4   ParagraphProperty  Problem Statement and Rationale
 p4   Delete             computation7
 p4   Insert             computation11
 p4   Delete             confidence8
 p4   Insert             confidence12
+p4   ParagraphProperty  Significance and Purpose
 p4   Delete             —
 p4   Insert             ,
 p4   Delete             —
 p4   Insert             ,
 p4   Property           
+p4   ParagraphProperty  Objectives
 p4   Delete             :
 p4   Insert             .
 p4   Delete             A novel
-p5   ParagraphProperty  A novelFirst, it introduces a two-stage news-and-financial-report architecture for LLM-driven long-term investment strategy generation, featuring a principled separation of. The architecture separates qualitative andfrom quantitative reasoning thatin a principled way, and this separation measurably improves deployment consistency. ExtensiveSecond, it provides extensive empirical validation centered on advanced frontier models, demonstrating that moderate. Moderate filtering configurations — those that, which keep a mid-sized candidate pool and roughly halve it between stages —, achieve a mean ROI of up to 60.6%,% and outperform the unfiltered baseline in 74–82% of matched evaluation windows — the range spans across the four well-sized configurations — and beat, with exact confidence intervals reported in the Results. The same configurations outperform an equal-weighted portfolio of the eligible universe and random matched-size portfolios, whereas the unfiltered baseline does not; comparisons with the S&P 500 benchmark in 96.5% of runsare reported as sector-relative context. AThird, it presents a systematic sensitivity analysis of returns and consistency across ten distinct pipeline configurations. ThisThe analysis establishes that while moderate filtering consistently improves uponon single-pass methodologies, aggressive over-filtering — forcing, which forces the model to draw from an oversized candidate pool it cannot fill with strong companies —, degrades performance. Furthermore, we demonstrate that theThe optimal filtering threshold is model-dependent, and that, for anythe target portfolio size,sizes tested the idealbest configuration requiresis consistent with a Stage One candidate pool of roughly twice thatthe target portfolio size; given the coarse configuration grid, we present this as a working hypothesis rather than a rule.
+p5   ParagraphProperty  A novelFirst, it introduces a two-stage news-and-financial-report architecture for LLM-driven long-term investment strategy generation, featuring a principled separation of. The architecture separates qualitative andfrom quantitative reasoning that measurably improves deployment consistencyin a principled way, which makes each stage independently auditable and lets performance differences be attributed to a specific stage. ExtensiveSecond, it provides extensive empirical validation centered on advanced frontier models, demonstrating that moderate. Moderate filtering configurations — those that, which keep a mid-sized candidate pool and roughly halve it between stages —, achieve a mean ROI of up to 60.6%,% and outperform the unfiltered baseline in 74–82% of matched evaluation windows — the range spans across the four well-sized configurations — and beat, with exact confidence intervals reported in the Results. The same configurations outperform an equal-weighted portfolio of the eligible universe and random matched-size portfolios, whereas the unfiltered baseline does not; comparisons with the S&P 500 benchmark in 96.5% of runsare reported as sector-relative context. AThird, it presents a systematic sensitivity analysis of returns and consistency across ten distinct pipeline configurations. ThisThe analysis establishes that while moderate filtering consistently improves uponon single-pass methodologies, aggressive over-filtering — forcing, which forces the model to draw from an oversized candidate pool it cannot fill with strong companies —, degrades performance. Furthermore, we demonstrate that theThe optimal filtering threshold is model-dependent, and that, for anythe target portfolio size,sizes tested the idealbest configuration requiresis consistent with a Stage One candidate pool of roughly twice thatthe target portfolio size; given the coarse configuration grid, we present this as a working hypothesis rather than a rule.
 p4   Insert             First, it introduces a
 p4   Property           two-stage news-and-financial-report architecture
 p4   Delete             , featuring a principled separation of
 p4   Insert             . The architecture separates
 p4   Delete             and
 p4   Insert             from
-p4   Delete             that
-p4   Insert             in a principled way, and this separation
-p4   Delete             Extensive
-p4   Insert             Second, it provides extensive
-p4   Property           empirical validation
+p5   Delete             that measurably improves deployment consistency
+p5   Insert             in a principled way, which makes each stage independently auditable and lets performance differences be attributed to a specific stage
+p5   Delete             Extensive
+p5   Insert             Second, it provides extensive
+p5   Property           empirical validation
 p5   Delete             , demonstrating that moderate
 p5   Insert             . Moderate
 p5   Delete             — those that
@@ -210,35 +235,91 @@ p5   Insert             of
 p5   Delete             that
 p5   Insert             the target portfolio
 p5   Insert             ; given the coarse configuration grid, we present this as a working hypothesis rather than a rule
+p5   ParagraphProperty  Scope and Limitations
 p5   Insert             Throughout the paper, “long-term” denotes these 12-month buy-and-hold horizons: long relative to the intraday-to-quarterly horizons that dominate the prior LLM-trading literature, though medium-term by traditional investing standards. The model is not restricted to a predefined ticker list: in every filtered configuration it proposes candidate companies freely from the screened news, so the effective universe is open and emerges from contemporaneous coverage rather than a curated survivor list. A fixed set of large-capitalization technology and semiconductor names is used only for the unfiltered single-pass baseline and as the eligible comparison set for the benchmark analyses.
-p5   Delete             Methodology Overview We propose a two-stage sequential filtering framework in which news articles and financial reports are evaluated separately. In Stage One the model analyzes historical news to identify candidate opportunities; in Stage Two financial reports are used to validate and refine those candidates into a final portfolio. This decomposition constrains the model to a well-defined reasoning task at each stage, letting us directly evaluate the impact of structural organization of information on investment performance. The evaluation enforces strict temporal constraints throughout to eliminate the look-ahead and data-snooping biases identified by Li et al. (2025) and others. All input data are sourced from dates strictly preceding each evaluation window, and model-specific training-cutoff restrictions further reduce lookahead risk, ensuring reported performance reflects genuine analytical capability rather than latent knowledge from pre-training.
+p6   Delete             Methodology Overview We propose a two-stage sequential filtering framework in which news articles and financial reports are evaluated separately. In Stage One the model analyzes historical news to identify candidate opportunities; in Stage Two financial reports are used to validate and refine those candidates into a final portfolio. This decomposition constrains the model to a well-defined reasoning task at each stage, letting us directly evaluate the impact of structural organization of information on investment performance. The evaluation enforces strict temporal constraints throughout to eliminate the look-ahead and data-snooping biases identified by Li et al. (2025) and others. All input data are sourced from dates strictly preceding each evaluation window, and model-specific training-cutoff restrictions further reduce lookahead risk, ensuring reported performance reflects genuine analytical capability rather than latent knowledge from pre-training.
 p6   Property           
 p6   Delete             / Figure 1: A Two-Stage Filtering Framework for LLM-Driven Investing
 p6   Insert             / Figure 1. A Two-Stage Filtering Framework for LLM-Driven Investing. (a) The two-stage pipeline: screened news drives Stage One, which generates X candidate stocks with justifications; Stage Two then validates those against their financial reports to select the Y-stock final portfolio (the X→Y notation used throughout). (b) The unfiltered single-pass baseline analyzes all news and financial reports together in one prompt. (c) The Ranked variant screens news, then generates and ranks all candidates by conviction and takes the top Y, without a fixed Stage-One count.
+p6   ParagraphProperty  Overall Framework Overview
 p6   Property           
 p6   Delete             —
 p6   Insert             (
 p6   Delete             —
 p6   Insert             )
+p7   ParagraphProperty  Data Sources
 p7   Delete             News data is sourced exclusively from a reputable financial news provider using an application programming interface. All articles are retrieved from dates strictly before the beginning of each evaluation period to prevent future information leakage
-p7   Insert             News articles and company financial reports are both obtained through the Alpha Vantage application programming interface, news through its news-and-sentiment endpoint and fundamentals through its company-report endpoints, and cached locally. For each decision date, news is drawn from a fixed 24-month window ending at that date; article publication timestamps are parsed to Coordinated Universal Time (UTC) and compared date-only against the window, and duplicate or syndicated stories are removed by exact headline match (first occurrence kept). Because every document is filtered to dates strictly preceding the decision date, no post-decision information can enter a run
-p8   Insert             In a representative screening run, the relevance filter retained 110 of 1,382 collected articles (8.0%) under strict investment-relevance criteria. To check the screen against human judgment, we blind-labeled a stratified sample of 180 of these articles (70 screen-passed and 110 screen-rejected) without access to the screen's decisions. The screen achieved a precision of 100% (95% Wilson confidence interval 94.8–100%): every article it passed was independently judged relevant, so the downstream stages are not contaminated by off-topic news. It is, however, deliberately conservative — re-weighting to the 8.0% population pass rate gives an estimated recall of 16% and a false-omission rate of 45% — indicating a high relevance bar rather than exhaustive retrieval; because the pipeline requires a focused, high-precision input set rather than complete coverage, precision is the more consequential property for downstream quality, and we note the lower recall as a limitation. Human–screen agreement was positive but modest (Cohen's kappa = 0.17), a value held down by the low base rate of passed articles, for which kappa is known to understate agreement. The screen is applied by the model without human adjudication during normal operation.
+p7   Insert             News articles are obtained through the New York Times Article Search application programming interface, and company financial reports through the Alpha Vantage company-report endpoints; both are cached locally. For each decision date, news is drawn from a fixed 24-month window ending at that date; article publication timestamps are parsed to Coordinated Universal Time (UTC) and compared date-only against the window, and duplicate or syndicated stories are removed by exact headline match (first occurrence kept). Every news document is filtered to a publication date strictly preceding the decision date; financial reports require a stricter rule than the period end alone, given below
+p7   Insert             quarterly income statement, balance sheet and cash-flow filings
+p7   Delete             Like news, reports are sourced only from dates preceding the evaluation period.
+p7   Insert             Because a fiscal period ending before a decision date does not mean the report was public by then, a report is admitted only if it was available strictly before that date. Availability is taken as the later of two dates: the fiscal period end plus the statutory filing deadline, and any filing date supplied by the source. The deadlines applied are 45 days for quarterly filings and 75 days for annual filings, the accelerated-filer limits, so the bound holds across the whole universe rather than only its largest constituents. Reports dated on the decision date itself are also excluded, since filings accepted after 17:30 Eastern Time are disseminated the following business day. In practice this withholds the most recent quarter from any decision falling inside its filing window.
+p7   ParagraphProperty  News Article Relevance Screening Process
+p7   Delete             —
+p7   Insert             :
+p7   Delete             ; articles without clear investment impact are excluded
+p8   Insert             In a representative screening run, the relevance filter retained 110 of 1,382 collected articles (8.0%) under strict investment-relevance criteria.
+p8   Insert             To check the screen against human judgment, we blind-labeled a stratified sample of 180 of these articles (70 screen-passed and 110 screen-rejected) without access to the screen's decisions. The screen achieved a precision of 100% (95% Wilson confidence interval 94.8–100%): every article it passed was independently judged relevant, so the downstream stages are not contaminated by off-topic news. It is, however, deliberately conservative — re-weighting to the 8.0% population pass rate gives an estimated recall of 16% and a false-omission rate of 45% — indicating a high relevance bar rather than exhaustive retrieval; because the pipeline requires a focused, high-precision input set rather than complete coverage, precision is the more consequential property for downstream quality, and we note the lower recall as a limitation. Human–screen agreement was positive but modest (Cohen's kappa = 0.17), a value held down by the low base rate of passed articles, for which kappa is known to understate agreement. The screen is applied by the model without human adjudication during normal operation.
+p8   ParagraphProperty  LLM-Based Strategy Generation
+p8   Delete             The
+p8   Insert             In Stage One the
+p8   Delete             then
+p8   Delete             generate investment recommendations, identifying
+p8   Insert             nominate candidate
+p8   Delete             . For
+p8   Insert             ,
+p8   Delete             selected stock the model must provide
+p8   Insert             with
+p8   Delete             of its reasoning
+p8   Insert             . This stage yields the candidate pool, not the final portfolio; only the unfiltered single-pass baseline produces a portfolio in one call
+p8   Delete             recommendation
+p8   Insert             candidate
+p8   Delete             , with
+p8   Insert             and is instructed to make the
+p8   Delete             summing
+p8   Insert             sum
+p8   Insert             When they do not, the execution layer renormalizes rather than rejecting the response: each allocation is divided by the sum of all allocations and rescaled to 100 percent, with the rounding remainder absorbed into the largest position. Portfolio weights are therefore always a valid distribution.
+p8   Insert             of each stage
+p8   Delete             strategy
+p8   Insert             set
+p8   Delete             this constitutes
+p8   Delete             One. Following
+p8   Insert             Two then follows. Using
+p8   ParagraphProperty  Bias and Hallucination Mitigation
 p8   Delete             bias45
 p8   Insert             bias12
+p8   Delete             All news
+p8   Insert             News
+p8   Delete             and financial reports
+p8   Delete             originate from dates
+p8   Insert             are published
+p8   Delete             preceding
+p8   Insert             before
+p8   Insert             financial reports are admitted only once public under the availability rule given in Data Sources,
+p8   Delete             is included
+p8   Insert             appears
+p8   Delete             eliminates
+p8   Insert             blocks the principal channels of
+p8   Delete             because
+p8   Insert             :
 p8   Delete             —
 p8   Insert             ,
-p8   Delete             —
+p8   Delete             —any
 p8   Insert             ,
-p8   Insert             In the runs reported here this check functioned as an audit of the generated output rather than a filter: no recommendation was removed by it.
-p8   Delete             to account for
-p8   Insert             , which incorporate
-p8   Insert             reinvested
-p8   Delete             .
-p8   Insert             ; returns are therefore total returns rather than price-only appreciation.
-p8   Delete             returns are calculated based solely on price appreciation over
-p8   Insert             each position’s return is measured from
-p8   Delete             selected time horizon
+p9   Insert             In the runs reported here this check functioned as an audit of the generated output rather than a filter: no recommendation was removed by it.
+p9   ParagraphProperty  Portfolio Construction
+p9   Delete             aligning
+p9   Insert             which aligns
+p9   Delete             to account for
+p9   Insert             , which incorporate
+p9   Insert             reinvested
+p9   Delete             .
+p9   Insert             ; returns are therefore total returns rather than price-only appreciation.
+p9   Delete             returns are calculated based solely on price appreciation over
+p9   Insert             each position’s return is measured from
+p9   Delete             selected time horizon
 p9   Insert             first to the last trading day of the holding window. The S&P 500 comparison uses the SPY exchange-traded fund on the same adjusted-close (total-return) basis, so portfolio and benchmark returns are directly comparable and the excess-return figures are not inflated by a price-versus-total-return mismatch
+p9   Property           
+p9   ParagraphProperty  Permutation Analysis Framework
 p9   Property           
 p9   Delete             For each
 p9   Insert             Each was invoked through the OpenAI API using the provider’s dated-alias
@@ -246,25 +327,31 @@ p9   Insert             identifiers “gpt-4o”, “gpt-4o-mini”, and “gpt-
 p9   Insert             sampling
 p9   Delete             ,
 p9   Insert             . For GPT-5.1 the same three runs per window and configuration were executed, but the OpenAI API does not accept custom temperature values for this model family, so all GPT-5.1 generations used the provider default; the three nominally temperature-labelled runs per cell are therefore treated as independent replicate generations at identical settings, and no temperature-level analysis is reported for GPT-5.1
-p9   Delete             Model-specific training-cutoff restrictions were enforced to reduce the risk of lookahead bias influencing our recommendations. Only evaluation windows that satisfied these temporal requirements were included in the final analysis. The final dataset comprised 2,759 matched portfolio runs.
-p10  Insert             Model-specific training-cutoff restrictions were enforced to reduce the risk of lookahead bias: any evaluation window whose start precedes the generating model’s training cutoff was excluded, and a request for GPT-5.1 before its cutoff fell back to a permissible model rather than running. Reported knowledge cutoffs are October 2023 for GPT-4o and GPT-4o-mini and September 30, 2024 for GPT-5.1, taken from a maintained compilation of LLM knowledge-cutoff dates that sources vendor (Azure OpenAI) documentation, because OpenAI’s own public documentation of these dates is inconsistent across sources. GPT-4o and GPT-4o-mini windows are therefore restricted to starts of June 2024 through June 2025 (thirteen windows), and GPT-5.1 windows to starts of October 2024 through June 2025 (nine windows with completed results), the latter a conservative one-month buffer beyond the stated cutoff. The final dataset comprised 2,759 matched portfolio runs, including repeated generations within cells, decomposing as 921 runs for GPT-4o, 1,212 for GPT-4o-mini, and 626 for GPT-5.1; a full per-cell breakdown by model, window, temperature label, and configuration is provided in the Supplementary Information. Win rates are computed at the cell level: for each model, temperature label, and window, the mean ROI of a configuration’s runs is compared with that of the matched unfiltered baseline, giving 27 matched comparisons per configuration for GPT-5.1 (nine windows, three temperature labels) and up to 39 for each older model (thirteen windows).
+p10  Delete             Model-specific training-cutoff restrictions were enforced to reduce the risk of lookahead bias influencing our recommendations. Only evaluation windows that satisfied these temporal requirements were included in the final analysis. The final dataset comprised 2,759 matched portfolio runs.
+p10  Insert             Model-specific training-cutoff restrictions were enforced to reduce the risk of lookahead bias: any evaluation window whose start precedes the generating model’s training cutoff was excluded, and a request for GPT-5.1 before its cutoff fell back to a permissible model rather than running. Reported knowledge cutoffs are October 2023 for GPT-4o and GPT-4o-mini and September 30, 2024 for GPT-5.1, taken from a maintained compilation of LLM knowledge-cutoff dates that sources vendor (Azure OpenAI) documentation, because OpenAI’s own public documentation of these dates is inconsistent across sources. GPT-4o and GPT-4o-mini windows are therefore restricted to starts of June 2024 through June 2025 (thirteen windows), and GPT-5.1 windows to starts of October 2024 through June 2025 (nine windows with completed results), the latter a conservative one-month buffer beyond the stated cutoff. The final dataset comprised 2,759 matched portfolio runs, including repeated generations within cells, decomposing as 921 runs for GPT-4o, 1,212 for GPT-4o-mini, and 626 for GPT-5.1; a full per-cell breakdown by model, window, temperature (where it applies), and configuration is provided in the Supplementary Information. Win rates are computed at the cell level: for each model, window, and — for the two older models — temperature, the mean ROI of a configuration’s runs is compared with that of the matched unfiltered baseline. This gives 27 matched comparisons per configuration for GPT-5.1 (nine windows × three generation groups, which for this model are replicate groups at the provider default rather than distinct temperatures) and up to 39 for each older model (thirteen windows × three temperatures).
+p10  ParagraphProperty  Evaluation Methodology
 p10  Insert             reported as raw excess return over the index, not risk-adjusted
+p10  Delete             permitting simultaneous evaluation of
+p10  Insert             which allows
+p10  Insert             to be assessed together
+p10  ParagraphProperty  Statistical Limitations
 p10  Delete             . Consequently,
 p10  Insert             , so
-p10  Delete             Statistical comparisons should
-p10  Insert             All inferential statistics are
-p10  Delete             be
-p10  Insert             paired and distribution-free, comparing each configuration with its matched baseline within windows, and p-values are
-p10  Insert             comparatively,
-p10  Delete             magnitude and practical significance
-p10  Insert             strength under the matched design,
-p10  Delete             fully
-p10  Insert             as exact error rates from
-p10  Delete             experimental
-p10  Delete             . Reported confidence intervals and p-values are approximate and should be treated as heuristic rather than exact
-p10  Delete             For configuration-level analysis, ROI distributions are grouped according to filtering structure and compared using one-way analysis of variance (ANOVA). When significant differences are detected, post-hoc pairwise comparisons are performed to identify which specific configurations diverge most strongly. Particular attention is paid to contrasting moderate filtering regimes against both aggressive filtering configurations and the unfiltered baseline. Model-level analysis is conducted by grouping results according to the language model used for portfolio generation. Comparisons between GPT-4o, GPT-4o-mini, and GPT-5.1 are used to evaluate the relationship between model capability and investment performance.
-p11  Insert             For each configuration we form matched pairs with the unfiltered baseline within each model × window (× temperature, where temperature was applied) cell, using the mean over replicate runs as the cell value. For every configuration we report the win rate with an exact binomial 95% confidence interval, an exact sign test, a Wilcoxon signed-rank test on the per-pair ROI differences, and a bootstrap 95% confidence interval on the median difference. As a conservative check for GPT-5.1, whose replicate generations share identical settings, we also collapse replicates and repeat the paired tests at the window level (n = 9). Model-level comparisons use the same paired structure across shared windows.
+p11  Delete             Statistical comparisons should
+p11  Insert             All inferential statistics are
+p11  Delete             be
+p11  Insert             paired and distribution-free, comparing each configuration with its matched baseline within windows, and p-values are
+p11  Insert             comparatively,
+p11  Delete             magnitude and practical significance
+p11  Insert             strength under the matched design,
+p11  Delete             fully
+p11  Insert             as exact error rates from
+p11  Delete             experimental
+p11  Delete             . Reported confidence intervals and p-values are approximate and should be treated as heuristic rather than exact
+p11  Delete             For configuration-level analysis, ROI distributions are grouped according to filtering structure and compared using one-way analysis of variance (ANOVA). When significant differences are detected, post-hoc pairwise comparisons are performed to identify which specific configurations diverge most strongly. Particular attention is paid to contrasting moderate filtering regimes against both aggressive filtering configurations and the unfiltered baseline. Model-level analysis is conducted by grouping results according to the language model used for portfolio generation. Comparisons between GPT-4o, GPT-4o-mini, and GPT-5.1 are used to evaluate the relationship between model capability and investment performance.
+p11  Insert             For each configuration we form matched pairs with the unfiltered baseline within each model × window × generation-group cell, using the mean of the runs in that cell as its value. For GPT-4o and GPT-4o-mini the generation groups are the three sampling temperatures; for GPT-5.1, where temperature could not be varied, they are three replicate groups at the provider default. For every configuration we report the win rate with an exact binomial 95% confidence interval, an exact sign test, a Wilcoxon signed-rank test on the per-pair ROI differences, and a bootstrap 95% confidence interval on the median difference. As a conservative check for GPT-5.1, whose replicate generations share identical settings, we also collapse replicates and repeat the paired tests at the window level (n = 9). Model-level comparisons use the same paired structure across shared windows.
 p11  Insert             ; the paired tests above quantify the strength of that isolation
+p11  ParagraphProperty  Results Key Findings
 p11  Delete             Structure beats brute force.
 p11  Delete             1's
 p11  Insert             1’s
@@ -302,84 +389,110 @@ p11  Delete             . How
 p11  Insert             : how
 p11  Delete             model's
 p11  Insert             model’s
-p11  Delete             / Figure 2 — The core result. GPT-5.1 mean ROI by initial candidate-pool size: performance peaks for a moderate pool (10–20) and falls below the unfiltered baseline when the model is asked for 30.
-p11  Delete             —
-p11  Insert             :
-p11  Delete             temperatures of 0.3, 0.4, and 0.5
-p11  Insert             three temperature labels
-p11  Delete             —
-p11  Insert             ,
-p11  Delete             horizons spanning a range of market conditions, with
-p11  Insert             windows. GPT-5.1 contributes nine completed evaluation windows (starts October 2024 through June 2025) and the older models thirteen
-p11  Delete             window treated as an
-p11  Insert             (starts June 2024 through June 2025); consecutive windows overlap by eleven months and are therefore not
-p11  Delete             experiment
-p11  Insert             observations
-p11  Delete             alpha
-p11  Insert             excess return
-p11  Insert             , with exact binomial confidence intervals
+p12  Delete             / Figure 2 — The core result. GPT-5.1 mean ROI by initial candidate-pool size: performance peaks for a moderate pool (10–20) and falls below the unfiltered baseline when the model is asked for 30.
+p12  ParagraphProperty  Evaluation Setup
+p12  Delete             —
+p12  Insert             :
+p12  Insert             three generations per cell — at
+p12  Delete             of
+p12  Delete             ,
+p12  Insert             for the two older models
+p12  Insert             as replicates at the provider default for GPT-5.1 — and
+p12  Delete             —
+p12  Insert             ,
+p12  Delete             horizons spanning a range of market conditions, with
+p12  Insert             windows. GPT-5.1 contributes nine completed evaluation windows (starts October 2024 through June 2025) and the older models thirteen
+p12  Delete             window treated as an
+p12  Insert             (starts June 2024 through June 2025); consecutive windows overlap by eleven months and are therefore not
+p12  Delete             experiment
+p12  Insert             observations
+p12  Delete             alpha
+p12  Insert             excess return
+p12  Insert             , with exact binomial confidence intervals
+p12  Delete             We state the expectation motivating the
+p12  Insert             The
+p12  Insert             tests a specific expectation
+p12  Delete             The results test this directly.
 p12  Delete             / Figure 3 - Distribution of GPT-5.1 ROI for every filtering configuration, with boxes colored by initial Stage-One pool size (5, 10, 20, or 30 candidates; grey marks the unfiltered and Ranked methods, which have no fixed pool). All ten configurations are carried through the analysis; the dashed line marks the unfiltered baseline mean. Takeaway: a moderate pool of 10–20 candidates produces the highest returns, while oversized 30-candidate pools fall below the baseline.
-p12  Delete             -,
-p12  Insert             - and
-p12  Delete             -, and temperature
-p12  Delete             ;
-p12  Insert             (no temperature-level analysis is reported for GPT-5.1, since the API applied a fixed default temperature to this model — see Methods);
-p12  Delete             7. Figure 3 shows GPT-5.1's ROI distribution per configuration
-p12  Insert             5
+p13  Delete             -,
+p13  Insert             - and
+p13  Delete             -, and temperature
+p13  Delete             ;
+p13  Insert             (no temperature-level analysis is reported for GPT-5.1, since the API applied a fixed default temperature to this model — see Methods);
+p13  Delete             7. Figure 3 shows GPT-5.1's ROI distribution per configuration
+p13  Insert             5
+p13  Delete             nonetheless
+p13  Delete             , and the systematic reason for the weaker methods' lower returns is examined below
 p13  Delete             Figure 3 shows that
-p14  Delete             /
-p14  Insert             /
+p14  Delete             leave achievable return unrealized. /
+p14  Insert             give up return that the same model could otherwise achieve. /
+p14  ParagraphProperty  Figure 4 -2. Percentage of matched evaluation windows in which each GPT-5.1 filtering configuration outperformed the unfiltered baseline, with bars colored by initial Stage-One pool size. Takeaway: configurations starting from 10–20 candidates beat the baseline 74–82% of the time, while the 30-candidate configurations and Ranked all fall below 50%.
 p14  Delete             4 -
 p14  Insert             2.
 p14  Delete             Takeaway: configurations starting from 10–20 candidates beat the baseline 74–82% of the time, while the 30-candidate configurations and Ranked all fall below 50%.
+p14  ParagraphProperty  Configuration
 p15  TableProperty      Configuration Mean ROI (%) Win vs Unfiltered (%) 95% CI (Win %) 20→10 60.6 81.5 61.9–93.7 10→5 56.2 77.8 57.7–91.4 10→3 54.1 74.1 53.7–88.9 20→5 50.4 74.1 53.7–88.9 unfiltered 45.7 — — 30→15 44.2 40.7 22.4–61.2 5→3 42.2 40.7 22.4–61.2 30→10 40.1 33.3 16.5–54.0 Ranked 38.9 29.6 13.8–50.2 30→5 32.3 18.5 6.3–38.1
 p14  Property           
 p14  Property           
 p14  Property           
 p14  Insert             95% CI (Win %)
 p15  CellInsertion      95% CI (Win %) 20→10 60.6 81.5 61.9–93.7 10→5 56.2 77.8 57.7–91.4 10→3 54.1 74.1 53.7–88.9 20→5 50.4 74.1 53.7–88.9 unfiltered 45.7 — — 30→15 44.2 40.7 22.4–61.2 5→3 42.2 40.7 22.4–61.2 30→10 40.1 33.3 16.5–54.0 Ranked 38.9 29.6 13.8–50.2 30→5 32.3 18.5 6.3–38.1
+p14  ParagraphProperty  20→10
 p14  Property           
 p14  Property           
 p14  Property           
 p14  Insert             61.9–93.7
+p14  ParagraphProperty  10→5
 p14  Property           
 p14  Property           
 p14  Property           
 p14  Insert             57.7–91.4
+p14  ParagraphProperty  10→3
 p14  Property           
 p14  Property           
 p14  Property           
 p14  Insert             53.7–88.9
-p14  Property           
-p14  Property           
-p14  Property           
-p14  Insert             53.7–88.9
-p14  Property           
-p14  Property           
-p14  Property           
-p14  Insert             —
+p15  ParagraphProperty  20→5
+p15  Property           
+p15  Property           
+p15  Property           
+p15  Insert             53.7–88.9
+p15  ParagraphProperty  unfiltered
+p15  Property           
+p15  Property           
+p15  Property           
+p15  Insert             —
+p15  ParagraphProperty  30→15
 p15  Property           
 p15  Property           
 p15  Property           
 p15  Insert             22.4–61.2
+p15  ParagraphProperty  5→3
 p15  Property           
 p15  Property           
 p15  Property           
 p15  Insert             22.4–61.2
+p15  ParagraphProperty  30→10
 p15  Property           
 p15  Property           
 p15  Property           
 p15  Insert             16.5–54.0
+p15  ParagraphProperty  Ranked
 p15  Property           
 p15  Property           
 p15  Property           
 p15  Insert             13.8–50.2
+p15  ParagraphProperty  30→5
 p15  Property           
 p15  Property           
 p15  Property           
 p15  Insert             6.3–38.1
+p15  ParagraphProperty  Table 1 -. GPT-5.1 mean ROI and win rate versus the unfiltered baseline, by filtering configuration (sorted by mean ROI). Full per-configuration statistics for all three models are reported in the supplementary information.
 p15  Delete             -
 p15  Insert             .
+p15  Delete             temperature and
+p15  Insert             the
+p15  Insert             and generation group
 p15  Delete             1's
 p15  Insert             1’s
 p15  Delete             windows,
@@ -389,227 +502,338 @@ p15  Insert             %; CI 53.7–88.9
 p15  Insert             %; CI 22.4–61.2
 p15  Delete             windows
 p15  Insert             window comparisons
-p15  Delete             ; because each window is a distinct
-p15  Insert             . Because consecutive
-p15  Delete             holding period
-p15  Insert             windows overlap, these comparisons should be read as matched within-window contrasts rather than outcomes in independent years. Formal paired statistics support these comparisons. For each configuration
-p15  Delete             best-sized configurations outperform
-p15  Insert             per-window ROI difference against
-p15  Insert             matched
-p15  Delete             in roughly
-p15  Insert             was evaluated with an exact sign test and a Wilcoxon signed-rank test, with a bootstrap 95% confidence interval on the median difference. The four moderate configurations differ significantly from the baseline (20→10: sign-test p = 0.002, Wilcoxon p < 0.001; 10→5: p = 0.006; 10→3 and 20→5: p = 0.019), the mid-table configurations are statistically indistinguishable from it, and 30→5 is significantly worse (5/27 wins; p = 0.002). As a conservative check, collapsing GPT-5.1’s
-p15  Delete             of
-p15  Insert             replicate generations per window and re-testing at the window level (n = 9) leaves the top configuration significant (sign test p = 0.039; Wilcoxon p = 0.027) and 30→5 significantly negative (p = 0.004). Per-configuration intervals accompany
-p15  Delete             four years tested.
-p15  Insert             win rate in Table 1 and the Supplementary Information.
-p16  Delete             /
-p16  Insert             /
-p16  Delete             5 -
-p16  Insert             3.
-p16  Delete             Takeaway: GPT-5.1's mean ROI beat the market in every window (37–69% versus 15–30%).
-p16  Delete             5
-p16  Insert             3
-p16  Insert             Across all GPT-5.1 runs, 604 of 626 (96.5%) exceeded the S&P 500 over their holding window; because this figure counts every run rather than one per cell, it is a fraction of 626, not of the 270 model–temperature–window–configuration cells.
-p16  Delete             1's evaluation
-p16  Insert             1 contributes nine completed rolling
-p16  Delete             span
-p16  Insert             , with start dates from
-p16  Insert             2025 (end dates October 2025 through June
-p16  Delete             ;
-p16  Insert             );
-p16  Delete             model's
-p16  Insert             model’s
-p16  Delete             % —
-p16  Insert             %,
+p15  Insert             A component ablation tests whether the advantage over the unfiltered baseline reflects sequential structure or simply the amount of material in the prompt. Holding the candidate documents fixed for GPT-5.1’s 20→10 configuration across all nine windows (two to four generations per condition), we compared the full pipeline against a single prompt over the full candidate pool and a budget-matched single prompt over the identical shortlist. The full pipeline gave the highest mean ROI of any arm (52.4%), leading the budget-matched variant by 5.0 percentage points in six of nine windows (Wilcoxon p = 0.055). Context length is therefore not the driver: a prompt carrying the same or more material does not outperform the staged pipeline. Token counts and full paired statistics are in the Supplementary Information. The same ablation isolates the narrowing step. Showing the reports but eliminating no candidates trailed the full pipeline by 3.7 percentage points (five of nine windows; Wilcoxon p = 0.570), and holding the entire pool trailed by 5.6 points (seven of nine; p = 0.055). Neither is significant at this sample size, so evidence that the cut itself carries the effect is suggestive rather than conclusive — consistent with the pool-size pattern above, where the gain comes from starting with a moderate candidate set rather than from how aggressively it is reduced.
+p15  Delete             ;
+p15  Insert             , though
+p15  Delete             each window is a distinct
+p15  Insert             consecutive
+p15  Delete             holding period, the best-sized
+p16  Insert             windows overlap, these comparisons should be read as matched within-window contrasts rather than as outcomes in independent years. Formal paired statistics support these comparisons. For each configuration, the per-window ROI difference against the matched unfiltered baseline was evaluated with an exact sign test and a Wilcoxon signed-rank test, with a bootstrap 95% confidence interval on the median difference. The four moderate
+p16  Delete             outperform the unfiltered baseline in roughly
+p16  Insert             differ significantly from the baseline (20→10: sign-test p = 0.002, Wilcoxon p < 0.001; 10→5: p = 0.006; 10→3 and 20→5: p = 0.019), the mid-table configurations are statistically indistinguishable from it, and 30→5 is significantly worse (5/27 wins; p = 0.002). As a conservative check, collapsing GPT-5.1’s
+p16  Delete             of
+p16  Insert             replicate generations per window and re-testing at the window level (n = 9) leaves the top configuration significant (sign test p = 0.039; Wilcoxon p = 0.027) and 30→5 significantly negative (p = 0.004). Per-configuration intervals accompany
+p16  Delete             four years tested.
+p16  Insert             win rate in Table 1 and the Supplementary Information.
 p17  Delete             /
 p17  Insert             /
-p17  Delete             6 -
-p17  Insert             4.
-p17  Delete             Takeaway: returns are steadiest at the extremes — the most selective configuration (5→3) and the unfiltered baseline — and moderately more variable for the highest-returning configurations.
-p18  Delete             6
-p18  Insert             4
-p18  Property           
-p18  Property           
-p19  Delete             /
-p19  Insert             /
-p19  Delete             7 -
-p19  Insert             5.
-p19  Delete             7
-p19  Insert             5
-p20  Delete             4
-p20  Insert             2
+p17  Delete             5 -
+p17  Insert             3.
+p17  Delete             Takeaway: GPT-5.1's mean ROI beat the market in every window (37–69% versus 15–30%).
+p17  Delete             5
+p17  Insert             3
+p17  Insert             Across all GPT-5.1 runs, 604 of 626 (96.5%) exceeded the S&P 500 over their holding window; because this figure counts every run rather than one per cell, it is a fraction of 626, not of the 270 window × generation-group × configuration cells.
+p17  Delete             1's evaluation
+p17  Insert             1 contributes nine completed rolling
+p17  Delete             span
+p17  Insert             , with start dates from
+p17  Insert             2025 (end dates October 2025 through June
+p17  Delete             ;
+p17  Insert             );
+p17  Delete             model's
+p17  Insert             model’s
+p17  Delete             % — roughly double
+p17  Insert             %, in each case well above
+p17  Insert             corresponding
+p17  Delete             in most periods
+p17  Insert             return
+p18  Property           Return Variance and Consistency Comparison
+p18  Delete             /
+p18  Insert             /
+p18  Delete             6 -
+p18  Insert             4.
+p19  Delete             Takeaway: returns are steadiest at the extremes — the most selective configuration (5→3) and the unfiltered baseline — and moderately more variable for the highest-returning configurations.
+p19  Delete             6
+p19  Insert             4
+p19  Property           
+p19  Delete             %). In short, a little more
+p19  Insert             %), so the
+p19  Insert             advantage
+p19  Delete             a little more variability
+p19  Insert             somewhat wider run-to-run spread
+p19  Property           
+p19  Delete             consistency
+p19  Delete             is governed by
+p19  Insert             follows from
+p19  Insert             structural
+p19  Insert             that drive return,
+p19  Delete             Consistency was
+p19  Insert             Filtering
+p19  Delete             not strictly monotonic in filtering strength for GPT-5.1: the single most selective configuration was the most stable, but the highest-returning configurations accepted moderately higher variance in exchange for their return advantage. These findings indicate that filtering
+p19  Delete             distribution, allowing practitioners to
+p19  Insert             spread, which lets a practitioner
+p19  Delete             consistent,
+p19  Insert             by moving toward the more selective end of the grid
+p20  Delete             /
+p20  Insert             /
+p20  ParagraphProperty  Figure 7 -5. Mean ROI by initial candidate-pool size for each model. GPT-5.1 leads at every pool size and peaks at a moderate pool of 10–20 candidates; GPT-4o peaks at ten, and GPT-4o-mini is highest at five. All three models decline for oversized 30-candidate pools.
+p20  Delete             7 -
+p20  Insert             5.
+p21  ParagraphProperty  Two factors determine which configuration to deploy: the underlying model, and how the desired portfolio size maps onto the two stages. Figure 75 compares the three models across fixed-pool configurations, while Table 1 and the matched win rates of Figure 42 identify the best configuration per target portfolio size; the unfiltered single-pass run is the baseline throughout. Figure 75 plots mean ROI against initial candidate-pool size for each of the three models. GPT-5.1 (red) produced the highest ROI at every pool size, averaging 47.0% mean ROI across all its runs — equivalently, an unweighted 46.5% across its ten per-configuration means, or 47.5% across the eight fixed-pool configurations (Table 1) — versus run-level means of 35.0% for GPT-4o and 32.7% for GPT-4o-mini, a gap of roughly 12 to 14 percentage points that holds across pool sizes. The shape of the curve, however, differs by model: GPT-5.1 traces a pronounced inverted-U peaking at 10–20 candidates; GPT-4o peaks modestly at ten, with its five-candidate pool outperforming its twenty; and GPT-4o-mini declines monotonically from a five-candidate maximum. What all three models share is the penalty for oversized pools — every model deteriorates at thirty candidates. This pattern suggests that the optimal pool size scales with model capability: a stronger model can fill a larger candidate request with conviction, while weaker models do best when asked for only as many names as they can justify. Raw model capability sets the overall return level, and the pipeline configuration determines how much of that level is realized. The same data indicate how the best configuration shifts with the desired portfolio size (Table 1). For a concentrated three-stock portfolio, 10→3 is best (54.1%), beating the unfiltered baseline in 74.1% of matched windows and outperforming the more selective 5→3 (42.2%). For a five-stock portfolio, 10→5 leads (56.2%, beating the baseline 77.8% of the time), ahead of 20→5 (50.4%, 74.1%). For a ten-stock portfolio, 20→10 is both the best option and the single highest-returning configuration in the study (60.6%), beating the baseline in 81.5% of matched windows. A consistent pattern emerges: the best Stage One pool is roughly twice the target portfolio size (consistent with the 2× rulehypothesis). The over-filtered methods identified in Figure 3above are dominated at every portfolio size and are not recommended.
 p20  Delete             7
 p20  Insert             5
-p20  Delete             mean ROI
-p20  Insert             all its runs — equivalently, an unweighted 46.5% across its ten per-configuration means, or 47.5% across the eight fixed-pool
-p20  Insert             (Table 1) —
-p20  Insert             run-level means of
-p20  Insert             consistent with
-p20  Delete             rule
-p20  Insert             hypothesis
-p20  Delete             in Figure 3
-p20  Insert             above
-p21  Delete             /
-p21  Insert             /
-p21  Delete             8 -
-p21  Insert             6.
-p21  Delete             8
-p21  Insert             6
-p22  Insert             A sector's share of realized return is computed as the sum, across that sector's holdings, of each position's initial weight times its window return, divided by the portfolio's total return, with both quantities pooled (summed) across runs (equivalently, averaged, since the per-run count cancels); because individual contributions can be negative, a sector's return share can exceed or fall below its weight share, and the shares sum to 100% by construction.
-p22  Property           
-p23  Insert             Benchmark Robustness, Ablations, and Weighting The S&P 500 comparison overstates selection skill, because the eligible universe is concentrated in technology and semiconductor names that outran the broad market over the study period. Against progressively harder benchmarks, GPT-5.1’s pooled beat rate falls from 96.5% (S&P 500) to 94.3% (S&P 500 Information Technology, XLK), then to 39.6% against an equal-weighted portfolio of the eligible universe itself and 32.2% against a pure-semiconductor index (SMH), the hardest comparison because semiconductors led the sector over the study period. The filtering effect, however, survives these harder comparisons: 20→10 outperforms the equal-weighted universe in 81.4% of runs and SMH in 68.3%, and 10→5 in 64.8% and 60.0% respectively, while the unfiltered baseline does so in only 18.5% and 6.7%. All comparisons in this subsection are pooled across the full run set. Random portfolios drawn from the eligible universe, matched to each portfolio’s holding count and equal-weighted, provide a direct test of selection skill: relative to 4,000 such draws per run, the median GPT-5.1 portfolio under 20→10 sits at the 75th percentile and under 10→5 at the 69th, whereas the unfiltered baseline sits at the 40th percentile and the aggressive 30-pool configurations near the 17th–21st. Moderate two-stage filtering is thus the difference between below-random and above-random selection within the sector. Two ablations probe the robustness of the effect. Removing the single largest return contributor from every portfolio lowers GPT-5.1’s 20→10 mean ROI from 60.6% to 52.5% and the unfiltered baseline from 45.7% to 39.4%, so the matched filtering edge narrows only modestly, from about +14.9 to +13.1 percentage points; excluding all semiconductor holdings (with weights renormalized) leaves a smaller edge of +3.0 points. The filtering advantage therefore does not rest on any single position—it survives removing each portfolio’s best contributor largely intact—but it operates substantially through semiconductor selection: once the semiconductor sector as a whole is excluded, the matched edge, while still positive, is modest. Finally, re-scoring every portfolio at equal weights isolates stock selection from allocation weighting: GPT-5.1’s model-assigned weights cost 4.6 percentage points of mean ROI relative to equal-weighting the same picks (Wilcoxon p < 0.0001; GPT-4o −1.2, GPT-4o-mini ≈ 0). The models’ selection adds value; their position sizing subtracts it. Sector-index returns, random-portfolio percentiles, ablation tables, and per-configuration risk metrics (annualized volatility, maximum drawdown, Sharpe, Sortino) are provided in the Supplementary Information. Risk-adjusted performance moves in the same direction as raw return. For GPT-5.1, the best configuration (20→10) earns a median Sharpe ratio of 1.99 and Sortino of 2.69, against 1.49 and 2.10 for the unfiltered baseline and roughly 0.83 for the S&P 500 over the same windows; the weakest configuration (30→5) falls to 1.35. Annualized volatility is similar across configurations (about 23–28%) and maximum drawdowns cluster near −22%, so the return gains from moderate filtering are not obtained by taking proportionally more risk. Full volatility, drawdown, and risk-adjusted statistics for every configuration and model are reported in the Supplementary Information. Ablation of Pipeline Components To separate the contribution of sequential structure from context length, and to identify which stages carry the effect, we ran a controlled ablation on GPT-5.1's headline configuration (20→10) across all nine evaluation windows, with three independent generations per condition. Holding the candidate documents fixed, we compared the full two-stage pipeline against five variants that each remove one element: a single prompt over the full candidate pool; a budget-matched single prompt over the identical shortlist documents; a variant that shows the reports but eliminates no candidates; a variant that selects the final portfolio in one step without a staged cut; and a variant with the financial reports shuffled across tickers. The full pipeline achieved the highest mean ROI (52.2%) and outperformed every variant in seven to nine of the nine windows. The single-pass arm carrying the most context underperformed the pipeline by 3.5 percentage points, and the budget-matched single-pass arm — identical documents, one prompt — lost by 4.7 points (sign-test p = 0.039; Wilcoxon p = 0.012), ruling out context length as the driver. Shuffling the reports produced the largest drop (6.5 points; p = 0.012) and the highest run-to-run variance, indicating that the financial-report stage contributes genuine signal rather than formatting. Removing the elimination step or the staged cut each cost roughly 4.6 to 5.1 points. Per-condition token counts and full paired statistics are reported in the Supplementary Information. Because the nine windows overlap and the sample is modest, we read the individual contrasts as directionally consistent — two reach conventional significance and the remainder sit at p ≈ 0.06–0.10 — and emphasize the joint pattern, the full pipeline dominating five independent ablations, as the principal evidence that the effect is structural rather than an artifact of input length.
-p23  Insert             A component ablation confirms this is not a context-length effect: holding the documents fixed, a single-pass prompt with the same or more material underperforms the staged pipeline, and shuffling the financial reports degrades it most, so the sequential staging and the report-validation stage each contribute.
+p21  Delete             4
+p21  Insert             2
+p21  Delete             7
+p21  Insert             5
+p21  Delete             mean ROI
+p21  Insert             all its runs — equivalently, an unweighted 46.5% across its ten per-configuration means, or 47.5% across the eight fixed-pool
+p21  Insert             (Table 1) —
+p21  Insert             run-level means of
+p21  Insert             consistent with
+p21  Delete             rule
+p21  Insert             hypothesis
+p21  Delete             in Figure 3
+p21  Insert             above
+p21  Delete             The reason this pattern holds is the same factor
+p21  Insert             One further ablation, before turning to why this pattern holds, asks whether the report stage contributes company-specific content or merely more structured text. Shuffling reports across tickers, so each candidate is validated against another company’s financials, produced the largest and only unambiguous degradation: 9.3 percentage points below the full pipeline, losing nine of nine windows (Wilcoxon p = 0.004). The report-validation stage therefore carries genuine company-specific signal. The configuration-by-target-size pattern above holds for the same reason
+p22  Delete             /
+p22  Insert             /
+p22  ParagraphProperty  Figure 8 -6. GPT-5.1 sector allocation versus realized ROI share. For each sector, the left marker is its share of recommended portfolio weight and the right marker its share of total realized ROI.
+p22  Delete             8 -
+p22  Insert             6.
+p23  ParagraphProperty  Beyond aggregate returns, the sector composition of GPT-5.1's portfolios shows where its performance originated. Figure 86 compares each sector's share of the recommended portfolio weight with its share of the realized return. GPT-5.1 allocated the largest share of capital to Mega-Cap Technology (46.9% of weight), yet that sector delivered only 35.5% of realized ROI; Semiconductors, at 26.8% of weight, contributed 54.2% of the realized return — roughly twice their allocation — making them the dominant source of performance. Networking/Infrastructure (8.9% of weight, 6.4% of ROI) and Enterprise SaaS (2.4%, 2.1%) contributed broadly in line with their weights, while a 14.9% allocation to unclassified holdings produced just 1.8% of the realized return. These results indicate that the framework's returns were driven disproportionately by semiconductor selections, and that allocation share alone understates where performance actually originated. A sector's share of realized return is computed as the sum, across that sector's holdings, of each position's initial weight times its window return, divided by the portfolio's total return, with both quantities pooled (summed) across runs (equivalently, averaged, since the per-run count cancels); because individual contributions can be negative, a sector's return share can exceed or fall below its weight share, and the shares sum to 100% by construction.
+p22  Delete             8
+p22  Insert             6
+p23  Insert             A sector's share of realized return is computed as the sum, across that sector's holdings, of each position's initial weight times its window return, divided by the portfolio's total return, with both quantities pooled (summed) across runs (equivalently, averaged, since the per-run count cancels); because individual contributions can be negative, a sector's return share can exceed or fall below its weight share, and the shares sum to 100% by construction.
+p23  Property           
+p24  Insert             Benchmark Robustness, Ablations, and Weighting The S&P 500 comparison overstates selection skill, because the eligible universe is concentrated in technology and semiconductor names that outran the broad market over the study period. Against progressively harder benchmarks, GPT-5.1’s pooled beat rate falls from 96.5% (S&P 500) to 94.3% (S&P 500 Information Technology, XLK), then to 39.6% against an equal-weighted portfolio of the eligible universe itself and 32.2% against a pure-semiconductor index (SMH), the hardest comparison because semiconductors led the sector over the study period. The filtering effect, however, survives these harder comparisons: 20→10 outperforms the equal-weighted universe in 81.4% of runs and SMH in 68.3%, and 10→5 in 64.8% and 60.0% respectively, while the unfiltered baseline does so in only 18.5% and 6.7%. All comparisons in this subsection are pooled across the full run set. The eligible comparison set is a fixed list of 29 large-capitalization technology and semiconductor companies (Supplementary Information), used only for the unfiltered baseline and as the draw pool for the equal-weighted and random benchmarks; the filtered configurations never see it, nominating candidates freely from screened news. Every constituent was continuously listed across the full evaluation span, so none was acquired or delisted and the benchmark needs no point-in-time reconstruction. The residual exposure is omission: companies large at the earliest window starts but no longer qualifying would not appear. The set does retain constituents whose prices declined materially, so it is not a selection of winners only, but this bounds the benchmark rather than the pipeline. Random portfolios drawn from the eligible universe, matched to each portfolio’s holding count and equal-weighted, provide a direct test of selection skill: relative to 4,000 such draws per run, the median GPT-5.1 portfolio under 20→10 sits at the 75th percentile and under 10→5 at the 69th, whereas the unfiltered baseline sits at the 40th percentile and the aggressive 30-pool configurations near the 17th–21st. Moderate two-stage filtering is thus the difference between below-random and above-random selection within the sector. Two ablations probe the robustness of the effect. Removing the single largest return contributor from every portfolio lowers GPT-5.1’s 20→10 mean ROI from 60.6% to 52.5% and the unfiltered baseline from 45.7% to 39.4%, so the matched filtering edge narrows only modestly, from about +14.9 to +13.1 percentage points; excluding all semiconductor holdings (with weights renormalized) leaves a smaller edge of +3.0 points. The filtering advantage therefore does not rest on any single position—it survives removing each portfolio’s best contributor largely intact—but it operates substantially through semiconductor selection: once the semiconductor sector as a whole is excluded, the matched edge, while still positive, is modest. Finally, re-scoring every portfolio at equal weights isolates stock selection from allocation weighting: GPT-5.1’s model-assigned weights cost 4.6 percentage points of mean ROI relative to equal-weighting the same picks (Wilcoxon p < 0.0001; GPT-4o −1.2, GPT-4o-mini ≈ 0). The models’ selection adds value; their position sizing subtracts from it. Sector-index returns, random-portfolio percentiles, ablation tables, and per-configuration risk metrics (annualized volatility, maximum drawdown, Sharpe, Sortino) are provided in the Supplementary Information. Risk-adjusted performance moves in the same direction as raw return. For GPT-5.1, the best configuration (20→10) earns a median Sharpe ratio of 1.99 and Sortino of 2.69, against 1.49 and 2.10 for the unfiltered baseline and roughly 0.83 for the S&P 500 over the same windows; the weakest configuration (30→5) falls to 1.35. Annualized volatility is similar across configurations (about 23–28%) and maximum drawdowns cluster near −22%, so the return gains from moderate filtering are not obtained by taking proportionally more risk. Full volatility, drawdown, and risk-adjusted statistics for every configuration and model are reported in the Supplementary Information.
+p24  ParagraphProperty  Discussion Implications and Significance
+p24  Insert             A component ablation points the same way, though not all of it reaches significance: holding the documents fixed, a single-pass prompt with the same or more material does not outperform the staged pipeline, and shuffling the financial reports degrades it most — the one difference in the ablation that is unambiguous — indicating that the report-validation stage in particular carries signal.
+p24  Delete             about two to one
+p24  Insert             roughly half
 p24  Insert             We present this padding account as a hypothesis consistent with the observed pattern rather than a directly measured mechanism; a candidate-overlap and Stage-One-rank-versus-realized-return analysis to test it directly is left to future work.
+p24  ParagraphProperty  Limitations and Future Work
+p25  ParagraphProperty  Several limitations bound the scope of these findings. All portfolios are long-only and buy-and-hold, and returns are computed without transaction costs, taxes, or slippage, which would modestly reduce realized performance. The investment universe is restrictedconfined to a fixed set ofthe large-capitalization technology and semiconductor equitiessector, so the sector-contribution results in particular may not generalize to broader markets. Because GPT-5.1's evaluation windows are constrained to begin after its training cutoff, its results rest on fewer rolling windows (October 2024 onward) than the older models, and all windows fall within a broadly rising market; performance in a sustained downturn is therefore untested. Finally, the analysis reports raw and benchmark-relative returns together with the coefficient of variation, but does not compute risk-adjusted measures such as the Sharpe or Sortino ratio or maximum drawdown, because the per-portfolio daily return series required for them were not retainedBecause the best configuration (20→10) was identified as the maximum mean ROI across ten configurations evaluated on the same windows used to report it, the headline 60.6% carries a degree of selection inflation; the matched-baseline win rate and its exact confidence interval, which do not depend on selecting the top configuration after the fact, are the more conservative summary. Finally, the financial-report source does not flag restatements or amendments: a restated figure carries the fiscal period end of the original filing, so it is treated as public from that date even though the corrected values appeared later. We therefore cannot rule out that a small number of report values reflect subsequent restatement. Future work should address these gaps directly: incorporating transaction-cost and drawdown modeling, extending the universe beyond technology to test sector generalization, evaluating across bear-market windows as longer post-cutoff histories become available, and adding risk-adjusted performance metrics. Live forward-testing — deploying the recommended configuration prospectively rather than on historical windows — would provide the strongest evidence that the framework's advantage over the unfiltered single-pass methodology persists out of sample.
 p24  Delete             restricted
 p24  Insert             confined
 p24  Delete             a fixed set of
 p24  Insert             the
 p24  Delete             equities
 p24  Insert             sector
-p24  Delete             Finally, the analysis reports raw and benchmark-relative returns together with the coefficient of variation, but does not compute risk-adjusted measures such as the Sharpe or Sortino ratio or maximum drawdown, because the per-portfolio daily return series required for them were not retained
-p24  Insert             Because the best configuration (20→10) was identified as the maximum mean ROI across ten configurations evaluated on the same windows used to report it, the headline 60.6% carries a degree of selection inflation; the matched-baseline win rate and its exact confidence interval, which do not depend on selecting the top configuration after the fact, are the more conservative summary. Finally, because every run retains its tickers, weights, and dates, the per-portfolio daily value series was reconstructed from public adjusted closing prices, and annualized volatility, maximum drawdown, and Sharpe, Sortino, and Calmar ratios were computed for every run; per-configuration values for all three models appear in the Supplementary Information
-p24  Delete             (the 2× rule)
-p24  Insert             — a ratio we present as a working hypothesis consistent with the tested grid —
-p25  Insert             Data and Code Availability To support full reproducibility, the following materials are made publicly available at [repository URL] upon acceptance: the news-relevance screening prompt; the Stage One and Stage Two prompts; the unfiltered single-pass and Ranked baseline prompts; the complete list of evaluation windows; the per-cell run outputs, including the selected tickers, weights, and decision dates for every run; and the analysis scripts, including the paired-difference statistics, the risk-metric reconstruction, and the benchmark-reconstruction code. News articles and financial reports were obtained from Alpha Vantage under its terms of use and are not redistributed; the retrieval queries, date windows, and timestamp conventions needed to reconstruct the corpora are documented in the Methods and Supplementary Information.
+p25  Delete             Finally, the analysis reports raw and benchmark-relative returns together with the coefficient of variation, but does not compute risk-adjusted measures such as the Sharpe or Sortino ratio or maximum drawdown, because the per-portfolio daily return series required for them were not retained
+p25  Insert             Because the best configuration (20→10) was identified as the maximum mean ROI across ten configurations evaluated on the same windows used to report it, the headline 60.6% carries a degree of selection inflation; the matched-baseline win rate and its exact confidence interval, which do not depend on selecting the top configuration after the fact, are the more conservative summary. Finally, the financial-report source does not flag restatements or amendments: a restated figure carries the fiscal period end of the original filing, so it is treated as public from that date even though the corrected values appeared later. We therefore cannot rule out that a small number of report values reflect subsequent restatement
+p25  ParagraphProperty  Conclusion
+p28  SectionProperty    Conclusion This study set out to test whether structuring the information given to a language model could improve long-term stock selection. Across 2,759 portfolio runs, a two-stage pipeline — using news to assemble a candidate shortlist and financial reports to validate it — reliably outperformed both unfiltered single-pass prompting and aggressive over-filtering. The largest gains came from a moderate design: starting from about ten to twenty candidates and narrowing them by roughly half (the 2× rule)— a ratio we present as a working hypothesis consistent with the tested grid — added on the order of fifteen percentage points of mean ROI over the unfiltered baseline and beat it in most matched evaluation windows. The central takeaway is that information design is a distinct and inexpensive determinant of performance in LLM-based investing, comparable in importance to the choice of model. Subject to the limitations above, this points toward a broader direction for LLM agents: treating the structure of a model's inputs as a first-class design variable rather than an afterthought. Data and Code Availability To support full reproducibility, the following materials are made publicly available at [repository URL] upon acceptance: the news-relevance screening prompt; the Stage One and Stage Two prompts; the unfiltered single-pass and Ranked baseline prompts; the complete list of evaluation windows; the per-cell run outputs, including the selected tickers, weights, and decision dates for every run; and the analysis scripts, including the paired-difference statistics, the risk-metric reconstruction, and the benchmark-reconstruction code. News articles were obtained from The New York Times and financial reports from Alpha Vantage, each under its provider’s terms of use, and neither corpus is redistributed; the retrieval queries, date windows, and timestamp conventions needed to reconstruct the corpora are documented in the Methods and Supplementary Information. References 11. Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, S. Zohren. A survey of large language models for financial applications: progress, prospects and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.11903. 2. S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379. . S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379. 2. K. Anjum, M. A. Arshad, K. Hayawi, E. Polyzos, A. Tariq, M. A. Serhani, L. Batool, B. Lund, N. R. Mannuru, R. V. K. Bevara, T. Mahbub, M. Z. Akram, S. Shahriar. Domain specific benchmarks for evaluating multimodal large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2506.12958. 3. A. Lopez-Lira, Y. Tang. Can ChatGPT forecast stock price movements? return predictability and large language models. SSRN. 2023, https://doi.org/10.2139/ssrn.4412788. 4. Y. Xiao, E. Sun, D. Luo, W. Wang. TradingAgents: multi-agents LLM financial trading framework. arXiv, 2024, https://doi.org/10.48550/arXiv.2412.20138. 5. H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361. D. Blitz, M. X. Hanauer, T. Hoogteijling, C. Howard. The term structure of machine learning alpha. The Journal of Financial Data Science. Vol. 5, pg. 40–58, 2023, https://doi.org/10.2139/ssrn.4474637. 6. W. W. Li, H. Kim, M. Cucuringu, T. Ma. Can LLM-based financial investing strategies outperform the market in the long run? arXiv, 2025, https://doi.org/10.48550/arXiv.2505.07078. 7. D. Blitz, M. X. Hanauer, T. Hoogteijling, C. Howard. The term structure of machine learning alpha. The Journal of Financial Data Science. Vol. 5, pg. 40–65, 2023, https://doi.org/10.3905/jfds.2023.1.135. 8B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422. 8. J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266. 9. G. Lu, S. B. Larcher, T. Tran. Hybrid long document summarization using C2F-FAR and ChatGPT: a practical study. arXiv, 2023, https://doi.org/10.48550/arXiv.2306.01169. 10.9. H. Naveed, A. U. Khan, S. Qiu, M. Saqib, S. Anwar, M. Usman, N. Akhtar, N. Barnes, A. Mian. A comprehensive overview of large language models. ACM Transactions on Intelligent Systems and Technology. Vol. 16, no. 5, 2025, https://doi.org/10.1145/3744746. 10. B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422. 11. C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197. 11. H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361. 12. S. Fatemi, Y. Hu. Enhancing financial question answering with a multi-agent reflection framework. Proceedings of the 5th ACM International Conference on AI in Finance. 2024. 13. G. Fatouros, K. Metaxas, J. Soldatos, M. Karathanassis. MarketSenseAI 2.0: enhancing stock analysis through LLM agents. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.00415. 14. B. Fazlija, M. Ibraimi, A. Forouzandeh, A. Fazlija. Implementing financial regulations using large language models. SSRN. 2024, https://doi.org/10.2139/ssrn.5010694. 15. T. Guo, H. Shen, J. Huang, Z. Mao, J. Luo, B. Chen, Z. Chen, L. Liu, B. Xia, X. Liu, Y. Ma, M. Zhang. MASS: multi-agent simulation scaling for portfolio construction. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10278. 16. T. Guo, X. Chen, Y. Wang, R. Chang, S. Pei, N. V. Chawla, O. Wiest, X. Zhang. Large language model based multi-agents: a survey of progress and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2402.01680. 17. X. Han, N. Wang, S. Che, H. Yang, K. Zhang, S. X. Xu. Enhancing investment analysis: optimizing AI-agent collaboration in financial research. Proceedings of the 5th ACM International Conference on AI in Finance. 2024, https://doi.org/10.48550/arXiv.2411.04788. 18. S. Joshi. A comprehensive review of gen AI agents: applications and frameworks in finance, investments and risk domains. International Journal of Innovative Science and Research Technology. 2025. 19. J. Luo, W. Zhang, Y. Yuan, Y. Zhao, J. Yang, Y. Gu, B. Wu, B. Chen, Z. Qiao, Q. Long, R. Tu, X. Luo, W. Ju, Z. Xiao, Y. Wang, M. Xiao, C. Liu, J. Yuan, S. Zhang, Y. Jin, F. Zhang, X. Wu, H. Zhao, D. Tao, P. S. Yu, M. Zhang. Large language model agent: a survey on methodology, applications and challenges. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21460. 20. S. Joshi. A literature review of gen AI agents in financial applications: models and implementations. SSRN. 2025, https://doi.org/10.2139/ssrn.5133985. 21. Z. Kou, H. Yu, J. Luo, J. Peng, X. Li, C. Liu, J. Dai, L. Chen, S. Han, Y. Guo. Automate strategy finding with LLM in quantitative investment. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.06289. 22. J. Lee, N. Stevens, S. C. Han, M. Song. A survey of large language models in finance (FinLLMs). Neural Computing and Applications. Vol. 37, pg. 24853–24867, 2024, https://doi.org/10.48550/arXiv.2402.02315. 23. H. Li, Y. Cao, Y. Yu, S. R. Javaji, Z. Deng, Y. He, Y. Jiang, Z. Zhu, K. Subbalakshmi, G. Xiong, J. Huang, L. Qian, X. Peng, Q. Xie, J. W. Suchow. InvestorBench: a benchmark for financial decision-making tasks with LLM-based agents. arXiv, 2024, https://doi.org/10.48550/arXiv.2412.18174. 24. J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684. 25. K. Chen, H. Ahmad, D. Goel, C. Szabo. 3S-trader: a multi-LLM framework for adaptive stock scoring, strategy, and selection in portfolio optimization. arXiv, 2025, https://doi.org/10.48550/arXiv.2510.17393. 26. T. Zhao, J. Lyu, S. Jones, H. Garber, S. Pasquali, D. Mehta. AlphaAgents: large language model-based multi-agents for equity portfolio constructions. arXiv, 2025, https://doi.org/10.48550/arXiv.2508.11152. 27. T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804. 28. W. Zhang, L. Zhao, H. Xia, S. Sun, J. Sun, M. Qin, X. Li, Y. Zhao, Y. Zhao, X. Cai, L. Zheng, X. Wang, B. An. A multimodal foundation agent for financial trading: tool-augmented, diversified, and generalist. Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 2024, https://doi.org/10.48550/arXiv.2402.18485. 29. N. Li, C. Gao, M. Li, Y. Li, Q. Liao. EconAgent: large language model-empowered agents for simulating macroeconomic activities. arXiv, 2023, https://doi.org/10.48550/arXiv.2310.10436. 30. Y. Li, Y. Yu, H. Li, Z. Chen, K. Khashanah. TradingGPT: multi-agent system with layered memory and distinct characters for enhanced financial trading performance. arXiv, 2023, https://doi.org/10.48550/arXiv.2309.03736. 31. A. Lopez-Lira. Can large language models trade? testing financial theories with LLM agents in market simulations. arXiv, 2025, https://doi.org/10.48550/arXiv.2504.10789. 32. I. Mirzadeh, K. Alizadeh, H. Shahrokhi, O. Tuzel, S. Bengio, M. Farajtabar. GSM-symbolic: understanding the limitations of mathematical reasoning in large language models. International Conference on Learning Representations (ICLR 2025). 2025, https://doi.org/10.48550/arXiv.2410.05229openreview.net/forum?id=AjXkRZIvjB. 12. Y. Zhang, Y. Li, L. Cui, D. Cai, L. Liu, T. Fu, X. Huang, E. Zhao, Y. Zhang, C. Xu, Y. Chen, L. Wang, A. T. Luu, W. Bi, F. Shi, S. Shi. Siren's song in the AI ocean: a survey on hallucination in large language models. Computational Linguistics. 33. H. Naveed, A. U. Khan, S. Qiu, M. Saqib, S. Anwar, M. Usman, N. Akhtar, N. Barnes, A. Mian. A comprehensive overview of large language models. ACM Transactions on Intelligent Systems and Technology. 2023Vol. , https://doi.org/10.48550/arXiv.2307.06435. 34. Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, S. Zohren. A survey of large language models for financial applications: progress, prospects and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.11903. 35. I. Okpala, A. Golgoon, A. R. Kannan. Agentic AI systems applied to tasks in financial services: modeling and model risk management crews. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.05439. 36. R. Sapkota, K. I. Roumeliotis, M. Karkee. AI agents vs. agentic AI: a conceptual taxonomy, applications, and challenges. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10468. 37. T. Takayanagi, K. Izumi, J. Sanz-Cruzado, R. McCreadie, I. Ounis. Are generative AI agents effective personalized financial advisors? arXiv, 2025, https://doi.org/10.48550/arXiv.2504.05862. 38. T. Takayanagi, M. Suzuki, K. Izumi, J. Sanz-Cruzado, R. McCreadie, I. Ounis. FinPersona: an LLM-driven conversational agent for personalized financial advising. Advances in Information Retrieval (ECIR 2025), Lecture Notes in Computer Science. 51, pg. 1373–1418, 2025, https://doi.org/10.1162/coli.a.16. Vol. 13. I. Okpala, A. Golgoon, A. R. Kannan. Agentic AI systems applied to tasks in financial services: modeling and model risk management crews. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.05439. 14. G. Fatouros, K. Metaxas, J. Soldatos, M. Karathanassis. MarketSenseAI 2.0: enhancing stock analysis through LLM agents. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.00415. 15. J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266. 16. C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197. 17. T. Guo, X. Chen, Y. Wang, R. Chang, S. Pei, N. V. Chawla, O. Wiest, X. Zhang. Large language model based multi-agents: a survey of progress and challenges. Proceedings of the 33rd International Joint Conference on Artificial Intelligence (IJCAI 2024), Survey Track. 2024, https://doi.org/10.24963/ijcai.2024/890. 18. X. Han, N. Wang, S. Che, H. Yang, K. Zhang, S. X. Xu. Enhancing investment analysis: optimizing AI-agent collaboration in financial research. Proceedings of the 5th ACM International Conference on AI in Finance. 2024, https://doi.org/10.15576, pg. 13–18, 2025, https://doi.org/10.1007/978-3-031-88720-8_3. 39. P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market. The Journal of Finance. Vol. 62, pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x. 40. A. Vidler, T. Walsh. Shifting power: leveraging LLMs to simulate human aversion in ABMs of bilateral financial exchanges. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.00320. 41. S. Wang, H. Yuan, L. M. Ni, J. Guo. QuantAgent: seeking the holy grail in trading by self-improving large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2402.03755. 42. Y. Yu, H. Li, Z. Chen, Y. Jiang, Y. Li, D. Zhang, R. Liu, J. W. Suchow, K. Khashanah. FinMem: a performance-enhanced LLM trading agent with layered memory and character design. AAAI Symposium Series. 2024, https://doi.org/10.48550/arXiv.2311.13743. 43. H. Yuan, S. Wang, J. Guo. Alpha-GPT 2.0: human-in-the-loop AI for quantitative investment. arXiv, 2024, https://doi.org/10.48550/arXiv.2402.09746. 441145/3677052.3698645. 19. C. Zhang, X. Liu, M. Jin, Z. Zhang, L. Li, Z. Wang, W. Hua, D. Shu, S. Zhu, X. Jin, S. Li, M. Du, Y. Zhang. When AI meets finance (StockAgent): large language model-based stock trading in simulated real-world environments. arXiv, 2024, https://doi.org/10.48550/arXiv.2407.18957. 45.20. Y. Li, Y. Yu, H. Li, Z. Chen, K. Khashanah. TradingGPT: multi-agent system with layered memory and distinct characters for enhanced financial trading performance. arXiv, 2023, https://doi.org/10.48550/arXiv.2309.03736. 21. Y. Yu, H. Li, Z. Chen, Y. Jiang, Y. Li, D. Zhang, R. Liu, J. W. Suchow, K. Khashanah. FinMem: a performance-enhanced LLM trading agent with layered memory and character design. Proceedings of the AAAI Symposium Series. Vol. 3, pg. 595–597, 2024, https://doi.org/10.1609/aaaiss.v3i1.31290. 22. T. Guo, H. Shen, J. Huang, Z. Mao, J. Luo, B. Chen, Z. Chen, L. Liu, B. Xia, X. Liu, Y. Ma, M. Zhang. MASS: multi-agent simulation scaling for portfolio construction. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10278. 23. J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684. 24. K. Chen, H. Ahmad, D. Goel, C. Szabo. 3S-trader: a multi-LLM framework for adaptive stock scoring, strategy, and selection in portfolio optimization. arXiv, 2025, https://doi.org/10.48550/arXiv.2510.17393. 25. T. Zhao, J. Lyu, S. Jones, H. Garber, S. Pasquali, D. Mehta. AlphaAgents: large language model-based multi-agents for equity portfolio constructions. arXiv, 2025, https://doi.org/10.48550/arXiv.2508.11152. 26. T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804. 27. W. Zhang, L. Zhao, H. Xia, S. Sun, J. Sun, M. Qin, X. Li, Y. Zhao, Y. Zhao, X. Cai, L. Zheng, X. Wang, B. An. A multimodal foundation agent for financial trading: tool-augmented, diversified, and generalist. Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 2024, https://doi.org/10.1145/3637528.3671801. 28. P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market. The Journal of Finance. Vol. 62, pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x. 29. J. Lee, N. Stevens, S. C. Han, M. Song. A survey of large language models in finance (FinLLMs). Neural Computing and Applications. Vol. 37, pg. 24853–24867, 2025, https://doi.org/10.1007/s00521-024-10495-6. 30. S. Wang, H. Yuan, L. M. Ni, J. Guo. QuantAgent: seeking holy grail in trading by self-improving large language model. arXiv, 2024, https://doi.org/10.48550/arXiv.2402.03755. 31. K. Anjum, M. A. Arshad, K. Hayawi, E. Polyzos, A. Tariq, M. A. Serhani, L. Batool, B. Lund, N. R. Mannuru, R. V. K. Bevara, T. Mahbub, M. Z. Akram, S. Shahriar. Domain specific benchmarks for evaluating multimodal large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2506.12958. 32. H. Li, Y. Cao, Y. Yu, S. R. Javaji, Z. Deng, Y. He, Y. Jiang, Z. Zhu, K. Subbalakshmi, G. Xiong, J. Huang, L. Qian, X. Peng, Q. Xie, J. W. Suchow. InvestorBench: a benchmark for financial decision-making tasks with LLM-based agents. Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025). pg. 2509–2525, 2025, https://doi.org/10.18653/v1/2025.acl-long.126. Y. Zhang, Y. Li, L. Cui, D. Cai, L. Liu, T. Fu, X. Huang, E. Zhao, Y. Zhang, C. Xu, Y. Chen, L. Wang, A. T. Luu, W. Bi, F. Shi, S. Shi. Siren's song in the AI ocean: a survey on hallucination in large language models. Computational Linguistics. 2025, https://doi.org/10.48550/arXiv.2309.01219.
+p25  Delete             (the 2× rule)
+p25  Insert             — a ratio we present as a working hypothesis consistent with the tested grid —
+p25  Insert             Data and Code Availability To support full reproducibility, the following materials are made publicly available at [repository URL] upon acceptance: the news-relevance screening prompt; the Stage One and Stage Two prompts; the unfiltered single-pass and Ranked baseline prompts; the complete list of evaluation windows; the per-cell run outputs, including the selected tickers, weights, and decision dates for every run; and the analysis scripts, including the paired-difference statistics, the risk-metric reconstruction, and the benchmark-reconstruction code. News articles were obtained from The New York Times and financial reports from Alpha Vantage, each under its provider’s terms of use, and neither corpus is redistributed; the retrieval queries, date windows, and timestamp conventions needed to reconstruct the corpora are documented in the Methods and Supplementary Information.
+p25  ParagraphProperty  References
 p25  Delete             1
+p26  ParagraphProperty  11. Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, S. Zohren. A survey of large language models for financial applications: progress, prospects and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.11903. 2. S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379. . S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379. 2. K. Anjum, M. A. Arshad, K. Hayawi, E. Polyzos, A. Tariq, M. A. Serhani, L. Batool, B. Lund, N. R. Mannuru, R. V. K. Bevara, T. Mahbub, M. Z. Akram, S. Shahriar. Domain specific benchmarks for evaluating multimodal large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2506.12958. 3. A. Lopez-Lira, Y. Tang. Can ChatGPT forecast stock price movements? return predictability and large language models. SSRN. 2023, https://doi.org/10.2139/ssrn.4412788. 4. Y. Xiao, E. Sun, D. Luo, W. Wang. TradingAgents: multi-agents LLM financial trading framework. arXiv, 2024, https://doi.org/10.48550/arXiv.2412.20138. 5. H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361.
 p25  Insert             1.
 p25  MovedTo            Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, S. Zohren. A survey of large language models for financial applications: progress, prospects and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.11903.
-p25  Insert             2
-p25  MovedTo            . S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379.
-p25  MovedFrom          . S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379.
-p25  Delete             2.
-p25  MovedFrom          K. Anjum, M. A. Arshad, K. Hayawi, E. Polyzos, A. Tariq, M. A. Serhani, L. Batool, B. Lund, N. R. Mannuru, R. V. K. Bevara, T. Mahbub, M. Z. Akram, S. Shahriar. Domain specific benchmarks for evaluating multimodal large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2506.12958.
-p25  Property           SSRN.
-p25  MovedTo            H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361.
-p25  MovedFrom          D. Blitz, M. X. Hanauer, T. Hoogteijling, C. Howard. The term structure of machine learning alpha. The Journal of Financial Data Science. Vol. 5, pg.
-p25  Property           The Journal of Financial Data Science.
-p25  Property           5
-p25  Delete             40–58, 2023, https://doi.org/10.2139/ssrn.4474637.
-p25  MovedTo            D. Blitz, M. X. Hanauer, T. Hoogteijling, C. Howard. The term structure of machine learning alpha. The Journal of Financial Data Science. Vol. 5, pg.
-p25  Property           The Journal of Financial Data Science.
-p25  Property           5
-p25  Insert             40–65, 2023, https://doi.org/10.3905/jfds.2023.1.135. 8
-p25  MovedFrom          B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422.
-p25  Delete             8.
-p25  MovedFrom          J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266.
-p25  Delete             9
+p25  Property           Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, S. Zohren. A survey of large language models for financial applications: progress, prospects and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.11903.
+p26  Insert             2
+p26  MovedTo            . S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379.
+p26  Property           . S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379.
+p26  MovedFrom          . S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379.
+p26  Property           . S. An, Q. Li, J. Lu, D. Yin, X. Sun. FinVerse: an autonomous agent system for versatile financial analysis. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.06379.
+p26  Delete             2.
+p26  MovedFrom          K. Anjum, M. A. Arshad, K. Hayawi, E. Polyzos, A. Tariq, M. A. Serhani, L. Batool, B. Lund, N. R. Mannuru, R. V. K. Bevara, T. Mahbub, M. Z. Akram, S. Shahriar. Domain specific benchmarks for evaluating multimodal large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2506.12958.
+p26  Property           K. Anjum, M. A. Arshad, K. Hayawi, E. Polyzos, A. Tariq, M. A. Serhani, L. Batool, B. Lund, N. R. Mannuru, R. V. K. Bevara, T. Mahbub, M. Z. Akram, S. Shahriar. Domain specific benchmarks for evaluating multimodal large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2506.12958.
+p26  Property           3. A. Lopez-Lira, Y. Tang. Can ChatGPT forecast stock price movements? return predictability and large language models.
+p26  Property           SSRN.
+p26  Property           2023, https://doi.org/10.2139/ssrn.4412788.
+p26  Property           4. Y. Xiao, E. Sun, D. Luo, W. Wang. TradingAgents: multi-agents LLM financial trading framework. arXiv, 2024, https://doi.org/10.48550/arXiv.2412.20138.
+p26  Property           5. H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361.
+p26  MovedTo            H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361.
+p26  MovedFrom          D. Blitz, M. X. Hanauer, T. Hoogteijling, C. Howard. The term structure of machine learning alpha. The Journal of Financial Data Science. Vol. 5, pg.
+p26  Property           D. Blitz, M. X. Hanauer, T. Hoogteijling, C. Howard. The term structure of machine learning alpha.
+p26  Property           The Journal of Financial Data Science.
+p26  Property           Vol.
+p26  Property           5
+p26  Property           , pg.
+p26  Delete             40–58, 2023, https://doi.org/10.2139/ssrn.4474637.
+p26  Property           6. W. W. Li, H. Kim, M. Cucuringu, T. Ma. Can LLM-based financial investing strategies outperform the market in the long run? arXiv, 2025, https://doi.org/10.48550/arXiv.2505.07078.
+p26  ParagraphProperty  6. W. W. Li, H. Kim, M. Cucuringu, T. Ma. Can LLM-based financial investing strategies outperform the market in the long run? arXiv, 2025, https://doi.org/10.48550/arXiv.2505.07078.
+p26  Property           7. D. Blitz, M. X. Hanauer, T. Hoogteijling, C. Howard. The term structure of machine learning alpha.
+p26  MovedTo            D. Blitz, M. X. Hanauer, T. Hoogteijling, C. Howard. The term structure of machine learning alpha. The Journal of Financial Data Science. Vol. 5, pg.
+p26  Property           The Journal of Financial Data Science.
+p26  Property           Vol.
+p26  Property           5
+p26  Property           , pg.
+p26  Insert             40–65, 2023, https://doi.org/10.3905/jfds.2023.1.135. 8
+p26  ParagraphProperty  8B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422. 8. J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266. 9. G. Lu, S. B. Larcher, T. Tran. Hybrid long document summarization using C2F-FAR and ChatGPT: a practical study. arXiv, 2023, https://doi.org/10.48550/arXiv.2306.01169.
+p26  MovedFrom          B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422.
+p26  Property           B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422.
+p26  Delete             8.
+p26  MovedFrom          J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266.
+p26  Property           J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266.
+p26  Delete             9
+p26  Property           . G. Lu, S. B. Larcher, T. Tran. Hybrid long document summarization using C2F-FAR and ChatGPT: a practical study. arXiv, 2023, https://doi.org/10.48550/arXiv.2306.01169.
 p26  Delete             10.
 p26  Insert             9.
 p26  MovedTo            H. Naveed, A. U. Khan, S. Qiu, M. Saqib, S. Anwar, M. Usman, N. Akhtar, N. Barnes, A. Mian. A comprehensive overview of large language models. ACM Transactions on Intelligent Systems and Technology.
+p26  Property           H. Naveed, A. U. Khan, S. Qiu, M. Saqib, S. Anwar, M. Usman, N. Akhtar, N. Barnes, A. Mian. A comprehensive overview of large language models.
 p26  Property           ACM Transactions on Intelligent Systems and Technology.
 p26  Insert             Vol. 16, no. 5, 2025, https://doi.org/10.1145/3744746. 10.
+p26  ParagraphProperty  10. B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422. 11. C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197. 11. H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361.
 p26  MovedTo            B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422.
+p26  Property           B. Cao, S. Wang, X. Lin, X. Wu, H. Zhang, L. M. Ni, J. Guo. From deep learning to LLMs: a survey of AI in quantitative investment. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21422.
 p26  Insert             11.
 p26  MovedFrom          C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197.
+p26  Property           C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197.
 p26  Delete             11.
 p26  MovedFrom          H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361.
+p26  Property           H. Ding, Y. Li, J. Wang, H. Chen. Large language model agent in financial trading: a survey. arXiv, 2024, https://doi.org/10.48550/arXiv.2408.06361.
 p26  Delete             12. S. Fatemi, Y. Hu. Enhancing financial question answering with a multi-agent reflection framework. Proceedings of the 5th ACM International Conference on AI in Finance. 2024. 13.
+p26  ParagraphProperty  13. G. Fatouros, K. Metaxas, J. Soldatos, M. Karathanassis. MarketSenseAI 2.0: enhancing stock analysis through LLM agents. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.00415.
 p26  MovedFrom          G. Fatouros, K. Metaxas, J. Soldatos, M. Karathanassis. MarketSenseAI 2.0: enhancing stock analysis through LLM agents. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.00415.
+p26  Property           G. Fatouros, K. Metaxas, J. Soldatos, M. Karathanassis. MarketSenseAI 2.0: enhancing stock analysis through LLM agents. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.00415.
 p26  Delete             14. B. Fazlija, M. Ibraimi, A. Forouzandeh, A. Fazlija. Implementing financial regulations using large language models. SSRN. 2024, https://doi.org/10.2139/ssrn.5010694. 15.
+p26  ParagraphProperty  15. T. Guo, H. Shen, J. Huang, Z. Mao, J. Luo, B. Chen, Z. Chen, L. Liu, B. Xia, X. Liu, Y. Ma, M. Zhang. MASS: multi-agent simulation scaling for portfolio construction. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10278.
 p26  MovedFrom          T. Guo, H. Shen, J. Huang, Z. Mao, J. Luo, B. Chen, Z. Chen, L. Liu, B. Xia, X. Liu, Y. Ma, M. Zhang. MASS: multi-agent simulation scaling for portfolio construction. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10278.
+p26  Property           T. Guo, H. Shen, J. Huang, Z. Mao, J. Luo, B. Chen, Z. Chen, L. Liu, B. Xia, X. Liu, Y. Ma, M. Zhang. MASS: multi-agent simulation scaling for portfolio construction. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10278.
 p26  Delete             16.
 p26  MovedFrom          T. Guo, X. Chen, Y. Wang, R. Chang, S. Pei, N. V. Chawla, O. Wiest, X. Zhang. Large language model based multi-agents: a survey of progress and challenges.
+p26  Property           T. Guo, X. Chen, Y. Wang, R. Chang, S. Pei, N. V. Chawla, O. Wiest, X. Zhang. Large language model based multi-agents: a survey of progress and challenges.
 p26  Delete             arXiv, 2024, https://doi.org/10.48550/arXiv.2402.01680. 17.
 p26  MovedFrom          X. Han, N. Wang, S. Che, H. Yang, K. Zhang, S. X. Xu. Enhancing investment analysis: optimizing AI-agent collaboration in financial research. Proceedings of the 5th ACM International Conference on AI in Finance. 2024, https://doi.org/10.
+p26  Property           X. Han, N. Wang, S. Che, H. Yang, K. Zhang, S. X. Xu. Enhancing investment analysis: optimizing AI-agent collaboration in financial research.
 p26  Property           Proceedings of the 5th ACM International Conference on AI in Finance.
-p26  Delete             48550/arXiv.2411.04788. 18. S. Joshi. A comprehensive review of gen AI agents: applications and frameworks in finance, investments and risk domains. International Journal of Innovative Science and Research Technology. 2025. 19. J. Luo, W. Zhang, Y. Yuan, Y. Zhao, J. Yang, Y. Gu, B. Wu, B. Chen, Z. Qiao, Q. Long, R. Tu, X. Luo, W. Ju, Z. Xiao, Y. Wang, M. Xiao, C. Liu, J. Yuan, S. Zhang, Y. Jin, F. Zhang, X. Wu, H. Zhao, D. Tao, P. S. Yu, M. Zhang. Large language model agent: a survey on methodology, applications and challenges. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21460. 20. S. Joshi. A literature review of gen AI agents in financial applications: models and implementations. SSRN. 2025, https://doi.org/10.2139/ssrn.5133985. 21. Z. Kou, H. Yu, J. Luo, J. Peng, X. Li, C. Liu, J. Dai, L. Chen, S. Han, Y. Guo. Automate strategy finding with LLM in quantitative investment. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.06289. 22.
-p26  MovedFrom          J. Lee, N. Stevens, S. C. Han, M. Song. A survey of large language models in finance (FinLLMs). Neural Computing and Applications. Vol. 37, pg.
-p26  Property           Neural Computing and Applications.
-p26  Property           37
-p26  Delete             24853–24867, 2024, https://doi.org/10.48550/arXiv.2402.02315. 23.
-p26  MovedFrom          H. Li, Y. Cao, Y. Yu, S. R. Javaji, Z. Deng, Y. He, Y. Jiang, Z. Zhu, K. Subbalakshmi, G. Xiong, J. Huang, L. Qian, X. Peng, Q. Xie, J. W. Suchow. InvestorBench: a benchmark for financial decision-making tasks with LLM-based agents.
-p26  Delete             arXiv, 2024, https://doi.org/10.48550/arXiv.2412.18174. 24.
-p26  MovedFrom          J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684.
+p26  Property           2024, https://doi.org/10.
+p27  Delete             48550/arXiv.2411.04788. 18. S. Joshi. A comprehensive review of gen AI agents: applications and frameworks in finance, investments and risk domains. International Journal of Innovative Science and Research Technology. 2025. 19. J. Luo, W. Zhang, Y. Yuan, Y. Zhao, J. Yang, Y. Gu, B. Wu, B. Chen, Z. Qiao, Q. Long, R. Tu, X. Luo, W. Ju, Z. Xiao, Y. Wang, M. Xiao, C. Liu, J. Yuan, S. Zhang, Y. Jin, F. Zhang, X. Wu, H. Zhao, D. Tao, P. S. Yu, M. Zhang. Large language model agent: a survey on methodology, applications and challenges. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.21460. 20. S. Joshi. A literature review of gen AI agents in financial applications: models and implementations. SSRN. 2025, https://doi.org/10.2139/ssrn.5133985. 21. Z. Kou, H. Yu, J. Luo, J. Peng, X. Li, C. Liu, J. Dai, L. Chen, S. Han, Y. Guo. Automate strategy finding with LLM in quantitative investment. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.06289. 22.
+p27  MovedFrom          J. Lee, N. Stevens, S. C. Han, M. Song. A survey of large language models in finance (FinLLMs). Neural Computing and Applications. Vol. 37, pg.
+p27  Property           J. Lee, N. Stevens, S. C. Han, M. Song. A survey of large language models in finance (FinLLMs).
+p27  Property           Neural Computing and Applications.
+p27  Property           Vol.
+p27  Property           37
+p27  Property           , pg.
+p27  Delete             24853–24867, 2024, https://doi.org/10.48550/arXiv.2402.02315. 23.
+p27  MovedFrom          H. Li, Y. Cao, Y. Yu, S. R. Javaji, Z. Deng, Y. He, Y. Jiang, Z. Zhu, K. Subbalakshmi, G. Xiong, J. Huang, L. Qian, X. Peng, Q. Xie, J. W. Suchow. InvestorBench: a benchmark for financial decision-making tasks with LLM-based agents.
+p27  Property           H. Li, Y. Cao, Y. Yu, S. R. Javaji, Z. Deng, Y. He, Y. Jiang, Z. Zhu, K. Subbalakshmi, G. Xiong, J. Huang, L. Qian, X. Peng, Q. Xie, J. W. Suchow. InvestorBench: a benchmark for financial decision-making tasks with LLM-based agents.
+p27  Delete             arXiv, 2024, https://doi.org/10.48550/arXiv.2412.18174. 24.
+p27  ParagraphProperty  24. J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684. 25. K. Chen, H. Ahmad, D. Goel, C. Szabo. 3S-trader: a multi-LLM framework for adaptive stock scoring, strategy, and selection in portfolio optimization. arXiv, 2025, https://doi.org/10.48550/arXiv.2510.17393. 26. T. Zhao, J. Lyu, S. Jones, H. Garber, S. Pasquali, D. Mehta. AlphaAgents: large language model-based multi-agents for equity portfolio constructions. arXiv, 2025, https://doi.org/10.48550/arXiv.2508.11152. 27. T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804.
+p27  MovedFrom          J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684.
+p27  Property           J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684.
 p27  Delete             25.
 p27  MovedFrom          K. Chen, H. Ahmad, D. Goel, C. Szabo. 3S-trader: a multi-LLM framework for adaptive stock scoring, strategy, and selection in portfolio optimization. arXiv, 2025, https://doi.org/10.48550/arXiv.2510.17393.
+p27  Property           K. Chen, H. Ahmad, D. Goel, C. Szabo. 3S-trader: a multi-LLM framework for adaptive stock scoring, strategy, and selection in portfolio optimization. arXiv, 2025, https://doi.org/10.48550/arXiv.2510.17393.
 p27  Delete             26.
 p27  MovedFrom          T. Zhao, J. Lyu, S. Jones, H. Garber, S. Pasquali, D. Mehta. AlphaAgents: large language model-based multi-agents for equity portfolio constructions. arXiv, 2025, https://doi.org/10.48550/arXiv.2508.11152.
+p27  Property           T. Zhao, J. Lyu, S. Jones, H. Garber, S. Pasquali, D. Mehta. AlphaAgents: large language model-based multi-agents for equity portfolio constructions. arXiv, 2025, https://doi.org/10.48550/arXiv.2508.11152.
 p27  Delete             27.
 p27  MovedFrom          T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804.
+p27  Property           T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804.
 p27  Delete             28.
 p27  MovedFrom          W. Zhang, L. Zhao, H. Xia, S. Sun, J. Sun, M. Qin, X. Li, Y. Zhao, Y. Zhao, X. Cai, L. Zheng, X. Wang, B. An. A multimodal foundation agent for financial trading: tool-augmented, diversified, and generalist. Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 2024, https://doi.org/10.
+p27  Property           W. Zhang, L. Zhao, H. Xia, S. Sun, J. Sun, M. Qin, X. Li, Y. Zhao, Y. Zhao, X. Cai, L. Zheng, X. Wang, B. An. A multimodal foundation agent for financial trading: tool-augmented, diversified, and generalist.
 p27  Property           Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.
+p27  Property           2024, https://doi.org/10.
 p27  Delete             48550/arXiv.2402.18485. 29. N. Li, C. Gao, M. Li, Y. Li, Q. Liao. EconAgent: large language model-empowered agents for simulating macroeconomic activities. arXiv, 2023, https://doi.org/10.48550/arXiv.2310.10436. 30
+p27  ParagraphProperty  30. Y. Li, Y. Yu, H. Li, Z. Chen, K. Khashanah. TradingGPT: multi-agent system with layered memory and distinct characters for enhanced financial trading performance. arXiv, 2023, https://doi.org/10.48550/arXiv.2309.03736.
 p27  MovedFrom          . Y. Li, Y. Yu, H. Li, Z. Chen, K. Khashanah. TradingGPT: multi-agent system with layered memory and distinct characters for enhanced financial trading performance. arXiv, 2023, https://doi.org/10.48550/arXiv.2309.03736.
+p27  Property           . Y. Li, Y. Yu, H. Li, Z. Chen, K. Khashanah. TradingGPT: multi-agent system with layered memory and distinct characters for enhanced financial trading performance. arXiv, 2023, https://doi.org/10.48550/arXiv.2309.03736.
 p27  Delete             31. A. Lopez-Lira. Can large language models trade? testing financial theories with LLM agents in market simulations. arXiv, 2025, https://doi.org/10.48550/arXiv.2504.10789. 32.
+p27  ParagraphProperty  32. I. Mirzadeh, K. Alizadeh, H. Shahrokhi, O. Tuzel, S. Bengio, M. Farajtabar. GSM-symbolic: understanding the limitations of mathematical reasoning in large language models. International Conference on Learning Representations (ICLR 2025). 2025, https://doi.org/10.48550/arXiv.2410.05229openreview.net/forum?id=AjXkRZIvjB.
+p27  Property           I. Mirzadeh, K. Alizadeh, H. Shahrokhi, O. Tuzel, S. Bengio, M. Farajtabar. GSM-symbolic: understanding the limitations of mathematical reasoning in large language models.
 p27  Property           International Conference on Learning Representations (ICLR 2025).
+p27  Property           2025, https://
 p27  Delete             doi.org/10.48550/arXiv.2410.05229
 p27  Insert             openreview.net/forum?id=AjXkRZIvjB
+p27  Property           .
 p27  Insert             12.
 p27  MovedTo            Y. Zhang, Y. Li, L. Cui, D. Cai, L. Liu, T. Fu, X. Huang, E. Zhao, Y. Zhang, C. Xu, Y. Chen, L. Wang, A. T. Luu, W. Bi, F. Shi, S. Shi. Siren's song in the AI ocean: a survey on hallucination in large language models. Computational Linguistics.
+p27  Property           Y. Zhang, Y. Li, L. Cui, D. Cai, L. Liu, T. Fu, X. Huang, E. Zhao, Y. Zhang, C. Xu, Y. Chen, L. Wang, A. T. Luu, W. Bi, F. Shi, S. Shi. Siren's song in the AI ocean: a survey on hallucination in large language models.
 p27  Property           Computational Linguistics.
 p27  Delete             33.
 p27  MovedFrom          H. Naveed, A. U. Khan, S. Qiu, M. Saqib, S. Anwar, M. Usman, N. Akhtar, N. Barnes, A. Mian. A comprehensive overview of large language models. ACM Transactions on Intelligent Systems and Technology.
+p27  Property           H. Naveed, A. U. Khan, S. Qiu, M. Saqib, S. Anwar, M. Usman, N. Akhtar, N. Barnes, A. Mian. A comprehensive overview of large language models.
 p27  Property           ACM Transactions on Intelligent Systems and Technology.
 p27  Delete             2023
 p27  MovedTo            Vol.
+p27  Property           Vol.
 p27  Delete             , https://doi.org/10.48550/arXiv.2307.06435. 34.
+p27  ParagraphProperty  34. Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, S. Zohren. A survey of large language models for financial applications: progress, prospects and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.11903. 35. I. Okpala, A. Golgoon, A. R. Kannan. Agentic AI systems applied to tasks in financial services: modeling and model risk management crews. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.05439.
 p27  MovedFrom          Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, S. Zohren. A survey of large language models for financial applications: progress, prospects and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.11903.
+p27  Property           Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, S. Zohren. A survey of large language models for financial applications: progress, prospects and challenges. arXiv, 2024, https://doi.org/10.48550/arXiv.2406.11903.
 p27  Delete             35.
 p27  MovedFrom          I. Okpala, A. Golgoon, A. R. Kannan. Agentic AI systems applied to tasks in financial services: modeling and model risk management crews. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.05439.
+p27  Property           I. Okpala, A. Golgoon, A. R. Kannan. Agentic AI systems applied to tasks in financial services: modeling and model risk management crews. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.05439.
 p27  Delete             36. R. Sapkota, K. I. Roumeliotis, M. Karkee. AI agents vs. agentic AI: a conceptual taxonomy, applications, and challenges. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10468. 37. T. Takayanagi, K. Izumi, J. Sanz-Cruzado, R. McCreadie, I. Ounis. Are generative AI agents effective personalized financial advisors? arXiv, 2025, https://doi.org/10.48550/arXiv.2504.05862. 38. T. Takayanagi, M. Suzuki, K. Izumi, J. Sanz-Cruzado, R. McCreadie, I. Ounis. FinPersona: an LLM-driven conversational agent for personalized financial advising. Advances in Information Retrieval (ECIR 2025), Lecture Notes in Computer Science.
 p27  Insert             51, pg. 1373–1418, 2025, https://doi.org/10.1162/coli.a.16.
 p27  MovedFrom          Vol.
+p27  Property           Vol.
+p27  ParagraphProperty  Vol. 13. I. Okpala, A. Golgoon, A. R. Kannan. Agentic AI systems applied to tasks in financial services: modeling and model risk management crews. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.05439. 14. G. Fatouros, K. Metaxas, J. Soldatos, M. Karathanassis. MarketSenseAI 2.0: enhancing stock analysis through LLM agents. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.00415. 15. J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266. 16. C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197.
 p27  Insert             13.
 p27  MovedTo            I. Okpala, A. Golgoon, A. R. Kannan. Agentic AI systems applied to tasks in financial services: modeling and model risk management crews. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.05439.
+p27  Property           I. Okpala, A. Golgoon, A. R. Kannan. Agentic AI systems applied to tasks in financial services: modeling and model risk management crews. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.05439.
 p27  Insert             14.
 p27  MovedTo            G. Fatouros, K. Metaxas, J. Soldatos, M. Karathanassis. MarketSenseAI 2.0: enhancing stock analysis through LLM agents. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.00415.
-p28  Insert             15.
-p28  MovedTo            J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266.
-p28  Insert             16.
-p28  MovedTo            C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197.
-p28  Insert             17.
+p27  Property           G. Fatouros, K. Metaxas, J. Soldatos, M. Karathanassis. MarketSenseAI 2.0: enhancing stock analysis through LLM agents. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.00415.
+p27  Insert             15.
+p27  MovedTo            J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266.
+p27  Property           J. Cheng, P. Chin. AAPM: large language model agent-based asset pricing models. arXiv, 2024, https://doi.org/10.48550/arXiv.2409.17266.
+p27  Insert             16.
+p27  MovedTo            C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197.
+p27  Property           C. Choi, A. Lopez-Lira, Y. Lee, J. Kwon, M. Kim, J. Hwang, M. Ha, C. Kim, J. Ha, S. Yun, J. Kim. Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.19197.
+p27  Insert             17.
 p28  MovedTo            T. Guo, X. Chen, Y. Wang, R. Chang, S. Pei, N. V. Chawla, O. Wiest, X. Zhang. Large language model based multi-agents: a survey of progress and challenges.
+p28  Property           T. Guo, X. Chen, Y. Wang, R. Chang, S. Pei, N. V. Chawla, O. Wiest, X. Zhang. Large language model based multi-agents: a survey of progress and challenges.
 p28  Insert             Proceedings of the 33rd International Joint Conference on Artificial Intelligence (IJCAI 2024), Survey Track. 2024, https://doi.org/10.24963/ijcai.2024/890. 18.
 p28  MovedTo            X. Han, N. Wang, S. Che, H. Yang, K. Zhang, S. X. Xu. Enhancing investment analysis: optimizing AI-agent collaboration in financial research. Proceedings of the 5th ACM International Conference on AI in Finance. 2024, https://doi.org/10.
+p28  Property           X. Han, N. Wang, S. Che, H. Yang, K. Zhang, S. X. Xu. Enhancing investment analysis: optimizing AI-agent collaboration in financial research.
 p28  Property           Proceedings of the 5th ACM International Conference on AI in Finance.
+p28  Property           2024, https://doi.org/10.
 p28  Delete             15576, pg. 13–18, 2025, https://doi.org/10.1007/978-3-031-88720-8_3. 39.
+p28  ParagraphProperty  39. P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market. The Journal of Finance. Vol. 62, pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x.
 p28  MovedFrom          P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market. The Journal of Finance. Vol. 62, pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x.
+p28  Property           P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market.
 p28  Property           The Journal of Finance.
+p28  Property           Vol.
 p28  Property           62
-p28  Delete             40. A. Vidler, T. Walsh. Shifting power: leveraging LLMs to simulate human aversion in ABMs of bilateral financial exchanges. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.00320. 41.
-p28  MovedFrom          S. Wang, H. Yuan, L. M. Ni, J. Guo.
+p28  Property           , pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x.
+p28  Delete             40. A. Vidler, T. Walsh. Shifting power: leveraging LLMs to simulate human aversion in ABMs of bilateral financial exchanges. arXiv, 2025, https://doi.org/10.48550/arXiv.2503.00320. 41
+p28  ParagraphProperty  41. S. Wang, H. Yuan, L. M. Ni, J. Guo. QuantAgent: seeking the holy grail in trading by self-improving large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2402.03755.
+p28  MovedFrom          . S. Wang, H. Yuan, L. M. Ni, J. Guo.
+p28  Property           . S. Wang, H. Yuan, L. M. Ni, J. Guo.
 p28  Delete             QuantAgent: seeking the holy grail in trading by self-improving large language models
 p28  MovedFrom          . arXiv, 2024, https://doi.org/10.48550/arXiv.2402.03755.
+p28  Property           . arXiv, 2024, https://doi.org/10.48550/arXiv.2402.03755.
 p28  Delete             42.
 p28  MovedFrom          Y. Yu, H. Li, Z. Chen, Y. Jiang, Y. Li, D. Zhang, R. Liu, J. W. Suchow, K. Khashanah. FinMem: a performance-enhanced LLM trading agent with layered memory and character design.
+p28  Property           Y. Yu, H. Li, Z. Chen, Y. Jiang, Y. Li, D. Zhang, R. Liu, J. W. Suchow, K. Khashanah. FinMem: a performance-enhanced LLM trading agent with layered memory and character design.
 p28  Delete             AAAI Symposium Series. 2024, https://doi.org/10.48550/arXiv.2311.13743. 43. H. Yuan, S. Wang, J. Guo. Alpha-GPT 2.0: human-in-the-loop AI for quantitative investment. arXiv, 2024, https://doi.org/10.48550/arXiv.2402.09746. 44
 p28  Insert             1145/3677052.3698645. 19
+p28  ParagraphProperty  19. C. Zhang, X. Liu, M. Jin, Z. Zhang, L. Li, Z. Wang, W. Hua, D. Shu, S. Zhu, X. Jin, S. Li, M. Du, Y. Zhang. When AI meets finance (StockAgent): large language model-based stock trading in simulated real-world environments. arXiv, 2024, https://doi.org/10.48550/arXiv.2407.18957. 45.20. Y. Li, Y. Yu, H. Li, Z. Chen, K. Khashanah. TradingGPT: multi-agent system with layered memory and distinct characters for enhanced financial trading performance. arXiv, 2023, https://doi.org/10.48550/arXiv.2309.03736.
+p28  Property           . C. Zhang, X. Liu, M. Jin, Z. Zhang, L. Li, Z. Wang, W. Hua, D. Shu, S. Zhu, X. Jin, S. Li, M. Du, Y. Zhang. When AI meets finance (StockAgent): large language model-based stock trading in simulated real-world environments. arXiv, 2024, https://doi.org/10.48550/arXiv.2407.18957.
 p28  Delete             45.
 p28  Insert             20
 p28  MovedTo            . Y. Li, Y. Yu, H. Li, Z. Chen, K. Khashanah. TradingGPT: multi-agent system with layered memory and distinct characters for enhanced financial trading performance. arXiv, 2023, https://doi.org/10.48550/arXiv.2309.03736.
+p28  Property           . Y. Li, Y. Yu, H. Li, Z. Chen, K. Khashanah. TradingGPT: multi-agent system with layered memory and distinct characters for enhanced financial trading performance. arXiv, 2023, https://doi.org/10.48550/arXiv.2309.03736.
 p28  Insert             21.
 p28  MovedTo            Y. Yu, H. Li, Z. Chen, Y. Jiang, Y. Li, D. Zhang, R. Liu, J. W. Suchow, K. Khashanah. FinMem: a performance-enhanced LLM trading agent with layered memory and character design.
+p28  Property           Y. Yu, H. Li, Z. Chen, Y. Jiang, Y. Li, D. Zhang, R. Liu, J. W. Suchow, K. Khashanah. FinMem: a performance-enhanced LLM trading agent with layered memory and character design.
 p28  Insert             Proceedings of the AAAI Symposium Series. Vol. 3, pg. 595–597, 2024, https://doi.org/10.1609/aaaiss.v3i1.31290. 22.
+p28  ParagraphProperty  22. T. Guo, H. Shen, J. Huang, Z. Mao, J. Luo, B. Chen, Z. Chen, L. Liu, B. Xia, X. Liu, Y. Ma, M. Zhang. MASS: multi-agent simulation scaling for portfolio construction. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10278. 23. J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684. 24. K. Chen, H. Ahmad, D. Goel, C. Szabo. 3S-trader: a multi-LLM framework for adaptive stock scoring, strategy, and selection in portfolio optimization. arXiv, 2025, https://doi.org/10.48550/arXiv.2510.17393. 25. T. Zhao, J. Lyu, S. Jones, H. Garber, S. Pasquali, D. Mehta. AlphaAgents: large language model-based multi-agents for equity portfolio constructions. arXiv, 2025, https://doi.org/10.48550/arXiv.2508.11152. 26. T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804.
 p28  MovedTo            T. Guo, H. Shen, J. Huang, Z. Mao, J. Luo, B. Chen, Z. Chen, L. Liu, B. Xia, X. Liu, Y. Ma, M. Zhang. MASS: multi-agent simulation scaling for portfolio construction. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10278.
+p28  Property           T. Guo, H. Shen, J. Huang, Z. Mao, J. Luo, B. Chen, Z. Chen, L. Liu, B. Xia, X. Liu, Y. Ma, M. Zhang. MASS: multi-agent simulation scaling for portfolio construction. arXiv, 2025, https://doi.org/10.48550/arXiv.2505.10278.
 p28  Insert             23.
 p28  MovedTo            J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684.
+p28  Property           J. Li, J. Zhang, H. Li, Y. Shen. An agent framework for real-time financial information searching with large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2502.15684.
 p28  Insert             24.
 p28  MovedTo            K. Chen, H. Ahmad, D. Goel, C. Szabo. 3S-trader: a multi-LLM framework for adaptive stock scoring, strategy, and selection in portfolio optimization. arXiv, 2025, https://doi.org/10.48550/arXiv.2510.17393.
+p28  Property           K. Chen, H. Ahmad, D. Goel, C. Szabo. 3S-trader: a multi-LLM framework for adaptive stock scoring, strategy, and selection in portfolio optimization. arXiv, 2025, https://doi.org/10.48550/arXiv.2510.17393.
 p28  Insert             25.
 p28  MovedTo            T. Zhao, J. Lyu, S. Jones, H. Garber, S. Pasquali, D. Mehta. AlphaAgents: large language model-based multi-agents for equity portfolio constructions. arXiv, 2025, https://doi.org/10.48550/arXiv.2508.11152.
-p29  Insert             26.
-p29  MovedTo            T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804.
-p29  Insert             27.
-p29  MovedTo            W. Zhang, L. Zhao, H. Xia, S. Sun, J. Sun, M. Qin, X. Li, Y. Zhao, Y. Zhao, X. Cai, L. Zheng, X. Wang, B. An. A multimodal foundation agent for financial trading: tool-augmented, diversified, and generalist. Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 2024, https://doi.org/10.
-p29  Property           Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.
-p29  Insert             1145/3637528.3671801. 28.
-p29  MovedTo            P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market. The Journal of Finance. Vol. 62, pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x.
-p29  Property           The Journal of Finance.
-p29  Property           62
-p29  Insert             29.
-p29  MovedTo            J. Lee, N. Stevens, S. C. Han, M. Song. A survey of large language models in finance (FinLLMs). Neural Computing and Applications. Vol. 37, pg.
-p29  Property           Neural Computing and Applications.
-p29  Property           37
-p29  Insert             24853–24867, 2025, https://doi.org/10.1007/s00521-024-10495-6. 30.
-p29  MovedTo            S. Wang, H. Yuan, L. M. Ni, J. Guo.
-p29  Insert             QuantAgent: seeking holy grail in trading by self-improving large language model
-p29  MovedTo            . arXiv, 2024, https://doi.org/10.48550/arXiv.2402.03755.
-p29  Insert             31.
-p29  MovedTo            K. Anjum, M. A. Arshad, K. Hayawi, E. Polyzos, A. Tariq, M. A. Serhani, L. Batool, B. Lund, N. R. Mannuru, R. V. K. Bevara, T. Mahbub, M. Z. Akram, S. Shahriar. Domain specific benchmarks for evaluating multimodal large language models. arXiv, 2025, https://doi.org/10.48550/arXiv.2506.12958.
-p29  Insert             32.
-p29  MovedTo            H. Li, Y. Cao, Y. Yu, S. R. Javaji, Z. Deng, Y. He, Y. Jiang, Z. Zhu, K. Subbalakshmi, G. Xiong, J. Huang, L. Qian, X. Peng, Q. Xie, J. W. Suchow. InvestorBench: a benchmark for financial decision-making tasks with LLM-based agents.
-p29  Insert             Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025). pg. 2509–2525, 2025, https://doi.org/10.18653/v1/2025.acl-long.126.
-p29  MovedFrom          Y. Zhang, Y. Li, L. Cui, D. Cai, L. Liu, T. Fu, X. Huang, E. Zhao, Y. Zhang, C. Xu, Y. Chen, L. Wang, A. T. Luu, W. Bi, F. Shi, S. Shi. Siren's song in the AI ocean: a survey on hallucination in large language models. Computational Linguistics.
-p29  Property           Computational Linguistics.
-p29  Delete             2025, https://doi.org/10.48550/arXiv.2309.01219.
+p28  Property           T. Zhao, J. Lyu, S. Jones, H. Garber, S. Pasquali, D. Mehta. AlphaAgents: large language model-based multi-agents for equity portfolio constructions. arXiv, 2025, https://doi.org/10.48550/arXiv.2508.11152.
+p28  Insert             26.
+p28  MovedTo            T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804.
+p28  Property           T. Zhou, P. Wang, Y. Wu, H. Yang. FinRobot: AI agent for equity research and valuation with large language models. arXiv, 2024, https://doi.org/10.48550/arXiv.2411.08804.
+p28  Insert             27.
+p28  MovedTo            W. Zhang, L. Zhao, H. Xia, S. Sun, J. Sun, M. Qin, X. Li, Y. Zhao, Y. Zhao, X. Cai, L. Zheng, X. Wang, B. An. A multimodal foundation agent for financial trading: tool-augmented, diversified, and generalist. Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 2024, https://doi.org/10.
+p28  Property           W. Zhang, L. Zhao, H. Xia, S. Sun, J. Sun, M. Qin, X. Li, Y. Zhao, Y. Zhao, X. Cai, L. Zheng, X. Wang, B. An. A multimodal foundation agent for financial trading: tool-augmented, diversified, and generalist.
+p28  Property           Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.
+p28  Property           2024, https://doi.org/10.
+p28  Insert             1145/3637528.3671801. 28.
+p28  ParagraphProperty  28. P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market. The Journal of Finance. Vol. 62, pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x.
+p28  MovedTo            P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market. The Journal of Finance. Vol. 62, pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x.
+p28  Property           P. C. Tetlock. Giving content to investor sentiment: the role of media in the stock market.
+p28  Property           The Journal of Finance.
+p28  Property           Vol.
+p28  Property           62
+p28  Property           , pg. 1139–1168, 2007, https://doi.org/10.1111/j.1540-6261.2007.01232.x.
+p28  Insert             29.
+p28  MovedTo            J. Lee, N. Stevens, S. C. Han, M. Song. A survey of large language models in finance (FinLLMs). Neural Computing and Applications. Vol. 37, pg.
+p28  Property           J. Lee, N. Stevens, S. C. Han, M. Song. A survey of large language models in finance (FinLLMs).
