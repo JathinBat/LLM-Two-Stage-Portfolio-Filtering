@@ -1,0 +1,26 @@
+============================================================
+PERMUTATION ERROR REPORT
+============================================================
+
+Timestamp  : 2026-06-14 18:22:21
+Perm ID    : 837
+Model      : gpt-5.1
+Temperature: 0.4
+Period     : 12 months
+Start date : 2024-10-01
+End date   : 2025-10-01
+Filter     : unfiltered
+Elapsed    : 29s
+
+────────────────────────────────────────────────────────────
+ERROR
+────────────────────────────────────────────────────────────
+RuntimeError: Strategy generation failed: Unified strategy generation failed: [UNFILTERED] Error in single-pass LLM call: JSONDecodeError: Unterminated string starting at: line 189 column 27 (char 17305)
+
+────────────────────────────────────────────────────────────
+TRACEBACK
+────────────────────────────────────────────────────────────
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\Github\ASDRP-LLM-Long-Term-Investment-Strategy\permutation_runner.py", line 640, in _run_one_perm
+    raise RuntimeError(f"Strategy generation failed: {result['error']}")
+RuntimeError: Strategy generation failed: Unified strategy generation failed: [UNFILTERED] Error in single-pass LLM call: JSONDecodeError: Unterminated string starting at: line 189 column 27 (char 17305)

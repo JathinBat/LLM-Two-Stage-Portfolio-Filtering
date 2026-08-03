@@ -1,0 +1,28 @@
+============================================================
+PERMUTATION ERROR REPORT
+============================================================
+
+Timestamp  : 2026-06-15 14:21:15
+Perm ID    : 154
+Model      : gpt-5.1
+Temperature: 0.3
+Period     : 12 months
+Start date : 2024-11-01
+End date   : 2025-11-01
+Filter     : ranked-final
+Elapsed    : 138s
+
+────────────────────────────────────────────────────────────
+ERROR
+────────────────────────────────────────────────────────────
+RuntimeError: Strategy generation failed: Unified strategy generation failed: Error getting company list: RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}} | caused by HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+
+────────────────────────────────────────────────────────────
+TRACEBACK
+────────────────────────────────────────────────────────────
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\Github\ASDRP-LLM-Long-Term-Investment-Strategy\permutation_runner.py", line 640, in _run_one_perm
+    raise RuntimeError(f"Strategy generation failed: {result['error']}")
+RuntimeError: Strategy generation failed: Unified strategy generation failed: Error getting company list: RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}} | caused by HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429

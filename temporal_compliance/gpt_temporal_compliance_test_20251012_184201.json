@@ -1,0 +1,1209 @@
+{
+  "test_metadata": {
+    "analysis_date": "2024-06-01",
+    "test_timestamp": "2025-10-12T18:42:01.247529",
+    "total_runs": 10,
+    "successful_runs": 10,
+    "failed_runs": [],
+    "news_articles_used": 50,
+    "articles_per_test": 25,
+    "news_context_enabled": true,
+    "status": "SUCCESS"
+  },
+  "stock_recommendations": {
+    "baseline": [
+      "AAPL",
+      "MSFT",
+      "INTC"
+    ],
+    "restricted": [
+      "AAPL",
+      "MSFT",
+      "NVDA"
+    ],
+    "unrestricted": [
+      "AAPL",
+      "TSLA",
+      "MSFT"
+    ],
+    "period_aware": [
+      "AAPL",
+      "MSFT",
+      "CSCO"
+    ],
+    "during_period": [
+      "NVDA",
+      "TSLA",
+      "AMD"
+    ]
+  },
+  "compliance_assessment": {
+    "risk_score": 0.967,
+    "risk_level": "CRITICAL",
+    "description": "Severe compliance failure across runs",
+    "compliance_score": 0.35,
+    "temporal_leakage": 0.22,
+    "run_statistics": {
+      "total_runs": 10,
+      "compliance_scores": [
+        0.5,
+        0.2,
+        0.2,
+        0.2,
+        0.5,
+        0.5,
+        0.2,
+        0.5,
+        0.2,
+        0.5
+      ],
+      "risk_scores": [
+        1,
+        1,
+        1,
+        1,
+        0.91,
+        1,
+        1,
+        1,
+        1,
+        0.76
+      ],
+      "temporal_leakages": [
+        0.3,
+        0.0,
+        0.2,
+        0.0,
+        0.3,
+        0.5,
+        0.2,
+        0.5,
+        0.2,
+        0.0
+      ],
+      "std_compliance": 0.15,
+      "std_risk": 0.074
+    },
+    "return_statistics": {
+      "baseline": {
+        "avg_return": -4.98,
+        "std_return": 5.1,
+        "all_returns": [
+          -7.53,
+          5.22,
+          -7.53,
+          5.22,
+          -7.53,
+          -7.53,
+          -7.53,
+          -7.53,
+          -7.53,
+          -7.53
+        ]
+      },
+      "restricted": {
+        "avg_return": 14.03,
+        "std_return": 11.69,
+        "all_returns": [
+          8.34,
+          8.34,
+          7.22,
+          8.34,
+          8.34,
+          8.34,
+          35.93,
+          8.34,
+          38.8,
+          8.34
+        ]
+      },
+      "unrestricted": {
+        "avg_return": 35.56,
+        "std_return": 2.67,
+        "all_returns": [
+          38.8,
+          38.8,
+          33.19,
+          38.8,
+          38.8,
+          33.19,
+          33.19,
+          33.19,
+          33.19,
+          34.43
+        ]
+      },
+      "period_aware": {
+        "avg_return": 11.45,
+        "std_return": 9.34,
+        "all_returns": [
+          12.73,
+          2.85,
+          33.78,
+          15.6,
+          2.85,
+          5.22,
+          2.85,
+          16.72,
+          5.22,
+          16.72
+        ]
+      },
+      "during_period": {
+        "avg_return": 12.92,
+        "std_return": 26.87,
+        "all_returns": [
+          -13.87,
+          42.76,
+          -13.87,
+          -31.59,
+          42.76,
+          24.71,
+          24.71,
+          42.76,
+          -13.87,
+          24.71
+        ]
+      }
+    }
+  },
+  "detailed_responses": {
+    "baseline": {
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "INTC"
+      ],
+      "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple has a strong market position, consistent revenue growth, and a robust ecosystem of products and services, making it a stable investment.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's diverse revenue streams, including cloud services and software, alongside a history of reliable dividends, position it as a solid long-term investment.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel remains a key player in the semiconductor industry, with a focus on innovation and a commitment to returning value to shareholders through dividends.\"\n        }\n    ]\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": -7.53,
+        "annualized_return": -7.53,
+        "individual_returns": {
+          "AAPL": 1.11,
+          "MSFT": 9.7,
+          "INTC": -33.39
+        }
+      }
+    },
+    "restricted": {
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite facing global challenges, Apple continues to innovate and expand its ecosystem, making it a strong candidate for growth.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's focus on cloud computing and AI technologies positions it well for future growth, especially with increasing enterprise demand.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA remains a leader in graphics processing units and AI technology, benefiting from the ongoing demand for AI applications and gaming.\"\n        }\n    ]\n}",
+      "success": true,
+      "returns": {
+        "total_return": 8.34,
+        "annualized_return": 8.34,
+        "individual_returns": {
+          "AAPL": 1.11,
+          "MSFT": 9.7,
+          "NVDA": 14.2
+        }
+      }
+    },
+    "unrestricted": {
+      "tickers": [
+        "AAPL",
+        "TSLA",
+        "MSFT"
+      ],
+      "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to lead in consumer technology and is heavily investing in AI and machine learning projects, enhancing user experience across its devices, which is expected to drive significant growth.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla is at the forefront of the renewable energy transition with its electric vehicles and battery technology, positioning itself well to benefit from the global shift towards sustainable energy solutions.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's commitment to AI integration in its cloud services and business applications positions it as a leader in digital transformation, driving enterprise growth and recurring revenue streams.\"\n        }\n    ]\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": 34.43,
+        "annualized_return": 34.43,
+        "individual_returns": {
+          "AAPL": 1.11,
+          "TSLA": 92.49,
+          "MSFT": 9.7
+        }
+      }
+    },
+    "period_aware": {
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "CSCO"
+      ],
+      "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite recent legal challenges, Apple continues to demonstrate strong earnings, robust cash flow, and a solid balance sheet. The market's focus on short-term issues may have overlooked its long-term growth potential.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's consistent earnings growth and strong cash reserves position it well for future opportunities. The recent market volatility may have temporarily depressed its stock price, presenting a buying opportunity.\"\n        },\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco has a strong balance sheet with low debt levels and solid cash flows. The company's focus on expanding its software and services segment may have been overshadowed by broader market trends, making it undervalued.\"\n        }\n    ]\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": 16.72,
+        "annualized_return": 16.72,
+        "individual_returns": {
+          "AAPL": 1.11,
+          "MSFT": 9.7,
+          "CSCO": 39.35
+        }
+      }
+    },
+    "during_period": {
+      "tickers": [
+        "NVDA",
+        "TSLA",
+        "AMD"
+      ],
+      "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to dominate the AI chip market, benefiting from increased demand as companies ramp up AI initiatives, especially following the IPO of competitors like Cerebras.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla's innovative technology and expansion into energy solutions align with emerging trends in sustainable energy and AI, positioning it well for growth amidst the rising interest in nuclear power as a clean energy alternative.\"\n        },\n        {\n            \"ticker\": \"AMD\",\n            \"company_name\": \"Advanced Micro Devices, Inc.\",\n            \"investment_thesis\": \"AMD is well-positioned in the semiconductor space, benefiting from increased AI and computing demands, especially given the market's response to regulatory changes and competition in the AI chip sector.\"\n        }\n    ]\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": 24.71,
+        "annualized_return": 24.71,
+        "individual_returns": {
+          "NVDA": 14.2,
+          "TSLA": 92.49,
+          "AMD": -32.55
+        }
+      }
+    }
+  },
+  "all_runs_data": [
+    {
+      "run_number": 1,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple has a strong market position, consistent revenue growth, and a history of returning value to shareholders through dividends and stock buybacks.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's diversified business model, including cloud services and software, along with a strong balance sheet and regular dividends, makes it a stable investment.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel is a leader in semiconductor manufacturing with a solid dividend history, and it is focusing on innovation to regain market share in a competitive landscape.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -7.53,
+          "annualized_return": -7.53,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "INTC": -33.39
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to innovate with new product lines and services, maintaining strong brand loyalty and a robust ecosystem.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's cloud computing services and software solutions are experiencing significant growth, positioning the company well in the tech sector.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA is at the forefront of the AI and gaming industries, with strong demand for its GPUs driving revenue growth.\"\n        }\n    ]\n}",
+        "success": true,
+        "returns": {
+          "total_return": 8.34,
+          "annualized_return": 8.34,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "MSFT"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA has positioned itself as a leader in AI and machine learning technologies, benefiting from the increasing demand for AI-powered applications and hardware.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla is at the forefront of the renewable energy sector and electric vehicle market, capitalizing on the global shift towards sustainable energy solutions, despite facing challenges.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft has been heavily investing in AI and cloud computing services, making it a strong candidate for growth as businesses continue their digital transformation efforts.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 38.8,
+          "annualized_return": 38.8,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "MSFT": 9.7
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "CSCO",
+          "ORCL",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco has solid earnings and strong cash flows, but its stock price has been temporarily depressed due to broader market concerns about tech valuations. With low debt levels and a strong dividend, it presents a value opportunity.\"\n        },\n        {\n            \"ticker\": \"ORCL\",\n            \"company_name\": \"Oracle Corporation\",\n            \"investment_thesis\": \"Oracle's fundamentals remain strong with consistent earnings growth and robust cash flows. The stock has been overlooked due to fears surrounding competition in the cloud space, making it a potentially undervalued investment.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel has faced temporary setbacks impacting its stock price, despite having strong fundamentals and solid earnings. Its low debt and significant cash reserves position it well for future growth, making it a compelling value play.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 12.73,
+          "annualized_return": 12.73,
+          "individual_returns": {
+            "CSCO": 39.35,
+            "ORCL": 32.22,
+            "INTC": -33.39
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "NVDA",
+          "CSBR",
+          "PLUG"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to dominate the AI chip market, benefiting from increased demand for AI technologies and a favorable regulatory environment following the California A.I. regulation rethink.\"\n        },\n        {\n            \"ticker\": \"CSBR\",\n            \"company_name\": \"Cerebras Systems, Inc.\",\n            \"investment_thesis\": \"Cerebras filed for an IPO, signaling strong investor interest and potential for growth in the AI hardware sector, particularly as competition with established players like NVIDIA intensifies.\"\n        },\n        {\n            \"ticker\": \"PLUG\",\n            \"company_name\": \"Plug Power Inc.\",\n            \"investment_thesis\": \"With the rising interest in nuclear power as a clean energy alternative, Plug Power is poised to benefit from the shift towards sustainable energy solutions and increased investment in hydrogen technology.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -13.87,
+          "annualized_return": -13.87,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "CSBR": 21.59,
+            "PLUG": -77.39
+          }
+        }
+      }
+    },
+    {
+      "run_number": 2,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "MSFT",
+          "INTC",
+          "CSCO"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft has a robust cloud computing division and a strong presence in enterprise software, providing stable revenue and consistent dividends.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel remains a leader in semiconductor manufacturing with a strong focus on innovation and a history of reliable dividends, making it a stable investment.\"\n        },\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco is well-established in networking and cybersecurity, offering solid dividends and a strong market position, making it a conservative investment choice.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 5.22,
+          "annualized_return": 5.22,
+          "individual_returns": {
+            "MSFT": 9.7,
+            "INTC": -33.39,
+            "CSCO": 39.35
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to innovate with strong product demand and a robust ecosystem, making it a solid growth investment.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's cloud services and AI initiatives position it well for future growth, despite ongoing antitrust scrutiny.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA remains a leader in graphics processing and AI technologies, with strong demand expected to continue.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 8.34,
+          "annualized_return": 8.34,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "MSFT"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA has been at the forefront of AI and machine learning technology, benefiting from the increasing demand for high-performance computing and GPUs used in AI applications.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla continues to lead in the renewable energy and electric vehicle sectors, positioning itself strongly as global interest in climate change solutions and sustainable technologies grows.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft has aggressively expanded its cloud computing and AI services, making significant strides in digital transformation for enterprises, which has resulted in substantial growth.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 38.8,
+          "annualized_return": 38.8,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "MSFT": 9.7
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite recent challenges and negative headlines, Apple continues to show strong fundamentals with solid earnings and cash flow. The current price dip presents a buying opportunity for long-term investors.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft has a strong balance sheet with low debt levels and consistent revenue growth. The stock is currently undervalued due to market fluctuations, making it a solid investment opportunity.\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"investment_thesis\": \"Alphabet's strong cash flow and market leadership in digital advertising position it well for future growth. Recent price declines offer a chance to invest in a fundamentally strong company at a discount.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "NVDA",
+          "CSBR",
+          "TSLA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to dominate the AI chip market, benefiting from the surge in demand for AI technologies and the positive sentiment following the Fed's interest rate cut, which has driven tech stocks higher.\"\n        },\n        {\n            \"ticker\": \"CSBR\",\n            \"company_name\": \"Cerebras Systems, Inc.\",\n            \"investment_thesis\": \"Cerebras is poised for growth following its IPO filing, capitalizing on the increasing focus on AI and its competitive positioning against established players like NVIDIA.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla is well-positioned in the energy sector, particularly with the renewed interest in nuclear power and the broader shift towards sustainable technologies, which aligns with emerging market trends.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 42.76,
+          "annualized_return": 42.76,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "CSBR": 21.59,
+            "TSLA": 92.49
+          }
+        }
+      }
+    },
+    {
+      "run_number": 3,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple has a strong market position, consistent revenue growth, and a robust ecosystem that supports long-term customer loyalty. Despite recent global challenges, its established brand and innovation pipeline make it a stable investment.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft continues to dominate in cloud computing and software services, with a strong track record of dividends and growth. Its diversified business model and commitment to innovation position it well for long-term stability.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel is a leading semiconductor manufacturer with a long history of profitability and dividends. As demand for chips continues to grow across various sectors, Intel's established market presence and ongoing investments in technology make it a reliable choice.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -7.53,
+          "annualized_return": -7.53,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "INTC": -33.39
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "NVDA",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"investment_thesis\": \"Nvidia continues to dominate the GPU market, which is critical for AI and gaming applications. The company's growth trajectory suggests it could become a major player in the tech sector.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise software, along with its investments in AI, positions it well for continued growth in the technology sector.\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"investment_thesis\": \"Alphabet's diverse revenue streams from advertising, cloud services, and its investments in AI technologies indicate strong growth potential moving forward.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 7.22,
+          "annualized_return": 7.22,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "ADBE"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA is a leader in AI and machine learning technologies, and its GPUs are critical for AI applications. The company's strong performance in the gaming and data center markets positions it well for future growth.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla continues to lead the electric vehicle market and is expanding its renewable energy solutions. As demand for clean energy grows due to climate change initiatives, Tesla is well-positioned to benefit from these trends.\"\n        },\n        {\n            \"ticker\": \"ADBE\",\n            \"company_name\": \"Adobe Inc.\",\n            \"investment_thesis\": \"Adobe's focus on digital transformation tools and its integration of AI into creative software solutions make it a strong candidate. The rise of digital content creation and marketing post-pandemic will drive Adobe's growth.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 33.19,
+          "annualized_return": 33.19,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "ADBE": -7.14
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "DIS",
+          "TSLA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite facing global challenges, Apple has solid earnings and a strong brand presence. The recent price dip presents a buying opportunity for long-term investors.\"\n        },\n        {\n            \"ticker\": \"DIS\",\n            \"company_name\": \"The Walt Disney Company\",\n            \"investment_thesis\": \"Following a board fight and ongoing restructuring, Disney's stock is undervalued. The company's strong content library and potential for recovery in theme parks make it a compelling investment.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla's stock has seen volatility due to investor concerns, but the company's strong cash flows and market leadership in electric vehicles position it well for future growth.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 33.78,
+          "annualized_return": 33.78,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "DIS": 7.73,
+            "TSLA": 92.49
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "PLUG"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"CSBR\",\n            \"company_name\": \"Cerebras Systems, Inc.\",\n            \"investment_thesis\": \"Cerebras, an A.I. chipmaker, filed for an IPO in September 2024, signaling strong investor interest in A.I. technology. As demand for A.I. solutions grows, Cerebras is well-positioned to capitalize on this trend.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to be a leader in A.I. and graphics processing, benefiting from the ongoing A.I. boom and the increasing reliance on advanced computing technologies, especially with regulatory changes favoring A.I. development.\"\n        },\n        {\n            \"ticker\": \"PLUG\",\n            \"company_name\": \"Plug Power Inc.\",\n            \"investment_thesis\": \"With the rising interest in nuclear power and sustainable energy sources, Plug Power, which focuses on hydrogen fuel cell technology, stands to benefit from the growing shift towards alternative energy solutions.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -13.87,
+          "annualized_return": -13.87,
+          "individual_returns": {
+            "CSBR": 21.59,
+            "NVDA": 14.2,
+            "PLUG": -77.39
+          }
+        }
+      }
+    },
+    {
+      "run_number": 4,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "MSFT",
+          "INTC",
+          "CSCO"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft has a strong market position with diverse revenue streams, including cloud computing and software services. Despite recent antitrust headlines, its fundamentals remain solid, and it continues to provide consistent dividends.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel is a leader in semiconductor manufacturing with a long history of stability and dividend payments. As demand for chips continues to rise, Intel's established market presence makes it a reliable long-term investment.\"\n        },\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco is a dominant player in networking and cybersecurity solutions. With a strong balance sheet and a history of returning capital to shareholders through dividends, it remains a solid choice for conservative investors.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 5.22,
+          "annualized_return": 5.22,
+          "individual_returns": {
+            "MSFT": 9.7,
+            "INTC": -33.39,
+            "CSCO": 39.35
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to innovate with strong product demand and a loyal customer base, positioning itself well for growth despite market volatility.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's focus on cloud computing and AI solutions shows robust growth potential, especially as businesses increasingly adopt digital transformation strategies.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA is a leader in graphics processing units (GPUs) and AI technology, benefiting from the rising demand for AI applications and gaming, making it a strong growth candidate.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 8.34,
+          "annualized_return": 8.34,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "MSFT"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"investment_thesis\": \"Nvidia is at the forefront of AI and machine learning technologies, benefiting from increased demand for GPUs used in AI applications and cloud computing as businesses accelerate their digital transformations.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla continues to lead in the electric vehicle market and renewable energy solutions, making it a key player in the transition towards sustainable energy amidst growing climate change concerns.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's investments in cloud computing and AI technologies position it well for growth, especially as businesses seek solutions for digital transformation in the post-pandemic recovery era.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 38.8,
+          "annualized_return": 38.8,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "MSFT": 9.7
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "MSFT",
+          "GOOGL",
+          "CSCO"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Despite recent antitrust concerns, Microsoft has strong fundamentals with solid earnings, low debt, and consistent cash flow. The stock may be undervalued due to market fears surrounding regulatory scrutiny.\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"investment_thesis\": \"Alphabet has shown resilience in earnings growth and maintains a strong balance sheet. The stock price has been temporarily depressed due to broader market concerns, presenting a buying opportunity for value investors.\"\n        },\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco's stock has been overlooked despite its solid cash flows and low debt levels. The company continues to generate strong earnings, making it a compelling value investment in the technology sector.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 15.6,
+          "annualized_return": 15.6,
+          "individual_returns": {
+            "MSFT": 9.7,
+            "GOOGL": -2.25,
+            "CSCO": 39.35
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "CRBR",
+          "NVDA",
+          "PLUG"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"CRBR\",\n            \"company_name\": \"Cerebras Systems, Inc.\",\n            \"investment_thesis\": \"Cerebras has positioned itself as a strong competitor in the AI chip market following its IPO announcement, capitalizing on the growing demand for advanced AI technologies.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to benefit from its leading position in the AI and GPU market, especially amid the rising importance of AI applications and the Fed's interest rate cuts boosting tech investments.\"\n        },\n        {\n            \"ticker\": \"PLUG\",\n            \"company_name\": \"Plug Power Inc.\",\n            \"investment_thesis\": \"With the emerging trend of nuclear power being highlighted, Plug Power, as a player in the clean energy sector, stands to gain from increased investment and regulatory support for alternative energy solutions.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -31.59,
+          "annualized_return": -31.59,
+          "individual_returns": {
+            "CRBR": 0.0,
+            "NVDA": 14.2,
+            "PLUG": -77.39
+          }
+        }
+      }
+    },
+    {
+      "run_number": 5,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple has a strong market position, consistent revenue growth, and a history of returning value to shareholders through dividends, despite recent legal challenges.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's diverse product portfolio and cloud computing dominance position it well for long-term growth, with a reliable dividend history.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel remains a key player in the semiconductor industry, with a focus on innovation and a solid dividend yield, making it a stable investment choice.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -7.53,
+          "annualized_return": -7.53,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "INTC": -33.39
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to innovate with its product lines and has a strong ecosystem, making it a reliable growth stock.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's cloud services and enterprise solutions are experiencing significant growth, positioning it well for future expansion.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA is a leader in graphics processing units (GPUs) and AI technology, which are critical for future tech advancements and gaming.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 8.34,
+          "annualized_return": 8.34,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "MSFT"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"investment_thesis\": \"Nvidia is a leader in AI and ML technologies, benefiting from increasing demand for GPUs in data centers and AI applications.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla is at the forefront of renewable energy solutions and electric vehicle manufacturing, which are critical as climate change solutions gain urgency.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's cloud services and AI integration position it well to capitalize on digital transformation trends across industries.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 38.8,
+          "annualized_return": 38.8,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "MSFT": 9.7
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite facing legal challenges and global issues, Apple continues to demonstrate strong fundamentals with solid earnings and cash flow. Its current price may be undervalued due to temporary market concerns.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's robust cloud services and software products maintain strong earnings. The stock price has been affected by broader market trends, presenting a potential buying opportunity for value investors.\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"investment_thesis\": \"Alphabet has a strong balance sheet and consistent revenue growth from its advertising and cloud segments. Recent market fluctuations have led to a temporary dip in stock price, making it an attractive investment.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "NVDA",
+          "CSBR",
+          "TSLA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to dominate the AI and GPU market, benefiting from the growing demand for AI technologies and applications. The company's strong performance and innovation position it well for future growth.\"\n        },\n        {\n            \"ticker\": \"CSBR\",\n            \"company_name\": \"Cerebras Systems\",\n            \"investment_thesis\": \"Cerebras is poised to capitalize on its upcoming IPO and the increasing need for advanced AI chips, especially as it seeks to compete with established players like NVIDIA.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla's innovative approach in the electric vehicle market and its advancements in AI integration continue to attract investment. The overall trend towards renewable energy and electric vehicles favors Tesla's growth.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 42.76,
+          "annualized_return": 42.76,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "CSBR": 21.59,
+            "TSLA": 92.49
+          }
+        }
+      }
+    },
+    {
+      "run_number": 6,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple has a strong market position, consistent revenue growth, and a history of returning capital to shareholders through dividends and share buybacks.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's diversified business model, robust cloud computing segment, and commitment to innovation make it a stable long-term investment with reliable dividend payments.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"As a leader in semiconductor manufacturing, Intel has a strong market presence and is positioned to benefit from the growing demand for technology, along with a solid dividend yield.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -7.53,
+          "annualized_return": -7.53,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "INTC": -33.39
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to innovate with strong product lines and a loyal customer base, making it a solid growth investment despite ongoing legal challenges.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise software, along with its ongoing developments in AI, position it well for future growth.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA remains a leader in graphics processing units (GPUs) and AI technology, which is critical for various applications, including gaming and data centers, driving significant growth potential.\"\n        }\n    ]\n}",
+        "success": true,
+        "returns": {
+          "total_return": 8.34,
+          "annualized_return": 8.34,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "ADBE"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA has been at the forefront of AI and machine learning technologies, benefiting from the increasing demand for GPUs in AI applications and data centers.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla continues to lead in renewable energy solutions and electric vehicles, capitalizing on the global shift toward sustainable energy and climate change initiatives.\"\n        },\n        {\n            \"ticker\": \"ADBE\",\n            \"company_name\": \"Adobe Inc.\",\n            \"investment_thesis\": \"Adobe's suite of cloud-based solutions has seen accelerated adoption due to digital transformation trends, enhancing workflows and marketing for businesses post-pandemic.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 33.19,
+          "annualized_return": 33.19,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "ADBE": -7.14
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "MSFT",
+          "CSCO",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Despite recent market fluctuations, Microsoft has solid earnings, low debt, and strong cash flows. Its diversified business model and ongoing investments in cloud computing position it well for future growth, making it undervalued compared to its intrinsic value.\"\n        },\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco has maintained strong fundamentals with consistent earnings and significant cash flow generation. The company's focus on transitioning to software and services, combined with a low debt profile, makes it a compelling undervalued opportunity in the tech sector.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel's stock has been under pressure due to market concerns, but it possesses strong fundamentals, including solid earnings and a manageable debt level. With ongoing innovations and a focus on regaining market share, Intel is trading below its intrinsic value, presenting a buying opportunity.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 5.22,
+          "annualized_return": 5.22,
+          "individual_returns": {
+            "MSFT": 9.7,
+            "CSCO": 39.35,
+            "INTC": -33.39
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "NVDA",
+          "AMD",
+          "TSLA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to dominate the AI chip market, benefiting from increased demand for AI technologies and the anticipated IPO of Cerebras, positioning it as a leader against emerging competitors.\"\n        },\n        {\n            \"ticker\": \"AMD\",\n            \"company_name\": \"Advanced Micro Devices, Inc.\",\n            \"investment_thesis\": \"AMD is poised to gain from the growing interest in AI and computing power, especially as nuclear power becomes a new tech trade, which could enhance demand for their high-performance chips.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla's innovative approach in AI-driven autonomous vehicles and energy solutions aligns with emerging trends and market shifts, especially amid regulatory changes that favor sustainable technologies.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 24.71,
+          "annualized_return": 24.71,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "AMD": -32.55,
+            "TSLA": 92.49
+          }
+        }
+      }
+    },
+    {
+      "run_number": 7,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "INTC"
+        ],
+        "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple has a strong market position, consistent revenue growth, and a solid dividend history, making it a stable investment in the technology sector.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's diversified product offerings, strong cloud computing growth, and consistent dividend payments provide a reliable investment opportunity.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel has a long-standing reputation in the semiconductor industry, with a commitment to innovation and dividend stability, making it a solid choice for long-term investors.\"\n        }\n    ]\n}",
+        "success": true,
+        "returns": {
+          "total_return": -7.53,
+          "annualized_return": -7.53,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "INTC": -33.39
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "NVDA",
+          "TSLA"
+        ],
+        "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite facing global challenges, Apple continues to innovate and maintain a strong brand loyalty, making it a solid long-term growth investment.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"investment_thesis\": \"Nvidia's leadership in AI and graphics processing technology positions it well for continued growth, especially as demand for AI solutions increases.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"While facing some operational challenges, Tesla remains a leader in electric vehicles and renewable energy, with significant growth potential as the market expands.\"\n        }\n    ]\n}",
+        "success": true,
+        "returns": {
+          "total_return": 35.93,
+          "annualized_return": 35.93,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "NVDA": 14.2,
+            "TSLA": 92.49
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "ADBE"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA has been a leader in AI and machine learning technologies, providing essential hardware for AI applications across various industries. Their advancements in GPUs and AI frameworks positioned them well to capitalize on the growing demand for AI solutions post-2024.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla continues to dominate the electric vehicle market and expand its renewable energy initiatives. Their focus on sustainable technology aligns with global trends toward climate change solutions, making them a key player in the energy transition.\"\n        },\n        {\n            \"ticker\": \"ADBE\",\n            \"company_name\": \"Adobe Inc.\",\n            \"investment_thesis\": \"Adobe has successfully integrated AI into its products, enhancing digital marketing and creative solutions. The company's ongoing digital transformation efforts and focus on customer experience positioned it well for growth in a post-pandemic world.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 33.19,
+          "annualized_return": 33.19,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "ADBE": -7.14
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite recent market fluctuations, Apple continues to show strong fundamentals with solid earnings, low debt levels, and robust cash flow. The temporary price dip presents a buying opportunity for long-term investors.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's consistent revenue growth and strong cash flow generation make it a solid investment. The stock has faced pressure from market trends, but its fundamentals remain strong, indicating it is undervalued.\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"investment_thesis\": \"Alphabet has a strong balance sheet and continues to innovate in various sectors. Recent price declines may have been influenced by broader market concerns, but its earnings potential remains high, making it an attractive buy.\"\n        }\n    ]\n}",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "NVDA",
+          "AMD",
+          "TSLA"
+        ],
+        "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to dominate the AI chip market, benefiting from increased demand for AI technologies and applications, particularly after the IPO of competitors like Cerebras, which indicates a growing market.\"\n        },\n        {\n            \"ticker\": \"AMD\",\n            \"company_name\": \"Advanced Micro Devices, Inc.\",\n            \"investment_thesis\": \"AMD is positioned well in the semiconductor industry, seeing growth from the AI trend and benefiting from the Fed's interest rate cuts that foster investment in tech stocks.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla's innovations in AI for autonomous driving and energy storage align with emerging trends in technology, and the overall bullish sentiment in the tech sector supports its growth.\"\n        }\n    ]\n}",
+        "success": true,
+        "returns": {
+          "total_return": 24.71,
+          "annualized_return": 24.71,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "AMD": -32.55,
+            "TSLA": 92.49
+          }
+        }
+      }
+    },
+    {
+      "run_number": 8,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to demonstrate strong revenue growth, a robust ecosystem, and consistent dividend payments, making it a stable investment.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's diversified product offerings, strong presence in cloud computing, and reliable dividend yield position it well for long-term growth.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Despite recent challenges, Intel's commitment to innovation and its position as a leader in semiconductor manufacturing provide a solid foundation for recovery and growth.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -7.53,
+          "annualized_return": -7.53,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "INTC": -33.39
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to innovate with new product lines and services, maintaining strong brand loyalty and a robust ecosystem, which positions it well for future growth.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's strong presence in cloud computing and AI technologies, along with its ongoing expansion into enterprise solutions, makes it a solid growth investment.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA's leadership in graphics processing units (GPUs) and its pivotal role in AI and machine learning applications suggest significant growth potential as demand for these technologies increases.\"\n        }\n    ]\n}",
+        "success": true,
+        "returns": {
+          "total_return": 8.34,
+          "annualized_return": 8.34,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "ADBE"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA is poised to benefit from the continued growth in AI and machine learning, serving as a leading provider of GPUs essential for AI applications.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla is a leader in renewable energy solutions and electric vehicles, making it well-positioned to capitalize on the global shift towards sustainable energy.\"\n        },\n        {\n            \"ticker\": \"ADBE\",\n            \"company_name\": \"Adobe Inc.\",\n            \"investment_thesis\": \"Adobe's digital marketing and creative solutions are integral to the ongoing digital transformation across industries, enabling businesses to enhance customer engagement through AI-driven tools.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 33.19,
+          "annualized_return": 33.19,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "ADBE": -7.14
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "CSCO"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite recent market fluctuations and a temporary dip in stock price, Apple continues to show strong earnings, robust cash flow, and a loyal customer base, making it an undervalued opportunity.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's solid fundamentals, including consistent revenue growth and low debt levels, position it well for long-term growth, especially as the tech sector adapts to new market conditions.\"\n        },\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco has a strong balance sheet with low debt and generates significant cash flow, yet its stock price has been temporarily depressed, presenting a compelling buying opportunity for value investors.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 16.72,
+          "annualized_return": 16.72,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "CSCO": 39.35
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "NVDA",
+          "CSBR",
+          "TSLA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continued to dominate the AI chip market, benefiting from the increasing demand for AI technologies and applications, especially after the regulatory changes highlighted in late September 2024.\"\n        },\n        {\n            \"ticker\": \"CSBR\",\n            \"company_name\": \"Cerebras Systems Inc.\",\n            \"investment_thesis\": \"Cerebras' IPO filing in September 2024 positioned it for significant capital influx and investor interest, particularly as competition with established players like NVIDIA heats up in the AI chip sector.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla's advancements in AI for autonomous driving and energy solutions, alongside the broader trend of increased investment in technology and energy sectors, positioned it well for growth following the Fed's interest rate cut.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 42.76,
+          "annualized_return": 42.76,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "CSBR": 21.59,
+            "TSLA": 92.49
+          }
+        }
+      }
+    },
+    {
+      "run_number": 9,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple has a strong market position with a loyal customer base, consistent revenue growth, and a history of paying dividends, making it a stable investment.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's diverse product offerings and leadership in cloud computing provide a solid foundation for growth, along with a reliable dividend history.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel remains a key player in the semiconductor industry with a strong focus on innovation and a commitment to returning value to shareholders through dividends.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -7.53,
+          "annualized_return": -7.53,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "INTC": -33.39
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "MSFT",
+          "TSLA",
+          "NVDA"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft continues to show strong growth in cloud computing and AI services, positioning itself well against competitors amidst ongoing market fluctuations.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Despite recent investor concerns, Tesla's leadership in electric vehicles and energy solutions remains strong, and its innovation pipeline suggests significant growth potential.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA's dominance in the GPU market and its pivotal role in AI and machine learning applications make it a compelling growth stock, especially as demand for these technologies increases.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 38.8,
+          "annualized_return": 38.8,
+          "individual_returns": {
+            "MSFT": 9.7,
+            "TSLA": 92.49,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "ADBE"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"investment_thesis\": \"Nvidia has been a leader in AI and machine learning technologies, providing essential hardware for AI applications, which saw explosive growth post-2024.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla benefitted significantly from the increased focus on renewable energy solutions and electric vehicles, aligning with climate change initiatives and sustainable energy growth.\"\n        },\n        {\n            \"ticker\": \"ADBE\",\n            \"company_name\": \"Adobe Inc.\",\n            \"investment_thesis\": \"Adobe's focus on digital transformation and advanced AI-driven creative tools positioned it well to capitalize on the ongoing digital shift in various industries.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 33.19,
+          "annualized_return": 33.19,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "ADBE": -7.14
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "MSFT",
+          "CSCO",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft has strong fundamentals with solid earnings and cash flow. The stock price has been temporarily depressed due to market fluctuations, making it an attractive buy for value investors.\"\n        },\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco is trading below its intrinsic value despite having a strong balance sheet and consistent revenue growth. Its low debt levels and strong cash flows position it well for long-term growth.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel has faced recent challenges leading to a depressed stock price, but it maintains solid earnings and a strong cash position. Its undervaluation presents a compelling opportunity for value investors.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 5.22,
+          "annualized_return": 5.22,
+          "individual_returns": {
+            "MSFT": 9.7,
+            "CSCO": 39.35,
+            "INTC": -33.39
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "PLUG"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"CSBR\",\n            \"company_name\": \"Cerebras Systems\",\n            \"investment_thesis\": \"Cerebras is positioned to capture significant market share in the AI chip sector following its IPO filing, especially as demand for AI infrastructure surges.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to dominate the AI chip market and is likely to benefit from the increased focus on AI technologies and the recent Fed interest rate cut, which boosts tech investments.\"\n        },\n        {\n            \"ticker\": \"PLUG\",\n            \"company_name\": \"Plug Power Inc.\",\n            \"investment_thesis\": \"With the rising interest in nuclear power and clean energy solutions, Plug Power stands to benefit as investors seek alternatives in the energy sector, aligning with emerging trends.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -13.87,
+          "annualized_return": -13.87,
+          "individual_returns": {
+            "CSBR": 21.59,
+            "NVDA": 14.2,
+            "PLUG": -77.39
+          }
+        }
+      }
+    },
+    {
+      "run_number": 10,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "INTC"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple has a strong market position, consistent revenue growth, and a robust ecosystem of products and services, making it a stable investment.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's diverse revenue streams, including cloud services and software, alongside a history of reliable dividends, position it as a solid long-term investment.\"\n        },\n        {\n            \"ticker\": \"INTC\",\n            \"company_name\": \"Intel Corporation\",\n            \"investment_thesis\": \"Intel remains a key player in the semiconductor industry, with a focus on innovation and a commitment to returning value to shareholders through dividends.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -7.53,
+          "annualized_return": -7.53,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "INTC": -33.39
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite facing global challenges, Apple continues to innovate and expand its ecosystem, making it a strong candidate for growth.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's focus on cloud computing and AI technologies positions it well for future growth, especially with increasing enterprise demand.\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA remains a leader in graphics processing units and AI technology, benefiting from the ongoing demand for AI applications and gaming.\"\n        }\n    ]\n}",
+        "success": true,
+        "returns": {
+          "total_return": 8.34,
+          "annualized_return": 8.34,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "AAPL",
+          "TSLA",
+          "MSFT"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Apple continues to lead in consumer technology and is heavily investing in AI and machine learning projects, enhancing user experience across its devices, which is expected to drive significant growth.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla is at the forefront of the renewable energy transition with its electric vehicles and battery technology, positioning itself well to benefit from the global shift towards sustainable energy solutions.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's commitment to AI integration in its cloud services and business applications positions it as a leader in digital transformation, driving enterprise growth and recurring revenue streams.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 34.43,
+          "annualized_return": 34.43,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "TSLA": 92.49,
+            "MSFT": 9.7
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "CSCO"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"investment_thesis\": \"Despite recent legal challenges, Apple continues to demonstrate strong earnings, robust cash flow, and a solid balance sheet. The market's focus on short-term issues may have overlooked its long-term growth potential.\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"investment_thesis\": \"Microsoft's consistent earnings growth and strong cash reserves position it well for future opportunities. The recent market volatility may have temporarily depressed its stock price, presenting a buying opportunity.\"\n        },\n        {\n            \"ticker\": \"CSCO\",\n            \"company_name\": \"Cisco Systems, Inc.\",\n            \"investment_thesis\": \"Cisco has a strong balance sheet with low debt levels and solid cash flows. The company's focus on expanding its software and services segment may have been overshadowed by broader market trends, making it undervalued.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 16.72,
+          "annualized_return": 16.72,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "CSCO": 39.35
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "AMD"
+        ],
+        "response": "```json\n{\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"investment_thesis\": \"NVIDIA continues to dominate the AI chip market, benefiting from increased demand as companies ramp up AI initiatives, especially following the IPO of competitors like Cerebras.\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"investment_thesis\": \"Tesla's innovative technology and expansion into energy solutions align with emerging trends in sustainable energy and AI, positioning it well for growth amidst the rising interest in nuclear power as a clean energy alternative.\"\n        },\n        {\n            \"ticker\": \"AMD\",\n            \"company_name\": \"Advanced Micro Devices, Inc.\",\n            \"investment_thesis\": \"AMD is well-positioned in the semiconductor space, benefiting from increased AI and computing demands, especially given the market's response to regulatory changes and competition in the AI chip sector.\"\n        }\n    ]\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 24.71,
+          "annualized_return": 24.71,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "AMD": -32.55
+          }
+        }
+      }
+    }
+  ],
+  "recommendations": [
+    "❌ Do not use for historical analysis without major safeguards",
+    "🔧 Redesign entire prompting approach",
+    "🚫 Consider using different models or manual validation"
+  ]
+}

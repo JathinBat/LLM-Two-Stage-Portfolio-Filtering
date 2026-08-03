@@ -1,0 +1,118 @@
+{
+  "test_metadata": {
+    "analysis_date": "2024-06-01",
+    "test_timestamp": "2025-10-12T17:01:16.303447",
+    "total_runs": 1,
+    "successful_runs": 1,
+    "failed_runs": [],
+    "news_articles_used": 50,
+    "articles_per_test": 25,
+    "news_context_enabled": true,
+    "status": "SUCCESS"
+  },
+  "stock_recommendations": {
+    "baseline": [
+      "AAPL",
+      "MSFT",
+      "GOOGL"
+    ],
+    "restricted": [
+      "AAPL",
+      "MSFT",
+      "GOOGL"
+    ],
+    "unrestricted": [
+      "AAPL",
+      "MSFT",
+      "GOOGL"
+    ]
+  },
+  "compliance_assessment": {
+    "risk_score": 0.0,
+    "risk_level": "LOW",
+    "description": "Good temporal compliance across runs",
+    "compliance_score": 1.0,
+    "temporal_leakage": 0.0,
+    "run_statistics": {
+      "total_runs": 1,
+      "compliance_scores": [
+        1.0
+      ],
+      "risk_scores": [
+        0
+      ],
+      "temporal_leakages": [
+        0.0
+      ],
+      "std_compliance": 0.0,
+      "std_risk": 0.0
+    }
+  },
+  "detailed_responses": {
+    "baseline": {
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "GOOGL"
+      ],
+      "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Growth\", \"AI Development\", \"Emerging Markets\"],\n        \"key_trends\": [\"Increased investment in technology sectors\", \"Shift towards AI and machine learning\", \"Growing interest in Indian markets\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple continues to innovate with its ecosystem of products and services, maintaining a strong competitive moat. The company is well-positioned to benefit from the growing demand for technology and AI integration in consumer electronics, as highlighted by the market's focus on tech growth.\",\n            \"growth_catalysts\": [\"Expansion of AI capabilities in products\", \"Increased services revenue from subscriptions\"],\n            \"risk_factors\": [\"Potential supply chain disruptions\", \"Regulatory scrutiny over privacy and competition\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise solutions, coupled with its aggressive push into AI technologies, makes it a prime candidate for long-term growth. The company's recent investments in AI tools are expected to drive significant revenue growth.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Increased adoption of AI solutions across industries\"],\n            \"risk_factors\": [\"Intense competition in cloud and AI markets\", \"Economic downturn affecting enterprise spending\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$400\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in digital advertising and its investments in AI and cloud computing provide a robust foundation for future growth. The company's focus on AI-driven products aligns with market trends towards automation and enhanced user experiences.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Innovations in AI and machine learning applications\"],\n            \"risk_factors\": [\"Regulatory challenges in multiple jurisdictions\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$300\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong competitive advantages and growth potential.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+      "success": true
+    },
+    "restricted": {
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "GOOGL"
+      ],
+      "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Growth\", \"AI Development\", \"Emerging Markets\"],\n        \"key_trends\": [\"Increased investment in AI\", \"Shift of investment focus from China to India\", \"Rising stock markets despite inflation concerns\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple Inc. continues to innovate with its ecosystem of products and services, maintaining a strong competitive moat. The company's focus on integrating AI into its devices and services aligns with current technological trends, making it a solid long-term investment.\",\n            \"growth_catalysts\": [\"Expansion of AI capabilities in products\", \"Growth in services revenue\"],\n            \"risk_factors\": [\"Increased competition in the tech space\", \"Potential supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$300\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong positioning in cloud computing and AI makes it a key player in the tech sector. The company's continuous investment in AI technologies and its robust enterprise solutions provide a solid foundation for growth.\",\n            \"growth_catalysts\": [\"Rapid growth in Azure cloud services\", \"Integration of AI in enterprise software\"],\n            \"risk_factors\": [\"Regulatory scrutiny on big tech\", \"Market volatility affecting tech stocks\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$400\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in search and advertising, coupled with its investments in AI and cloud computing, positions it well for long-term growth. The company's diverse revenue streams and commitment to innovation provide a strong competitive advantage.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Advancements in AI technologies\"],\n            \"risk_factors\": [\"Ad revenue dependency\", \"Competition from other tech giants\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$2500\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong fundamentals and competitive advantages.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+      "success": true
+    },
+    "unrestricted": {
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "GOOGL"
+      ],
+      "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technological Innovation\", \"Emerging Markets\", \"Sustainability\"],\n        \"key_trends\": [\"AI Integration in Business\", \"Growth in Indian Tech Sector\", \"Shift Towards Renewable Energy\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple Inc. continues to lead in innovation with its strong ecosystem of products and services. The company's commitment to sustainability and reducing its carbon footprint aligns with global trends, making it a strong candidate for long-term investment. Additionally, the anticipated growth in AI technology integration into its products will further enhance its competitive advantage.\",\n            \"growth_catalysts\": [\"Expansion of AI capabilities in devices\", \"Increased services revenue from subscriptions\"],\n            \"risk_factors\": [\"Market saturation in smartphone segment\", \"Supply chain vulnerabilities\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise software, coupled with its investments in AI, positions it well for future growth. The company's focus on sustainability and ethical AI development aligns with ESG trends, making it a favorable long-term investment.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Increased adoption of AI tools in enterprises\"],\n            \"risk_factors\": [\"Intense competition in cloud market\", \"Regulatory scrutiny on tech giants\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in digital advertising and its investments in AI and machine learning technologies present significant growth opportunities. The company's ongoing commitment to sustainability and renewable energy initiatives enhances its appeal to socially conscious investors.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Innovations in AI-driven advertising\"],\n            \"risk_factors\": [\"Regulatory challenges in multiple markets\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$3000\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong competitive advantages and ESG commitments.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+      "success": true
+    }
+  },
+  "all_runs_data": [
+    {
+      "run_number": 1,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Growth\", \"AI Development\", \"Emerging Markets\"],\n        \"key_trends\": [\"Increased investment in technology sectors\", \"Shift towards AI and machine learning\", \"Growing interest in Indian markets\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple continues to innovate with its ecosystem of products and services, maintaining a strong competitive moat. The company is well-positioned to benefit from the growing demand for technology and AI integration in consumer electronics, as highlighted by the market's focus on tech growth.\",\n            \"growth_catalysts\": [\"Expansion of AI capabilities in products\", \"Increased services revenue from subscriptions\"],\n            \"risk_factors\": [\"Potential supply chain disruptions\", \"Regulatory scrutiny over privacy and competition\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise solutions, coupled with its aggressive push into AI technologies, makes it a prime candidate for long-term growth. The company's recent investments in AI tools are expected to drive significant revenue growth.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Increased adoption of AI solutions across industries\"],\n            \"risk_factors\": [\"Intense competition in cloud and AI markets\", \"Economic downturn affecting enterprise spending\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$400\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in digital advertising and its investments in AI and cloud computing provide a robust foundation for future growth. The company's focus on AI-driven products aligns with market trends towards automation and enhanced user experiences.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Innovations in AI and machine learning applications\"],\n            \"risk_factors\": [\"Regulatory challenges in multiple jurisdictions\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$300\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong competitive advantages and growth potential.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Growth\", \"AI Development\", \"Emerging Markets\"],\n        \"key_trends\": [\"Increased investment in AI\", \"Shift of investment focus from China to India\", \"Rising stock markets despite inflation concerns\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple Inc. continues to innovate with its ecosystem of products and services, maintaining a strong competitive moat. The company's focus on integrating AI into its devices and services aligns with current technological trends, making it a solid long-term investment.\",\n            \"growth_catalysts\": [\"Expansion of AI capabilities in products\", \"Growth in services revenue\"],\n            \"risk_factors\": [\"Increased competition in the tech space\", \"Potential supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$300\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong positioning in cloud computing and AI makes it a key player in the tech sector. The company's continuous investment in AI technologies and its robust enterprise solutions provide a solid foundation for growth.\",\n            \"growth_catalysts\": [\"Rapid growth in Azure cloud services\", \"Integration of AI in enterprise software\"],\n            \"risk_factors\": [\"Regulatory scrutiny on big tech\", \"Market volatility affecting tech stocks\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$400\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in search and advertising, coupled with its investments in AI and cloud computing, positions it well for long-term growth. The company's diverse revenue streams and commitment to innovation provide a strong competitive advantage.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Advancements in AI technologies\"],\n            \"risk_factors\": [\"Ad revenue dependency\", \"Competition from other tech giants\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$2500\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong fundamentals and competitive advantages.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true
+      },
+      "unrestricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technological Innovation\", \"Emerging Markets\", \"Sustainability\"],\n        \"key_trends\": [\"AI Integration in Business\", \"Growth in Indian Tech Sector\", \"Shift Towards Renewable Energy\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple Inc. continues to lead in innovation with its strong ecosystem of products and services. The company's commitment to sustainability and reducing its carbon footprint aligns with global trends, making it a strong candidate for long-term investment. Additionally, the anticipated growth in AI technology integration into its products will further enhance its competitive advantage.\",\n            \"growth_catalysts\": [\"Expansion of AI capabilities in devices\", \"Increased services revenue from subscriptions\"],\n            \"risk_factors\": [\"Market saturation in smartphone segment\", \"Supply chain vulnerabilities\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise software, coupled with its investments in AI, positions it well for future growth. The company's focus on sustainability and ethical AI development aligns with ESG trends, making it a favorable long-term investment.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Increased adoption of AI tools in enterprises\"],\n            \"risk_factors\": [\"Intense competition in cloud market\", \"Regulatory scrutiny on tech giants\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in digital advertising and its investments in AI and machine learning technologies present significant growth opportunities. The company's ongoing commitment to sustainability and renewable energy initiatives enhances its appeal to socially conscious investors.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Innovations in AI-driven advertising\"],\n            \"risk_factors\": [\"Regulatory challenges in multiple markets\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$3000\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong competitive advantages and ESG commitments.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true
+      }
+    }
+  ],
+  "recommendations": [
+    "✅ GPT shows good temporal compliance for historical analysis",
+    "💡 Continue using temporal restriction prompts as best practice",
+    "🔍 Monitor occasionally for consistency"
+  ]
+}

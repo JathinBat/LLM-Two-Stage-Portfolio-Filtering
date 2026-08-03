@@ -1,0 +1,26 @@
+============================================================
+PERMUTATION ERROR REPORT
+============================================================
+
+Timestamp  : 2026-06-15 10:52:23
+Perm ID    : 154
+Model      : gpt-5.1
+Temperature: 0.3
+Period     : 12 months
+Start date : 2024-11-01
+End date   : 2025-11-01
+Filter     : ranked-final
+Elapsed    : 34s
+
+────────────────────────────────────────────────────────────
+ERROR
+────────────────────────────────────────────────────────────
+RuntimeError: Strategy generation failed: Unified strategy generation failed: Error getting company list: JSONDecodeError: Unterminated string starting at: line 150 column 27 (char 11388)
+
+────────────────────────────────────────────────────────────
+TRACEBACK
+────────────────────────────────────────────────────────────
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\Github\ASDRP-LLM-Long-Term-Investment-Strategy\permutation_runner.py", line 640, in _run_one_perm
+    raise RuntimeError(f"Strategy generation failed: {result['error']}")
+RuntimeError: Strategy generation failed: Unified strategy generation failed: Error getting company list: JSONDecodeError: Unterminated string starting at: line 150 column 27 (char 11388)

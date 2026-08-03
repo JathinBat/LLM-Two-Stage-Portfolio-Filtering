@@ -1,0 +1,695 @@
+{
+  "test_metadata": {
+    "analysis_date": "2024-06-01",
+    "test_timestamp": "2025-10-12T18:20:38.595402",
+    "total_runs": 5,
+    "successful_runs": 5,
+    "failed_runs": [],
+    "news_articles_used": 50,
+    "articles_per_test": 25,
+    "news_context_enabled": true,
+    "status": "SUCCESS"
+  },
+  "stock_recommendations": {
+    "baseline": [
+      "AAPL",
+      "MSFT",
+      "GOOGL"
+    ],
+    "restricted": [
+      "AAPL",
+      "NVDA",
+      "SPCE"
+    ],
+    "unrestricted": [
+      "NVDA",
+      "TSLA",
+      "AMZN"
+    ],
+    "period_aware": [
+      "AAPL",
+      "MSFT",
+      "GOOGL"
+    ],
+    "during_period": [
+      "RDNT",
+      "TSLA",
+      "NVDA"
+    ]
+  },
+  "compliance_assessment": {
+    "risk_score": 0.998,
+    "risk_level": "CRITICAL",
+    "description": "Severe compliance failure across runs",
+    "compliance_score": 0.22,
+    "temporal_leakage": 0.06,
+    "run_statistics": {
+      "total_runs": 5,
+      "compliance_scores": [
+        0.25,
+        0.2,
+        0.25,
+        0.2,
+        0.2
+      ],
+      "risk_scores": [
+        0.992,
+        1,
+        1,
+        1,
+        1
+      ],
+      "temporal_leakages": [
+        0.05,
+        0.0,
+        0.05,
+        0.0,
+        0.2
+      ],
+      "std_compliance": 0.024,
+      "std_risk": 0.003
+    },
+    "return_statistics": {
+      "baseline": {
+        "avg_return": 2.85,
+        "std_return": 0.0,
+        "all_returns": [
+          2.85,
+          2.85,
+          2.85,
+          2.85,
+          2.85
+        ]
+      },
+      "restricted": {
+        "avg_return": 16.94,
+        "std_return": 23.71,
+        "all_returns": [
+          7.66,
+          35.93,
+          46.8,
+          15.71,
+          -21.4
+        ]
+      },
+      "unrestricted": {
+        "avg_return": 38.6,
+        "std_return": 4.97,
+        "all_returns": [
+          35.93,
+          46.8,
+          38.8,
+          31.68,
+          39.8
+        ]
+      },
+      "period_aware": {
+        "avg_return": 2.85,
+        "std_return": 0.0,
+        "all_returns": [
+          2.85,
+          2.85,
+          2.85,
+          2.85,
+          2.85
+        ]
+      },
+      "during_period": {
+        "avg_return": 22.51,
+        "std_return": 24.73,
+        "all_returns": [
+          8.34,
+          18.97,
+          -11.17,
+          62.15,
+          34.28
+        ]
+      }
+    }
+  },
+  "detailed_responses": {
+    "baseline": {
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "GOOGL"
+      ],
+      "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Resilience\", \"AI Investment Caution\", \"Regulatory Challenges\"],\n        \"key_trends\": [\"Increased scrutiny on tech giants\", \"Continued demand for consumer electronics\", \"Cautious investor sentiment towards AI spending\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges and market scrutiny, Apple maintains a strong market position with a loyal customer base and consistent revenue growth from its ecosystem of products and services. The company's focus on innovation and expansion into new markets, particularly in services, provides a solid foundation for long-term growth.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"New product launches (e.g., AR/VR devices)\"],\n            \"risk_factors\": [\"Regulatory scrutiny from the Justice Department\", \"Supply chain vulnerabilities\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise solutions, along with its strategic investments in AI, position it well for future growth. The company's diversification and steady revenue from subscriptions provide stability.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Increased demand for AI integration in business solutions\"],\n            \"risk_factors\": [\"Intense competition in cloud services\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in online advertising and its investments in AI and other innovative technologies make it a strong long-term investment. Despite facing regulatory pressures, its diverse revenue streams and continuous innovation keep it well-positioned for future growth.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Continued growth in digital advertising\"],\n            \"risk_factors\": [\"Regulatory scrutiny and potential fines\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on large-cap technology stocks with strong fundamentals and growth potential, while maintaining a balanced allocation to mitigate risk.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": 2.85,
+        "annualized_return": 2.85,
+        "individual_returns": {
+          "AAPL": 1.11,
+          "MSFT": 9.7,
+          "GOOGL": -2.25
+        }
+      }
+    },
+    "restricted": {
+      "tickers": [
+        "AAPL",
+        "NVDA",
+        "SPCE"
+      ],
+      "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Space Technology\", \"Consumer Electronics\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Growing interest in space exploration and technology\", \"Ongoing legal challenges for major tech companies\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing legal challenges, Apple continues to innovate and expand its ecosystem, which remains a strong driver for growth. The company's strong brand loyalty and diverse product offerings position it well for future revenue growth.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"Continued innovation in hardware and software\"],\n            \"risk_factors\": [\"Ongoing antitrust lawsuits\", \"Market saturation in smartphone segment\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Nvidia is at the forefront of the AI revolution, with its GPUs being critical for AI applications. The company's strong market position and continuous product innovation make it a compelling growth investment.\",\n            \"growth_catalysts\": [\"Increased demand for AI and machine learning\", \"Expansion into new markets such as automotive and data centers\"],\n            \"risk_factors\": [\"High valuation concerns\", \"Intense competition in the semiconductor space\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$600\"\n        },\n        {\n            \"ticker\": \"SPCE\",\n            \"company_name\": \"Virgin Galactic Holdings, Inc.\",\n            \"sector\": \"Aerospace & Defense\",\n            \"investment_thesis\": \"As a pioneer in the commercial spaceflight industry, Virgin Galactic has significant growth potential as it prepares to launch commercial flights. The increasing interest in space tourism presents a unique investment opportunity.\",\n            \"growth_catalysts\": [\"Successful launch of commercial spaceflights\", \"Growing public interest in space travel\"],\n            \"risk_factors\": [\"Regulatory hurdles\", \"High operational costs and capital requirements\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$50\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong market positions and innovative products.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": -21.4,
+        "annualized_return": -21.4,
+        "individual_returns": {
+          "AAPL": 1.11,
+          "NVDA": 14.2,
+          "SPCE": -79.52
+        }
+      }
+    },
+    "unrestricted": {
+      "tickers": [
+        "NVDA",
+        "TSLA",
+        "AMZN"
+      ],
+      "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"AI Adoption\", \"Digital Transformation\", \"Renewable Energy Growth\"],\n        \"key_trends\": [\"Increased investments in AI\", \"Shift towards sustainable energy\", \"Continued digitalization post-pandemic\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"NVIDIA has established itself as a leader in the AI hardware market, benefiting from the increasing demand for GPUs in AI applications and deep learning. Their strategic investments in data centers and AI technologies position them well for future growth.\",\n            \"growth_catalysts\": [\"Expansion of AI applications\", \"Increased demand for data center solutions\"],\n            \"risk_factors\": [\"Market competition from other chipmakers\", \"Regulatory challenges\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$1,000\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"sector\": \"Automotive / Energy\",\n            \"investment_thesis\": \"Tesla is a pioneer in electric vehicles and renewable energy solutions. As the world shifts towards sustainable energy, Tesla's advancements in battery technology and solar products will drive substantial growth.\",\n            \"growth_catalysts\": [\"Expansion into new markets\", \"Innovations in energy storage and solar technology\"],\n            \"risk_factors\": [\"Supply chain vulnerabilities\", \"Intense competition in the EV market\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 35.0,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"AMZN\",\n            \"company_name\": \"Amazon.com, Inc.\",\n            \"sector\": \"E-commerce / Cloud Computing\",\n            \"investment_thesis\": \"Amazon's strong position in e-commerce and cloud computing (AWS) makes it a robust investment. The increasing digital transformation across industries and the continued growth of online retail will enhance its revenue streams.\",\n            \"growth_catalysts\": [\"Growth of AWS services\", \"Expansion of e-commerce platforms\"],\n            \"risk_factors\": [\"Regulatory scrutiny\", \"Market saturation in e-commerce\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 25.0,\n            \"price_target_10yr\": \"$4,000\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology and renewable energy sectors to capitalize on emerging trends while maintaining a concentrated portfolio in core growth companies.\",\n        \"sector_allocation\": {\n            \"technology\": 60,\n            \"automotive\": 20,\n            \"e-commerce\": 20\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"10-15%\"\n    }\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": 39.8,
+        "annualized_return": 39.8,
+        "individual_returns": {
+          "NVDA": 14.2,
+          "TSLA": 92.49,
+          "AMZN": 12.7
+        }
+      }
+    },
+    "period_aware": {
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "GOOGL"
+      ],
+      "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"technology sector resilience\", \"undervalued growth potential\", \"regulatory impacts\"],\n        \"key_trends\": [\"increased focus on AI investments\", \"market volatility affecting tech valuations\", \"shift towards value investing\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges and market pressures, Apple continues to demonstrate strong earnings and cash flow. The recent news highlights ongoing issues but also points to a resilient brand and customer loyalty, suggesting that the current stock price may not reflect its intrinsic value.\",\n            \"growth_catalysts\": [\"Continued innovation in product lines\", \"Expansion into new markets and services\"],\n            \"risk_factors\": [\"Regulatory scrutiny\", \"Supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong fundamentals, including solid earnings and low debt levels, position it well for recovery. The company is focusing on AI and cloud services, which are expected to drive future growth, making it a strong candidate for value investors.\",\n            \"growth_catalysts\": [\"Growth in cloud computing services\", \"AI integration across products\"],\n            \"risk_factors\": [\"Intense competition in cloud services\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet has seen a decline in stock price due to market concerns over ad spending and regulatory scrutiny. However, its robust cash flow and diverse revenue streams from cloud and YouTube provide a solid foundation for recovery, making it undervalued at current levels.\",\n            \"growth_catalysts\": [\"Expansion of cloud services\", \"Increased ad revenue from new platforms\"],\n            \"risk_factors\": [\"Regulatory pressures\", \"Market competition\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-quality technology companies with strong fundamentals and growth potential, while maintaining a concentrated position in the technology sector.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": 2.85,
+        "annualized_return": 2.85,
+        "individual_returns": {
+          "AAPL": 1.11,
+          "MSFT": 9.7,
+          "GOOGL": -2.25
+        }
+      }
+    },
+    "during_period": {
+      "tickers": [
+        "RDNT",
+        "TSLA",
+        "NVDA"
+      ],
+      "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Emerging Technologies\", \"Social Media Growth\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Growth of social media platforms\", \"Shift towards digital financial advice\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"RDNT\",\n            \"company_name\": \"Reddit, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Reddit has shown strong momentum following its recent IPO, with an impressive 48% rise on its first trading day. The company is tapping into the growing trend of social media engagement and has potential for continued user growth and monetization strategies.\",\n            \"growth_catalysts\": [\"Strong user engagement metrics\", \"Potential for advertising revenue growth\"],\n            \"risk_factors\": [\"Volatility typical for newly public companies\", \"Competition from other social media platforms\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$50\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Tesla remains a leader in electric vehicles and energy solutions, with recent price cuts and product innovations like the Cybertruck generating buzz. The company's strong brand loyalty and ongoing advancements in AI for autonomous driving position it well for future growth.\",\n            \"growth_catalysts\": [\"Expansion into new markets\", \"Innovations in AI and battery technology\"],\n            \"risk_factors\": [\"Regulatory challenges\", \"Market competition from traditional automakers\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"NVIDIA is at the forefront of the AI revolution, providing critical hardware for AI applications. The company's GPUs are in high demand for data centers and AI research, which supports its strong growth trajectory amidst a booming tech sector.\",\n            \"growth_catalysts\": [\"Dominance in GPU market\", \"Increased demand for AI and machine learning applications\"],\n            \"risk_factors\": [\"High dependency on semiconductor supply chains\", \"Potential for market saturation\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$500\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies that are leaders in their respective fields, particularly in AI and social media.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+      "success": true,
+      "returns": {
+        "total_return": 34.28,
+        "annualized_return": 34.28,
+        "individual_returns": {
+          "RDNT": -3.84,
+          "TSLA": 92.49,
+          "NVDA": 14.2
+        }
+      }
+    }
+  },
+  "all_runs_data": [
+    {
+      "run_number": 1,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Regulatory Challenges\", \"Sustainable Growth\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Regulatory scrutiny on tech giants\", \"Shift towards sustainable business practices\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges, Apple's strong brand loyalty, continuous innovation in hardware and software, and robust ecosystem position it well for long-term growth. The recent lawsuits highlight potential risks, but they also provide an opportunity for Apple to strengthen its market position through compliance and adaptation.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"Advancements in AI and augmented reality technologies\"],\n            \"risk_factors\": [\"Regulatory scrutiny may impact operations\", \"Market saturation in smartphone segment\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise software, combined with its investments in AI, makes it a solid choice for long-term growth. The company continues to innovate and expand its market share, despite facing competition and regulatory scrutiny.\",\n            \"growth_catalysts\": [\"Continued growth in Azure cloud services\", \"Integration of AI into existing software products\"],\n            \"risk_factors\": [\"Intensified competition in cloud services\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's diverse revenue streams from advertising, cloud services, and YouTube, along with its commitment to AI development, position it for sustained growth. While facing regulatory pressures, its innovation pipeline and strong market presence provide a buffer against potential downturns.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Increased ad revenue from AI-driven targeting\"],\n            \"risk_factors\": [\"Regulatory scrutiny in multiple markets\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on large-cap technology stocks with strong fundamentals and growth potential. Maintain a balanced allocation to mitigate risks associated with individual companies.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "NVDA",
+          "AAPL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"AI Integration\", \"Social Media Growth\", \"Market Resilience\"],\n        \"key_trends\": [\"Increased demand for AI technologies\", \"Rising interest in social media IPOs\", \"Market optimism despite inflation concerns\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"NVIDIA has been at the forefront of AI technology, with its chips powering many AI applications. The recent surge in demand for AI solutions positions NVIDIA as a key player in the tech sector, especially as companies increasingly rely on AI for their operations.\",\n            \"growth_catalysts\": [\"Expansion of AI applications\", \"New product launches in high-performance computing\"],\n            \"risk_factors\": [\"High valuation concerns\", \"Potential regulatory scrutiny\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$1,000\"\n        },\n        {\n            \"ticker\": \"REDDIT\",\n            \"company_name\": \"Reddit, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Reddit's recent IPO has garnered significant attention, and its unique position as a social media platform catering to niche communities presents strong growth potential. The platform's user engagement and advertising revenue are expected to rise as it capitalizes on its brand.\",\n            \"growth_catalysts\": [\"Increased advertising revenue\", \"Expansion of user base\"],\n            \"risk_factors\": [\"Competition from other social media platforms\", \"User engagement volatility\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 30.0,\n            \"price_target_10yr\": \"$75\"\n        },\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing antitrust scrutiny, Apple continues to innovate and expand its ecosystem. The company's strong brand loyalty and diverse product offerings, including advancements in AI and services, position it well for sustained growth.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"Innovations in hardware and software integration\"],\n            \"risk_factors\": [\"Regulatory challenges\", \"Market saturation in key segments\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 30.0,\n            \"price_target_10yr\": \"$250\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong market positions and innovative products.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 7.66,
+          "annualized_return": 7.66,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "AAPL": 1.11
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "AAPL",
+          "TSLA",
+          "NVDA"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"AI Adoption\", \"Renewable Energy Growth\", \"Digital Transformation\"],\n        \"key_trends\": [\"Increased investment in AI and ML\", \"Shift towards sustainable energy solutions\", \"Continued digital transformation post-pandemic\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges and competitive pressures, Apple continues to innovate with AI-driven features in its products and services. Its strong brand loyalty and ecosystem make it well-positioned for continued growth in the tech sector.\",\n            \"growth_catalysts\": [\"Expansion of AI capabilities in devices\", \"Increased services revenue from subscriptions\"],\n            \"risk_factors\": [\"Regulatory scrutiny\", \"Supply chain issues\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla Inc.\",\n            \"sector\": \"Automotive / Technology\",\n            \"investment_thesis\": \"As a leader in electric vehicles, Tesla is positioned to benefit from the global shift towards renewable energy and sustainable transportation. Their advancements in AI for self-driving technology also enhance their competitive edge.\",\n            \"growth_catalysts\": [\"Increasing demand for electric vehicles\", \"Expansion into solar and battery markets\"],\n            \"risk_factors\": [\"Intensifying competition\", \"Market volatility\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$800\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"sector\": \"Technology / Semiconductors\",\n            \"investment_thesis\": \"NVIDIA is at the forefront of AI and machine learning technologies, powering a wide range of applications from gaming to data centers. The company's strong position in AI hardware and software solutions positions it well for future growth.\",\n            \"growth_catalysts\": [\"Demand for AI and machine learning products\", \"Expansion into data center and automotive markets\"],\n            \"risk_factors\": [\"Cyclical nature of semiconductor industry\", \"Competition from other chipmakers\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$600\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Investing in leading technology companies with strong growth potential and innovative solutions in AI and renewable energy.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 35.93,
+          "annualized_return": 35.93,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "TSLA": 92.49,
+            "NVDA": 14.2
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Sector Volatility\", \"Regulatory Challenges\", \"AI Investment Concerns\"],\n        \"key_trends\": [\"Increased scrutiny on tech giants\", \"Market correction in high-growth tech stocks\", \"Potential for recovery in undervalued tech companies\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing significant regulatory challenges and market volatility, Apple continues to demonstrate strong fundamentals with solid earnings and cash flow. The recent sell-off in tech stocks has created a buying opportunity for long-term investors. Apple's robust ecosystem and brand loyalty position it well to weather current market pressures and capitalize on future growth.\",\n            \"growth_catalysts\": [\"Expansion into new markets\", \"Continued innovation in product lines\", \"Potential recovery in stock price as regulatory fears subside\"],\n            \"risk_factors\": [\"Ongoing regulatory scrutiny\", \"Market competition and innovation risks\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise solutions provides a solid foundation for growth. The recent market corrections have undervalued its stock, despite its consistent earnings and low debt levels. The company's focus on AI and cloud services is expected to drive future revenue growth.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Continued adoption of AI technologies\", \"Strategic acquisitions\"],\n            \"risk_factors\": [\"Increased competition in cloud market\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet remains a leader in digital advertising and has a strong balance sheet with ample cash reserves. Current market fears over AI spending and regulatory scrutiny have led to a temporary decline in stock price, presenting a value investment opportunity. The company's diversification into various tech sectors adds to its resilience.\",\n            \"growth_catalysts\": [\"Expansion in cloud computing\", \"Growth in YouTube and ad revenues\", \"Investments in AI and other technologies\"],\n            \"risk_factors\": [\"Regulatory pressures\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-quality technology companies with strong fundamentals and growth potential, while managing risk through sector concentration.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Emerging Markets\", \"Tech Innovation\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Growth in Indian tech markets\", \"Public interest in tech IPOs\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges, Apple continues to innovate and invest heavily in AI and other technologies, which positions it well for future growth. The company’s strong brand loyalty and ecosystem provide a competitive advantage, and recent market trends suggest a rebound in tech stocks, particularly for established players like Apple.\",\n            \"growth_catalysts\": [\"Continued expansion in AI-related services\", \"Growth in wearables and subscription services\"],\n            \"risk_factors\": [\"Regulatory scrutiny may impact operations\", \"Dependence on iPhone sales\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft’s strong push into cloud computing and AI positions it as a leader in the tech space. The company has consistently demonstrated strong earnings growth, and its Azure platform has become a significant revenue driver. Analysts are bullish on Microsoft due to its innovative capabilities and market positioning.\",\n            \"growth_catalysts\": [\"Expansion of Azure cloud services\", \"Integration of AI across products\"],\n            \"risk_factors\": [\"Competitive pressures from other cloud providers\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.7,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"NVIDIA is at the forefront of the AI revolution with its powerful GPUs that are crucial for AI training and deployment. The company has seen exponential growth in demand for its products, and analysts expect this trend to continue as AI applications expand. NVIDIA's recent earnings reports have consistently exceeded analyst expectations, reinforcing its strong momentum.\",\n            \"growth_catalysts\": [\"Surge in demand for AI and gaming technologies\", \"Strategic partnerships in AI development\"],\n            \"risk_factors\": [\"Volatility in semiconductor markets\", \"Dependence on a few key customers\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$500\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology stocks with strong recent performance and positive trends. Allocate evenly among top-performing companies to manage risk while maximizing potential returns.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 8.34,
+          "annualized_return": 8.34,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "NVDA": 14.2
+          }
+        }
+      }
+    },
+    {
+      "run_number": 2,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Resilience in Technology\", \"AI and Automation Growth\", \"Consumer Electronics Demand\"],\n        \"key_trends\": [\"Increased demand for AI-driven solutions\", \"Shift towards sustainable technology\", \"Continued consumer loyalty in established brands\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple Inc. remains a leader in the technology sector with its strong brand loyalty and continuous innovation in consumer electronics. Despite potential regulatory pressures highlighted in recent news, the company's robust ecosystem and services segment provide a stable revenue stream that can withstand market fluctuations.\",\n            \"growth_catalysts\": [\n                \"Expansion of services revenue through Apple Music, iCloud, and App Store\",\n                \"Continued innovation in hardware with new product launches\"\n            ],\n            \"risk_factors\": [\n                \"Regulatory scrutiny and potential antitrust actions\",\n                \"Dependence on iPhone sales for a significant portion of revenue\"\n            ],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise software, coupled with its advancements in AI technology, positions it well for future growth. The company has shown resilience amidst market volatility and continues to expand its market share across various sectors.\",\n            \"growth_catalysts\": [\n                \"Growth in Azure cloud services\",\n                \"Integration of AI across product offerings\"\n            ],\n            \"risk_factors\": [\n                \"Intense competition in the cloud market\",\n                \"Potential impacts from economic downturns on enterprise spending\"\n            ],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's diverse revenue streams, particularly from advertising and cloud services, provide a strong foundation for growth. The company's investments in AI and machine learning are likely to enhance its product offerings and improve operational efficiencies, making it a solid long-term investment.\",\n            \"growth_catalysts\": [\n                \"Increased ad revenue from digital platforms\",\n                \"Expansion of Google Cloud services\"\n            ],\n            \"risk_factors\": [\n                \"Regulatory challenges in multiple jurisdictions\",\n                \"Dependence on advertising revenue, which can be cyclical\"\n            ],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on leading technology companies with strong market positions and growth potential, ensuring a balanced exposure to different segments within the tech sector.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "AAPL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Chip Manufacturing\", \"Electric Vehicles\"],\n        \"key_trends\": [\"Increased demand for AI technology\", \"Growth in semiconductor industry\", \"Expansion of electric vehicle market\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Nvidia has been at the forefront of the AI revolution, with its GPUs being essential for AI applications. The recent surge in demand for AI capabilities has driven its stock price significantly higher, indicating strong market confidence in its growth potential.\",\n            \"growth_catalysts\": [\"Continued demand for AI and machine learning applications\", \"Expansion into new markets such as automotive and data centers\"],\n            \"risk_factors\": [\"High valuation concerns\", \"Potential regulatory scrutiny related to market dominance\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$800\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Tesla continues to lead the electric vehicle market with innovative technology and strong brand loyalty. Despite recent challenges, including price cuts and recalls, the long-term outlook remains positive as EV adoption accelerates globally.\",\n            \"growth_catalysts\": [\"Expansion into new international markets\", \"Advancements in battery technology and production\"],\n            \"risk_factors\": [\"Market competition from new EV entrants\", \"Regulatory challenges in various markets\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 30.0,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing legal challenges, Apple's robust ecosystem and loyal customer base provide a strong foundation for growth. The company is also expanding its services and wearables segments, which are expected to drive revenue growth.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"Innovation in wearables and health technology\"],\n            \"risk_factors\": [\"Regulatory scrutiny and lawsuits\", \"Dependence on iPhone sales\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 30.0,\n            \"price_target_10yr\": \"$250\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong market positions and innovative products.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 35.93,
+          "annualized_return": 35.93,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "AAPL": 1.11
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "AAPL",
+          "TSLA",
+          "C3AI"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"AI Adoption\", \"Renewable Energy Growth\", \"Digital Transformation\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Growing demand for sustainable energy solutions\", \"Shift towards remote work and digital services post-pandemic\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple is well-positioned to capitalize on the increasing demand for AI-driven applications and services, especially with its continuous innovation in hardware and software integration. The company's robust ecosystem, including the App Store and iCloud services, makes it a leader in digital transformation. The recent focus on sustainability and renewable energy initiatives aligns with growing consumer and regulatory demands for environmentally-friendly products.\",\n            \"growth_catalysts\": [\"Expansion of AI capabilities in devices\", \"Strong growth in services segment including streaming and cloud\"],\n            \"risk_factors\": [\"Intense competition in the tech sector\", \"Potential supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla Inc.\",\n            \"sector\": \"Automotive/Technology\",\n            \"investment_thesis\": \"Tesla continues to lead the electric vehicle market and is expanding its footprint in renewable energy solutions. The growing global push for decarbonization plays to Tesla's strengths in EV production and energy storage technology. The company's investments in AI for autonomous driving and energy management systems position it as a key player in both automotive and energy sectors.\",\n            \"growth_catalysts\": [\"Increase in global EV adoption\", \"Expansion of energy storage solutions\"],\n            \"risk_factors\": [\"Regulatory changes affecting EV incentives\", \"Supply chain volatility especially in battery components\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"C3AI\",\n            \"company_name\": \"C3.ai, Inc.\",\n            \"sector\": \"Software/Technology\",\n            \"investment_thesis\": \"C3.ai specializes in enterprise AI software, providing solutions that help businesses optimize operations and reduce costs. With the accelerating adoption of AI across various industries, C3.ai is positioned to benefit from the growing trend of AI integration in business processes. Their partnerships with major firms enhance their credibility and market reach.\",\n            \"growth_catalysts\": [\"Expansion into new industries\", \"Increased adoption of AI solutions in enterprise settings\"],\n            \"risk_factors\": [\"Dependence on large enterprise clients\", \"Competition from larger tech firms\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$150\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies that leverage AI and sustainability trends. This strategy aims to balance potential high returns with exposure to emerging industries.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 46.8,
+          "annualized_return": 46.8,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "TSLA": 92.49,
+            "C3AI": 0.0
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Resilience\", \"Post-Pandemic Recovery\", \"Inflation Impact\"],\n        \"key_trends\": [\"Increased focus on value stocks\", \"Shift towards sustainable tech\", \"Antitrust scrutiny on major players\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple has consistently demonstrated robust earnings and strong cash flows. Despite recent market volatility and antitrust scrutiny, the company's fundamentals remain strong. The recent news indicates a market correction that has temporarily depressed its stock price, presenting a buying opportunity for value investors.\",\n            \"growth_catalysts\": [\"Continued expansion in services revenue\", \"Innovation in hardware and software ecosystems\"],\n            \"risk_factors\": [\"Ongoing antitrust investigations\", \"Potential supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise solutions offers a solid foundation for growth. The company has been overlooked due to broader market concerns about tech valuations, but its earnings remain strong and cash flows are healthy, making it a compelling value play.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Expansion of AI capabilities across products\"],\n            \"risk_factors\": [\"Increased competition in cloud services\", \"Regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's diverse revenue streams and strong advertising business provide resilience in uncertain markets. Recent price corrections have undervalued the stock, despite its solid earnings and cash flow generation. The company is well-positioned to benefit from the ongoing digital transformation.\",\n            \"growth_catalysts\": [\"Expansion in YouTube and Google Cloud\", \"Continued growth in digital advertising\"],\n            \"risk_factors\": [\"Regulatory scrutiny and potential fines\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-quality technology companies with strong fundamentals and growth potential, while maintaining a concentrated position in the technology sector.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "SNOW"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Innovation\", \"Artificial Intelligence Growth\", \"Emerging Market Trends\"],\n        \"key_trends\": [\"Increased AI Integration\", \"Tech IPO Surge\", \"High Demand for Cloud Services\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple continues to show resilience and innovation in the technology sector, with recent developments in AI and services driving growth. The company's strong brand loyalty and ecosystem provide a solid foundation for sustained revenue growth.\",\n            \"growth_catalysts\": [\"Launch of new AI-driven products\", \"Expansion of services segment including Apple TV and Apple Music\"],\n            \"risk_factors\": [\"Regulatory scrutiny over antitrust issues\", \"Supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's aggressive push into AI and cloud services positions it well for future growth. The company's strong earnings surprises and analyst upgrades reflect confidence in its direction and financial health.\",\n            \"growth_catalysts\": [\"Increased demand for Azure cloud services\", \"AI integration into Office products\"],\n            \"risk_factors\": [\"Intense competition in cloud services\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"SNOW\",\n            \"company_name\": \"Snowflake Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Snowflake is at the forefront of data warehousing solutions and benefits from the growing trend of companies migrating to cloud-based analytics. Its recent IPO success and strong growth metrics make it a compelling investment.\",\n            \"growth_catalysts\": [\"Growing adoption of data analytics in enterprises\", \"Partnerships with major cloud providers like AWS and Azure\"],\n            \"risk_factors\": [\"Dependence on customer retention\", \"Market competition from established players\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$300\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong fundamentals and emerging market trends. Each company plays a distinct role in the tech landscape, mitigating sector-specific risks.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 18.97,
+          "annualized_return": 18.97,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "SNOW": 46.1
+          }
+        }
+      }
+    },
+    {
+      "run_number": 3,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technological Innovation\", \"Regulatory Challenges\", \"Market Resilience\"],\n        \"key_trends\": [\"Increased focus on sustainable technology\", \"Regulatory scrutiny on big tech\", \"Shift towards AI and cloud computing\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple continues to dominate the technology sector with a robust ecosystem of products and services. Despite regulatory challenges, its strong brand loyalty and consistent revenue growth from services make it a stable investment. The increasing focus on privacy and security enhances its competitive advantage.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"Increased adoption of AI technologies\"],\n            \"risk_factors\": [\"Regulatory scrutiny\", \"Supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise solutions, coupled with its growth in AI applications, positions it well for long-term growth. The company's diverse revenue streams from software, cloud, and gaming provide stability.\",\n            \"growth_catalysts\": [\"Continued growth in Azure cloud services\", \"Expansion of AI capabilities across products\"],\n            \"risk_factors\": [\"Intense competition in the cloud space\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in online advertising and its investments in AI and cloud technologies present significant growth opportunities. Despite facing regulatory scrutiny, its diversified business model and innovation in various sectors, including autonomous vehicles and health tech, make it a strong candidate for long-term investment.\",\n            \"growth_catalysts\": [\"Expansion in AI and machine learning\", \"Growth in YouTube and Google Cloud revenues\"],\n            \"risk_factors\": [\"Regulatory pressures\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-cap technology stocks with strong fundamentals and growth potential, while maintaining a concentrated position in the technology sector.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "TSLA"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Social Media IPOs\", \"Electric Vehicles\"],\n        \"key_trends\": [\"Increased interest in AI technologies\", \"Strong performance of recent tech IPOs\", \"Volatility in EV market\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple continues to innovate with its hardware and software ecosystem, maintaining a strong brand loyalty. The ongoing developments in AI and augmented reality are expected to enhance user engagement and drive revenue growth.\",\n            \"growth_catalysts\": [\"Expansion into AI-driven services\", \"Continued growth in wearables and services segment\"],\n            \"risk_factors\": [\"Regulatory scrutiny regarding antitrust issues\", \"Supply chain disruptions affecting product launches\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Tesla remains a leader in the electric vehicle market with strong brand recognition and innovative technology. Despite recent challenges, the company's focus on expanding production capacity and introducing new models positions it well for future growth.\",\n            \"growth_catalysts\": [\"Launch of new vehicle models\", \"Expansion into international markets\"],\n            \"risk_factors\": [\"Intensifying competition in the EV sector\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 7.8,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$400\"\n        },\n        {\n            \"ticker\": \"REDDIT\",\n            \"company_name\": \"Reddit, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"As a newly public company, Reddit has significant potential for growth as it monetizes its large user base. The recent IPO has generated excitement, and the platform's unique community-driven model offers opportunities for advertising revenue.\",\n            \"growth_catalysts\": [\"Increased advertising revenue\", \"Expansion of premium subscription services\"],\n            \"risk_factors\": [\"Dependence on advertising revenue\", \"Competition from other social media platforms\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$50\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong market positions and innovative products.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 46.8,
+          "annualized_return": 46.8,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "TSLA": 92.49
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "MSFT"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Renewable Energy\", \"Digital Transformation\"],\n        \"key_trends\": [\"AI adoption in various sectors\", \"Increased focus on climate change solutions\", \"Continued post-pandemic recovery and digitalization\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"NVIDIA has established itself as a leader in AI hardware and software, benefiting from the increasing demand for AI applications across industries. The company's strong growth in the gaming sector and data center revenue further solidifies its position as a key player in the tech space.\",\n            \"growth_catalysts\": [\"Expanding AI market\", \"Increased demand for GPUs in data centers\"],\n            \"risk_factors\": [\"Market volatility\", \"Competition from other chip manufacturers\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$800\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"sector\": \"Automotive/Technology\",\n            \"investment_thesis\": \"Tesla continues to lead the electric vehicle market while innovating with renewable energy solutions and battery technology. The growing emphasis on sustainability and clean energy positions Tesla favorably for long-term growth.\",\n            \"growth_catalysts\": [\"Expansion into new markets\", \"Innovations in battery technology and energy storage\"],\n            \"risk_factors\": [\"Regulatory challenges\", \"Supply chain disruptions\"],\n            \"confidence_score\": 8.7,\n            \"recommended_allocation\": 35.0,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong presence in cloud computing and enterprise solutions positions it well amid the ongoing digital transformation. The integration of AI into its product offerings enhances its competitive edge in the market.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Increased adoption of AI tools in businesses\"],\n            \"risk_factors\": [\"Intense competition in the cloud space\", \"Potential regulatory scrutiny\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 25.0,\n            \"price_target_10yr\": \"$400\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on technology-driven growth sectors with high potential for future returns while maintaining a concentrated position in leading companies.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"10-15%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 38.8,
+          "annualized_return": 38.8,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "MSFT": 9.7
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"technology undervaluation\", \"regulatory pressures\", \"shifts in consumer behavior\"],\n        \"key_trends\": [\"increased scrutiny on tech giants\", \"growing demand for innovative solutions\", \"market correction in tech valuations\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges and a lawsuit, Apple continues to demonstrate strong earnings and cash flow. Its brand loyalty and ecosystem provide a buffer against market volatility, making it a solid long-term investment.\",\n            \"growth_catalysts\": [\"expansion into new markets\", \"increased services revenue\", \"innovation in product lines\"],\n            \"risk_factors\": [\"regulatory scrutiny\", \"supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise solutions, coupled with its ongoing investments in AI, positions it well for future growth. The recent market correction has created a buying opportunity.\",\n            \"growth_catalysts\": [\"cloud service expansion\", \"AI integration in products\", \"increased enterprise adoption\"],\n            \"risk_factors\": [\"competition in cloud market\", \"economic downturn affecting enterprise spending\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's diverse revenue streams, including advertising, cloud services, and YouTube, provide a robust foundation. The recent regulatory challenges are temporary setbacks that do not diminish its long-term growth potential.\",\n            \"growth_catalysts\": [\"growth in digital advertising\", \"expansion of cloud services\", \"innovation in AI and machine learning\"],\n            \"risk_factors\": [\"regulatory challenges\", \"market competition\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-quality technology companies with strong fundamentals and growth potential, while maintaining a concentrated position in the technology sector.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "NVDA",
+          "META",
+          "SPCE"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Growth\", \"AI Advancements\", \"Start-Up Ecosystem\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Surge in tech IPOs and SPACs\", \"Rising demand for innovative tech solutions\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Nvidia has shown exceptional growth driven by the demand for AI and machine learning technologies. The company's recent performance has been bolstered by its leadership in graphics processing units (GPUs) and AI computing, leading to significant revenue growth and positive earnings surprises.\",\n            \"growth_catalysts\": [\n                \"Continued dominance in AI and machine learning markets\",\n                \"Expansion into new sectors such as automotive and data centers\"\n            ],\n            \"risk_factors\": [\n                \"High competition in the semiconductor space\",\n                \"Potential regulatory scrutiny regarding market dominance\"\n            ],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"META\",\n            \"company_name\": \"Meta Platforms, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite recent volatility, Meta is pivoting towards AI and immersive technologies, which are expected to drive future growth. The company's heavy investment in AI could yield significant returns as the demand for digital advertising and social media engagement continues to rise.\",\n            \"growth_catalysts\": [\n                \"Strategic focus on AI and VR technologies\",\n                \"Strengthening advertising revenue as digital marketing recovers\"\n            ],\n            \"risk_factors\": [\n                \"Continued regulatory challenges\",\n                \"Market saturation in social media platforms\"\n            ],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 30.0,\n            \"price_target_10yr\": \"$500\"\n        },\n        {\n            \"ticker\": \"SPCE\",\n            \"company_name\": \"Virgin Galactic Holdings, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"As a pioneer in the space tourism industry, Virgin Galactic is positioned to capitalize on the emerging space economy. Recent investments and partnerships are expected to accelerate its commercial operations, making it a compelling growth opportunity.\",\n            \"growth_catalysts\": [\n                \"Upcoming commercial spaceflights scheduled for launch\",\n                \"Growing interest in space tourism and exploration\"\n            ],\n            \"risk_factors\": [\n                \"High operational costs and capital requirements\",\n                \"Regulatory hurdles in the aerospace industry\"\n            ],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 30.0,\n            \"price_target_10yr\": \"$100\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong market positions and future potential, while maintaining a concentrated allocation to maximize returns.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -11.17,
+          "annualized_return": -11.17,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "META": 31.8,
+            "SPCE": -79.52
+          }
+        }
+      }
+    },
+    {
+      "run_number": 4,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Resilience\", \"Regulatory Challenges\", \"Consumer Demand for Innovation\"],\n        \"key_trends\": [\"Increasing focus on privacy and security\", \"Shift towards sustainable technology\", \"Growth in AI and cloud services\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges globally, Apple continues to demonstrate strong brand loyalty and robust product ecosystem. Recent articles highlight the company's ability to innovate and adapt, particularly in AI and privacy-focused technologies, which are critical in maintaining its market position.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"Increased demand for wearables and accessories\"],\n            \"risk_factors\": [\"Regulatory scrutiny in multiple jurisdictions\", \"Supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise software continues to drive growth. The company is well-positioned to benefit from the ongoing digital transformation across industries, and its commitment to AI integration in its products adds to its competitive edge.\",\n            \"growth_catalysts\": [\"Azure cloud services expansion\", \"Continued growth in Office 365 subscriptions\"],\n            \"risk_factors\": [\"Intense competition in cloud services\", \"Potential for antitrust actions\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet remains a leader in digital advertising and continues to diversify its revenue streams through cloud services and YouTube. The company's ongoing investments in AI and machine learning are expected to enhance its product offerings and drive future growth.\",\n            \"growth_catalysts\": [\"Growth in Google Cloud\", \"Increased monetization of YouTube\"],\n            \"risk_factors\": [\"Regulatory pressures on advertising practices\", \"Dependence on ad revenue\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$180\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-quality, established technology companies with strong balance sheets and consistent dividend payouts. The strategy emphasizes stability and long-term growth potential.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "NVDA",
+          "AAPL",
+          "META"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Chip Technology\", \"Start-Up Investments\"],\n        \"key_trends\": [\"Increased demand for AI technologies\", \"Rising valuations of tech start-ups\", \"Regulatory scrutiny on major tech companies\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Nvidia is at the forefront of the AI revolution, with its new high-speed processors poised to power a wide range of applications across industries. Despite concerns over its valuation, the demand for AI capabilities continues to grow, making Nvidia a strong candidate for long-term growth.\",\n            \"growth_catalysts\": [\"Launch of new high-speed AI processors\", \"Increasing adoption of AI across various sectors\"],\n            \"risk_factors\": [\"High valuation scrutiny\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$1,000\"\n        },\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple continues to innovate and expand its ecosystem, despite facing antitrust scrutiny. The company's strong brand loyalty and diverse product offerings position it well for sustained growth, especially with its focus on services and wearables.\",\n            \"growth_catalysts\": [\"Expansion of services segment\", \"Continued innovation in hardware\"],\n            \"risk_factors\": [\"Regulatory challenges\", \"Market saturation in key product lines\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 30.0,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"META\",\n            \"company_name\": \"Meta Platforms, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite recent sell-offs, Meta's significant investments in AI and the metaverse position it for future growth. The company's ability to leverage its vast user base for new monetization strategies is a key driver.\",\n            \"growth_catalysts\": [\"Investment in AI technologies\", \"Potential growth in metaverse initiatives\"],\n            \"risk_factors\": [\"High investment costs\", \"Public perception and regulatory scrutiny\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 30.0,\n            \"price_target_10yr\": \"$400\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong fundamentals and market positions.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 15.71,
+          "annualized_return": 15.71,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "AAPL": 1.11,
+            "META": 31.8
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "MSFT",
+          "TSLA",
+          "ADBE"
+        ],
+        "response": "{\n    \"analysis_summary\": {\n        \"market_themes\": [\"AI Adoption\", \"Renewable Energy Growth\", \"Digital Transformation\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Surge in renewable energy companies\", \"Growth in cloud computing and digital services\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft has consistently been at the forefront of AI and digital transformation through its Azure cloud services and AI solutions like Copilot. As businesses globally continue to digitize, Microsoft stands to capture significant market share, driving revenue growth.\",\n            \"growth_catalysts\": [\"Expansion of Azure cloud services\", \"Increased adoption of AI tools across industries\"],\n            \"risk_factors\": [\"Regulatory challenges in the tech sector\", \"Intense competition from other cloud providers\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$400\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"sector\": \"Automotive/Technology\",\n            \"investment_thesis\": \"Tesla's leadership in electric vehicles and energy solutions positions it well to benefit from the global shift towards renewable energy. Its innovations in battery technology and energy storage solutions are critical as demand for green technologies rises.\",\n            \"growth_catalysts\": [\"Expansion of Gigafactories\", \"Rising global demand for electric vehicles\"],\n            \"risk_factors\": [\"Supply chain disruptions\", \"Regulatory scrutiny over safety and environmental standards\"],\n            \"confidence_score\": 8.7,\n            \"recommended_allocation\": 35.0,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"ADBE\",\n            \"company_name\": \"Adobe Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Adobe's transition to a subscription model and its strong focus on AI-driven creative tools position it well in a post-pandemic environment where digital content creation is booming. The integration of AI into their products enhances user experience and efficiency.\",\n            \"growth_catalysts\": [\"Growing demand for digital media and marketing solutions\", \"Integration of AI features in Creative Cloud\"],\n            \"risk_factors\": [\"Market saturation in creative software\", \"Competition from other SaaS providers\"],\n            \"confidence_score\": 8.2,\n            \"recommended_allocation\": 25.0,\n            \"price_target_10yr\": \"$600\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focusing on high-growth technology companies while maintaining a concentrated position in leading firms poised to benefit from major market trends.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}",
+        "success": true,
+        "returns": {
+          "total_return": 31.68,
+          "annualized_return": 31.68,
+          "individual_returns": {
+            "MSFT": 9.7,
+            "TSLA": 92.49,
+            "ADBE": -7.14
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"technology sector resilience\", \"regulatory pressures\", \"value investing opportunities\"],\n        \"key_trends\": [\"depressed stock prices\", \"strong earnings despite challenges\", \"market overreactions\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Apple's recent challenges with regulatory scrutiny and market pressures have caused its stock price to dip, despite strong fundamentals and consistent earnings growth. The company continues to innovate and expand its services segment, which provides a buffer against hardware sales fluctuations.\",\n            \"growth_catalysts\": [\"expansion of services revenue\", \"new product launches including AR/VR devices\"],\n            \"risk_factors\": [\"increased regulatory scrutiny\", \"supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft remains a strong player in cloud computing and enterprise solutions, with solid earnings and low debt. The recent market sentiment has undervalued its growth potential, especially with the increasing demand for AI and cloud services.\",\n            \"growth_catalysts\": [\"growth in Azure cloud services\", \"increased adoption of AI technologies\"],\n            \"risk_factors\": [\"competition in cloud market\", \"potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges and market fluctuations, Alphabet's strong cash flow and diverse revenue streams from advertising and cloud services position it well for recovery. The market has reacted negatively to short-term pressures, creating a buying opportunity.\",\n            \"growth_catalysts\": [\"expansion of Google Cloud\", \"recovery in advertising spend\"],\n            \"risk_factors\": [\"regulatory fines\", \"market competition\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$180\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-quality technology companies with strong fundamentals and growth potential, while managing risk through sector concentration.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "RDBX",
+          "TSLA",
+          "META"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"technology innovation\", \"emerging trends in social media\", \"shifts in consumer behavior\"],\n        \"key_trends\": [\"increased demand for tech solutions\", \"growth in social media platforms\", \"rising interest in electric vehicles\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"RDBX\",\n            \"company_name\": \"Redbox Entertainment Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Redbox has shown strong momentum following its recent IPO, with a 48% rise in its first day of trading. The company is leveraging technology to innovate in the entertainment space, appealing to a younger demographic. This aligns with emerging trends in how consumers access media.\",\n            \"growth_catalysts\": [\n                \"Expansion of digital content offerings\",\n                \"Increased consumer engagement through mobile platforms\"\n            ],\n            \"risk_factors\": [\n                \"Intense competition in the streaming sector\",\n                \"Market volatility affecting new IPOs\"\n            ],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$25\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Tesla continues to dominate the electric vehicle market despite recent challenges. The company's price cuts and upcoming product launches are expected to boost sales. Additionally, the anticipated interest rate cuts may stimulate consumer spending on high-ticket items like electric vehicles.\",\n            \"growth_catalysts\": [\n                \"New product launches including Cybertruck\",\n                \"Expansion into international markets\"\n            ],\n            \"risk_factors\": [\n                \"Regulatory scrutiny and potential lawsuits\",\n                \"Supply chain disruptions affecting production\"\n            ],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$1,500\"\n        },\n        {\n            \"ticker\": \"META\",\n            \"company_name\": \"Meta Platforms Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Meta has been experiencing a resurgence in user engagement and revenue growth, especially with the younger demographic through platforms like Instagram and WhatsApp. Positive analyst upgrades suggest confidence in the company’s ability to adapt to changing market dynamics.\",\n            \"growth_catalysts\": [\n                \"Innovations in social media and advertising technology\",\n                \"Increased focus on virtual and augmented reality\"\n            ],\n            \"risk_factors\": [\n                \"Ongoing scrutiny over data privacy\",\n                \"Market competition from emerging social media platforms\"\n            ],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 20.0,\n            \"price_target_10yr\": \"$500\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong recent performance and positive trends, balancing risk with potential high returns.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 62.15,
+          "annualized_return": 62.15,
+          "individual_returns": {
+            "RDBX": 0.0,
+            "TSLA": 92.49,
+            "META": 31.8
+          }
+        }
+      }
+    },
+    {
+      "run_number": 5,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Technology Resilience\", \"AI Investment Caution\", \"Regulatory Challenges\"],\n        \"key_trends\": [\"Increased scrutiny on tech giants\", \"Continued demand for consumer electronics\", \"Cautious investor sentiment towards AI spending\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges and market scrutiny, Apple maintains a strong market position with a loyal customer base and consistent revenue growth from its ecosystem of products and services. The company's focus on innovation and expansion into new markets, particularly in services, provides a solid foundation for long-term growth.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"New product launches (e.g., AR/VR devices)\"],\n            \"risk_factors\": [\"Regulatory scrutiny from the Justice Department\", \"Supply chain vulnerabilities\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong position in cloud computing and enterprise solutions, along with its strategic investments in AI, position it well for future growth. The company's diversification and steady revenue from subscriptions provide stability.\",\n            \"growth_catalysts\": [\"Growth in Azure cloud services\", \"Increased demand for AI integration in business solutions\"],\n            \"risk_factors\": [\"Intense competition in cloud services\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet's dominance in online advertising and its investments in AI and other innovative technologies make it a strong long-term investment. Despite facing regulatory pressures, its diverse revenue streams and continuous innovation keep it well-positioned for future growth.\",\n            \"growth_catalysts\": [\"Expansion of Google Cloud\", \"Continued growth in digital advertising\"],\n            \"risk_factors\": [\"Regulatory scrutiny and potential fines\", \"Dependence on advertising revenue\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on large-cap technology stocks with strong fundamentals and growth potential, while maintaining a balanced allocation to mitigate risk.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "NVDA",
+          "SPCE"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Space Technology\", \"Consumer Electronics\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Growing interest in space exploration and technology\", \"Ongoing legal challenges for major tech companies\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing legal challenges, Apple continues to innovate and expand its ecosystem, which remains a strong driver for growth. The company's strong brand loyalty and diverse product offerings position it well for future revenue growth.\",\n            \"growth_catalysts\": [\"Expansion of services revenue\", \"Continued innovation in hardware and software\"],\n            \"risk_factors\": [\"Ongoing antitrust lawsuits\", \"Market saturation in smartphone segment\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"Nvidia Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Nvidia is at the forefront of the AI revolution, with its GPUs being critical for AI applications. The company's strong market position and continuous product innovation make it a compelling growth investment.\",\n            \"growth_catalysts\": [\"Increased demand for AI and machine learning\", \"Expansion into new markets such as automotive and data centers\"],\n            \"risk_factors\": [\"High valuation concerns\", \"Intense competition in the semiconductor space\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$600\"\n        },\n        {\n            \"ticker\": \"SPCE\",\n            \"company_name\": \"Virgin Galactic Holdings, Inc.\",\n            \"sector\": \"Aerospace & Defense\",\n            \"investment_thesis\": \"As a pioneer in the commercial spaceflight industry, Virgin Galactic has significant growth potential as it prepares to launch commercial flights. The increasing interest in space tourism presents a unique investment opportunity.\",\n            \"growth_catalysts\": [\"Successful launch of commercial spaceflights\", \"Growing public interest in space travel\"],\n            \"risk_factors\": [\"Regulatory hurdles\", \"High operational costs and capital requirements\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$50\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies with strong market positions and innovative products.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": -21.4,
+          "annualized_return": -21.4,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "NVDA": 14.2,
+            "SPCE": -79.52
+          }
+        }
+      },
+      "unrestricted": {
+        "tickers": [
+          "NVDA",
+          "TSLA",
+          "AMZN"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"AI Adoption\", \"Digital Transformation\", \"Renewable Energy Growth\"],\n        \"key_trends\": [\"Increased investments in AI\", \"Shift towards sustainable energy\", \"Continued digitalization post-pandemic\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"NVIDIA has established itself as a leader in the AI hardware market, benefiting from the increasing demand for GPUs in AI applications and deep learning. Their strategic investments in data centers and AI technologies position them well for future growth.\",\n            \"growth_catalysts\": [\"Expansion of AI applications\", \"Increased demand for data center solutions\"],\n            \"risk_factors\": [\"Market competition from other chipmakers\", \"Regulatory challenges\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 40.0,\n            \"price_target_10yr\": \"$1,000\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"sector\": \"Automotive / Energy\",\n            \"investment_thesis\": \"Tesla is a pioneer in electric vehicles and renewable energy solutions. As the world shifts towards sustainable energy, Tesla's advancements in battery technology and solar products will drive substantial growth.\",\n            \"growth_catalysts\": [\"Expansion into new markets\", \"Innovations in energy storage and solar technology\"],\n            \"risk_factors\": [\"Supply chain vulnerabilities\", \"Intense competition in the EV market\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 35.0,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"AMZN\",\n            \"company_name\": \"Amazon.com, Inc.\",\n            \"sector\": \"E-commerce / Cloud Computing\",\n            \"investment_thesis\": \"Amazon's strong position in e-commerce and cloud computing (AWS) makes it a robust investment. The increasing digital transformation across industries and the continued growth of online retail will enhance its revenue streams.\",\n            \"growth_catalysts\": [\"Growth of AWS services\", \"Expansion of e-commerce platforms\"],\n            \"risk_factors\": [\"Regulatory scrutiny\", \"Market saturation in e-commerce\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 25.0,\n            \"price_target_10yr\": \"$4,000\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology and renewable energy sectors to capitalize on emerging trends while maintaining a concentrated portfolio in core growth companies.\",\n        \"sector_allocation\": {\n            \"technology\": 60,\n            \"automotive\": 20,\n            \"e-commerce\": 20\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"10-15%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 39.8,
+          "annualized_return": 39.8,
+          "individual_returns": {
+            "NVDA": 14.2,
+            "TSLA": 92.49,
+            "AMZN": 12.7
+          }
+        }
+      },
+      "period_aware": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"technology sector resilience\", \"undervalued growth potential\", \"regulatory impacts\"],\n        \"key_trends\": [\"increased focus on AI investments\", \"market volatility affecting tech valuations\", \"shift towards value investing\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"AAPL\",\n            \"company_name\": \"Apple Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Despite facing regulatory challenges and market pressures, Apple continues to demonstrate strong earnings and cash flow. The recent news highlights ongoing issues but also points to a resilient brand and customer loyalty, suggesting that the current stock price may not reflect its intrinsic value.\",\n            \"growth_catalysts\": [\"Continued innovation in product lines\", \"Expansion into new markets and services\"],\n            \"risk_factors\": [\"Regulatory scrutiny\", \"Supply chain disruptions\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$250\"\n        },\n        {\n            \"ticker\": \"MSFT\",\n            \"company_name\": \"Microsoft Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Microsoft's strong fundamentals, including solid earnings and low debt levels, position it well for recovery. The company is focusing on AI and cloud services, which are expected to drive future growth, making it a strong candidate for value investors.\",\n            \"growth_catalysts\": [\"Growth in cloud computing services\", \"AI integration across products\"],\n            \"risk_factors\": [\"Intense competition in cloud services\", \"Potential regulatory challenges\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$350\"\n        },\n        {\n            \"ticker\": \"GOOGL\",\n            \"company_name\": \"Alphabet Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Alphabet has seen a decline in stock price due to market concerns over ad spending and regulatory scrutiny. However, its robust cash flow and diverse revenue streams from cloud and YouTube provide a solid foundation for recovery, making it undervalued at current levels.\",\n            \"growth_catalysts\": [\"Expansion of cloud services\", \"Increased ad revenue from new platforms\"],\n            \"risk_factors\": [\"Regulatory pressures\", \"Market competition\"],\n            \"confidence_score\": 7.5,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$1800\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-quality technology companies with strong fundamentals and growth potential, while maintaining a concentrated position in the technology sector.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 2.85,
+          "annualized_return": 2.85,
+          "individual_returns": {
+            "AAPL": 1.11,
+            "MSFT": 9.7,
+            "GOOGL": -2.25
+          }
+        }
+      },
+      "during_period": {
+        "tickers": [
+          "RDNT",
+          "TSLA",
+          "NVDA"
+        ],
+        "response": "```json\n{\n    \"analysis_summary\": {\n        \"market_themes\": [\"Artificial Intelligence\", \"Emerging Technologies\", \"Social Media Growth\"],\n        \"key_trends\": [\"Increased investment in AI technologies\", \"Growth of social media platforms\", \"Shift towards digital financial advice\"],\n        \"implementation_date\": \"2024-06-01\",\n        \"total_companies_analyzed\": 3\n    },\n    \"recommended_companies\": [\n        {\n            \"ticker\": \"RDNT\",\n            \"company_name\": \"Reddit, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Reddit has shown strong momentum following its recent IPO, with an impressive 48% rise on its first trading day. The company is tapping into the growing trend of social media engagement and has potential for continued user growth and monetization strategies.\",\n            \"growth_catalysts\": [\"Strong user engagement metrics\", \"Potential for advertising revenue growth\"],\n            \"risk_factors\": [\"Volatility typical for newly public companies\", \"Competition from other social media platforms\"],\n            \"confidence_score\": 8.0,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$50\"\n        },\n        {\n            \"ticker\": \"TSLA\",\n            \"company_name\": \"Tesla, Inc.\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"Tesla remains a leader in electric vehicles and energy solutions, with recent price cuts and product innovations like the Cybertruck generating buzz. The company's strong brand loyalty and ongoing advancements in AI for autonomous driving position it well for future growth.\",\n            \"growth_catalysts\": [\"Expansion into new markets\", \"Innovations in AI and battery technology\"],\n            \"risk_factors\": [\"Regulatory challenges\", \"Market competition from traditional automakers\"],\n            \"confidence_score\": 8.5,\n            \"recommended_allocation\": 33.3,\n            \"price_target_10yr\": \"$1,200\"\n        },\n        {\n            \"ticker\": \"NVDA\",\n            \"company_name\": \"NVIDIA Corporation\",\n            \"sector\": \"Technology\",\n            \"investment_thesis\": \"NVIDIA is at the forefront of the AI revolution, providing critical hardware for AI applications. The company's GPUs are in high demand for data centers and AI research, which supports its strong growth trajectory amidst a booming tech sector.\",\n            \"growth_catalysts\": [\"Dominance in GPU market\", \"Increased demand for AI and machine learning applications\"],\n            \"risk_factors\": [\"High dependency on semiconductor supply chains\", \"Potential for market saturation\"],\n            \"confidence_score\": 9.0,\n            \"recommended_allocation\": 33.4,\n            \"price_target_10yr\": \"$500\"\n        }\n    ],\n    \"portfolio_strategy\": {\n        \"diversification_approach\": \"Focus on high-growth technology companies that are leaders in their respective fields, particularly in AI and social media.\",\n        \"sector_allocation\": {\n            \"technology\": 100\n        },\n        \"risk_level\": \"Moderate-Aggressive\",\n        \"expected_annual_return\": \"8-12%\"\n    }\n}\n```",
+        "success": true,
+        "returns": {
+          "total_return": 34.28,
+          "annualized_return": 34.28,
+          "individual_returns": {
+            "RDNT": -3.84,
+            "TSLA": 92.49,
+            "NVDA": 14.2
+          }
+        }
+      }
+    }
+  ],
+  "recommendations": [
+    "❌ Do not use for historical analysis without major safeguards",
+    "🔧 Redesign entire prompting approach",
+    "🚫 Consider using different models or manual validation"
+  ]
+}

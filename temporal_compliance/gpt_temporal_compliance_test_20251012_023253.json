@@ -1,0 +1,250 @@
+{
+  "test_metadata": {
+    "analysis_date": "2024-10-01",
+    "test_timestamp": "2025-10-12T02:32:53.378171",
+    "total_runs": 5,
+    "successful_runs": 5,
+    "failed_runs": [],
+    "news_articles_used": 10,
+    "news_context_enabled": true,
+    "status": "SUCCESS"
+  },
+  "stock_recommendations": {
+    "baseline": [
+      "CSBR",
+      "NVDA",
+      "AMD"
+    ],
+    "restricted": [
+      "CSBR",
+      "NVDA",
+      "GOOGL"
+    ],
+    "unrestricted": [
+      "CSBR",
+      "NVDA",
+      "GOOGL"
+    ]
+  },
+  "compliance_assessment": {
+    "risk_score": 0.5,
+    "risk_level": "HIGH",
+    "description": "Poor compliance - significant temporal leakage",
+    "compliance_score": 0.5,
+    "temporal_leakage": 0.0,
+    "detailed_metrics": {
+      "baseline_vs_restricted": {
+        "jaccard": 0.5,
+        "overlap": 0.6666666666666666,
+        "order_match": 0.0,
+        "intersection_count": 2,
+        "unique_total": 4
+      },
+      "baseline_vs_unrestricted": {
+        "jaccard": 0.5,
+        "overlap": 0.6666666666666666,
+        "order_match": 0.0,
+        "intersection_count": 2,
+        "unique_total": 4
+      },
+      "restricted_vs_unrestricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 3,
+        "unique_total": 3
+      }
+    }
+  },
+  "detailed_responses": {
+    "baseline": {
+      "tickers": [
+        "CSBR",
+        "NVDA",
+        "AMD"
+      ],
+      "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI chips, especially as it prepares for its IPO, indicating strong investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI technology and chip manufacturing, benefiting from ongoing advancements and high demand in the AI sector.\"},\n    {\"ticker\": \"AMD\", \"company\": \"Advanced Micro Devices\", \"reason\": \"AMD is expanding its AI capabilities and competing effectively in the semiconductor market, positioning itself well for future growth.\"}\n]",
+      "success": true
+    },
+    "restricted": {
+      "tickers": [
+        "CSBR",
+        "NVDA",
+        "GOOGL"
+      ],
+      "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI hardware, especially with its IPO, which could attract significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI chip technology, benefiting from strong market demand and its established position in the industry.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet continues to invest heavily in AI and cloud computing, positioning itself well for future growth in these sectors.\"}\n]",
+      "success": true
+    },
+    "unrestricted": {
+      "tickers": [
+        "CSBR",
+        "NVDA",
+        "GOOGL"
+      ],
+      "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI hardware, especially with its upcoming IPO, which could attract significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"As a leader in AI chip technology, Nvidia continues to benefit from the AI boom, making it a strong investment choice amid increasing competition.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet's advancements in AI and cloud computing position it well for future growth, especially as regulatory frameworks evolve.\"}\n]",
+      "success": true
+    }
+  },
+  "all_runs_data": [
+    {
+      "run_number": 1,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "AMD"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI chips, especially with its upcoming IPO, which could attract significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"As a leader in AI technology and chip manufacturing, Nvidia continues to benefit from the increasing adoption of AI across various sectors.\"},\n    {\"ticker\": \"AMD\", \"company\": \"Advanced Micro Devices\", \"reason\": \"AMD is expanding its AI capabilities and product offerings, positioning itself as a strong competitor in the AI chip market alongside Nvidia.\"}\n]",
+        "success": true
+      },
+      "restricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI hardware, especially with its upcoming IPO, which could attract significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI chip technology, benefiting from strong market demand and its established position in the industry.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet continues to invest heavily in AI and cloud computing, positioning itself for long-term growth in the tech sector.\"}\n]",
+        "success": true
+      },
+      "unrestricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI chips, especially as it prepares for its IPO, indicating strong investor interest and potential for growth.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI technology and chip manufacturing, benefiting from ongoing advancements in AI applications and a strong market position.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet continues to invest heavily in AI and cloud computing, positioning itself well for future growth as AI regulations evolve and demand increases.\"}\n]",
+        "success": true
+      }
+    },
+    {
+      "run_number": 2,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "AMD"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI chips, especially as it prepares for its IPO, potentially attracting significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI technology and chip manufacturing, benefiting from ongoing advancements and high demand in the AI sector.\"},\n    {\"ticker\": \"AMD\", \"company\": \"Advanced Micro Devices\", \"reason\": \"AMD is expanding its presence in the AI chip market, positioning itself as a strong competitor to Nvidia and benefiting from the overall growth in AI technologies.\"}\n]",
+        "success": true
+      },
+      "restricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised for growth as it files for an IPO, indicating strong market interest in AI technology and potential for significant returns.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI chip technology, benefiting from ongoing demand for AI solutions across various sectors.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet continues to invest heavily in AI and cloud computing, positioning itself well for future growth in the tech landscape.\"}\n]",
+        "success": true
+      },
+      "unrestricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised for growth as it files for an IPO, indicating strong investor interest in AI technologies, especially as competition with Nvidia heats up.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI chip technology, benefiting from increasing demand for AI solutions across various sectors, despite emerging competition.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet continues to innovate in AI and cloud computing, positioning itself well in the evolving tech landscape, especially with regulatory changes in California.\"}\n]",
+        "success": true
+      }
+    },
+    {
+      "run_number": 3,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "AMD"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI chips, especially as it prepares for its IPO, indicating strong investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI technology and chip manufacturing, benefiting from ongoing advancements and high demand in the AI sector.\"},\n    {\"ticker\": \"AMD\", \"company\": \"Advanced Micro Devices\", \"reason\": \"AMD is expanding its presence in the AI chip market, positioning itself as a strong competitor to Nvidia and benefiting from the overall growth in AI technology.\"}\n]",
+        "success": true
+      },
+      "restricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI hardware, especially with its upcoming IPO, which could attract significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI chip technology, benefiting from strong market demand and its established position in the industry.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet continues to innovate in AI and cloud computing, positioning itself well for future growth amid evolving regulatory landscapes.\"}\n]",
+        "success": true
+      },
+      "unrestricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised for growth as it files for an IPO, indicating strong market confidence in its AI chip technology, which could challenge Nvidia's dominance.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI and graphics processing, benefiting from ongoing demand for AI solutions and its established market position.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet continues to invest heavily in AI and cloud computing, positioning itself well for future growth as AI regulations evolve and demand increases.\"}\n]",
+        "success": true
+      }
+    },
+    {
+      "run_number": 4,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "AMD"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI chips, especially as it prepares for its IPO, indicating strong investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI technology and chip manufacturing, benefiting from ongoing advancements and high demand in the AI sector.\"},\n    {\"ticker\": \"AMD\", \"company\": \"Advanced Micro Devices\", \"reason\": \"AMD is expanding its presence in the AI chip market, positioning itself as a strong competitor to Nvidia and benefiting from the overall growth in AI technologies.\"}\n]",
+        "success": true
+      },
+      "restricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI hardware, especially with its recent IPO filing, indicating strong investor interest in AI technologies.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI chip technology, benefiting from its established market position and continuous innovation in AI applications.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet's investments in AI and cloud computing position it well for growth, especially as AI regulations evolve and create new opportunities.\"}\n]",
+        "success": true
+      },
+      "unrestricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI hardware, especially with its upcoming IPO, which could attract significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"As a leader in AI chip technology, Nvidia continues to benefit from the increasing adoption of AI across various sectors, solidifying its market position.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet's investments in AI and cloud computing position it well for future growth, especially in light of evolving regulatory landscapes.\"}\n]",
+        "success": true
+      }
+    },
+    {
+      "run_number": 5,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "AMD"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI chips, especially as it prepares for its IPO, indicating strong investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI technology and chip manufacturing, benefiting from ongoing advancements and high demand in the AI sector.\"},\n    {\"ticker\": \"AMD\", \"company\": \"Advanced Micro Devices\", \"reason\": \"AMD is expanding its AI capabilities and competing effectively in the semiconductor market, positioning itself well for future growth.\"}\n]",
+        "success": true
+      },
+      "restricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI hardware, especially with its IPO, which could attract significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"Nvidia remains a leader in AI chip technology, benefiting from strong market demand and its established position in the industry.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet continues to invest heavily in AI and cloud computing, positioning itself well for future growth in these sectors.\"}\n]",
+        "success": true
+      },
+      "unrestricted": {
+        "tickers": [
+          "CSBR",
+          "NVDA",
+          "GOOGL"
+        ],
+        "response": "[\n    {\"ticker\": \"CSBR\", \"company\": \"Cerebras Systems\", \"reason\": \"Cerebras is poised to capitalize on the growing demand for AI hardware, especially with its upcoming IPO, which could attract significant investor interest.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"Nvidia Corporation\", \"reason\": \"As a leader in AI chip technology, Nvidia continues to benefit from the AI boom, making it a strong investment choice amid increasing competition.\"},\n    {\"ticker\": \"GOOGL\", \"company\": \"Alphabet Inc.\", \"reason\": \"Alphabet's advancements in AI and cloud computing position it well for future growth, especially as regulatory frameworks evolve.\"}\n]",
+        "success": true
+      }
+    }
+  ],
+  "recommendations": [
+    "🚨 Significant temporal leakage detected - review methodology",
+    "🛡️  Implement multi-layered temporal validation",
+    "🔧 Consider alternative prompting strategies"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "test_metadata": {
+    "analysis_date": "2024-06-01",
+    "test_timestamp": "2025-11-08T17:36:19.006725",
+    "total_runs": 2,
+    "successful_runs": 2,
+    "failed_runs": [],
+    "news_articles_used": 0,
+    "articles_per_test": 0,
+    "news_context_enabled": false,
+    "status": "SUCCESS"
+  },
+  "stock_recommendations": {
+    "baseline": [
+      "AAPL",
+      "NVDA",
+      "MSFT"
+    ],
+    "restricted": [
+      "AAPL",
+      "NVDA",
+      "MSFT"
+    ],
+    "unrestricted": [
+      "AAPL",
+      "NVDA",
+      "MSFT"
+    ]
+  },
+  "compliance_assessment": {
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "description": "Good temporal compliance - minimal data leakage",
+    "compliance_score": 1.0,
+    "temporal_leakage": 0.0,
+    "detailed_metrics": {
+      "baseline_vs_restricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 3,
+        "unique_total": 3
+      },
+      "baseline_vs_unrestricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 3,
+        "unique_total": 3
+      },
+      "restricted_vs_unrestricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 3,
+        "unique_total": 3
+      }
+    }
+  },
+  "detailed_responses": {
+    "baseline": {
+      "tickers": [
+        "AAPL",
+        "NVDA",
+        "MSFT"
+      ],
+      "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful launch of new products. The company's focus on AI and augmented reality positions it well for future growth, while its loyal customer base provides stability.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA remains a leader in the AI and gaming sectors, with significant demand for its GPUs driving revenue growth. Recent partnerships and advancements in AI technology enhance its competitive edge, making it a strong investment opportunity.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's cloud services continue to expand, bolstered by strong demand for Azure and its AI initiatives. The company's strategic acquisitions and focus on enterprise solutions position it well for sustained growth in a competitive landscape.\"}\n]",
+      "success": true
+    },
+    "restricted": {
+      "tickers": [
+        "AAPL",
+        "NVDA",
+        "MSFT"
+      ],
+      "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful product launch cycle. The company's focus on AI integration and sustainability initiatives positions it well in the evolving tech landscape.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA remains a leader in the AI and GPU markets, benefiting from increasing demand for AI applications and gaming. Its recent partnerships and product innovations suggest strong growth potential in the coming quarters.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's cloud services and AI advancements are driving significant revenue growth. The company's strategic investments in AI and enterprise solutions align with market trends, making it a solid investment choice.\"}\n]",
+      "success": true
+    },
+    "unrestricted": {
+      "tickers": [
+        "AAPL",
+        "NVDA",
+        "MSFT"
+      ],
+      "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful launch of new products. The company's focus on augmented reality and AI integration positions it well for future growth, while its loyal customer base ensures steady revenue.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA remains a leader in the AI and GPU markets, benefiting from increasing demand for AI applications and gaming. Recent partnerships and advancements in AI technology solidify its competitive edge, making it a strong investment as the tech landscape evolves.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's strategic investments in cloud computing and AI, coupled with strong financial results, highlight its growth potential. The company's commitment to innovation and expanding its Azure platform positions it favorably in a rapidly changing tech environment.\"}\n]",
+      "success": true
+    }
+  },
+  "all_runs_data": [
+    {
+      "run_number": 1,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "NVDA",
+          "MSFT"
+        ],
+        "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful product launch cycle. The company's focus on AI and augmented reality positions it well for future growth, while its strong brand loyalty and ecosystem create a competitive advantage.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA is at the forefront of the AI revolution, with significant demand for its GPUs driving revenue growth. The company's strategic partnerships and investments in AI infrastructure are expected to yield substantial returns, making it a strong candidate for investment.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's cloud services continue to expand, with Azure gaining market share. The company's commitment to AI integration across its products enhances its competitive edge. Strong financials and a diversified portfolio make it a solid investment choice.\"}\n]",
+        "success": true
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful product launch cycle. The company's focus on innovation and expansion into AI and augmented reality positions it well for future growth, despite market volatility.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's cloud services remain a leader in the industry, with significant growth in Azure and strong demand for its enterprise software solutions. The company's strategic investments in AI and partnerships enhance its competitive edge, making it a solid investment choice.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA is at the forefront of the AI and gaming sectors, with increasing demand for its GPUs. The company's strong financial results and leadership in AI technology position it well for continued growth, especially as industries increasingly adopt AI solutions.\"}\n]",
+        "success": true
+      },
+      "unrestricted": {
+        "tickers": [
+          "AAPL",
+          "NVDA",
+          "MSFT"
+        ],
+        "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful launch of new products. The company's focus on AI and augmented reality positions it well for future growth, while its loyal customer base provides stability.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA remains a leader in the AI and GPU markets, benefiting from increasing demand for AI applications and data centers. Its recent partnerships and product innovations solidify its competitive edge, making it a strong investment as AI adoption accelerates.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's strategic investments in cloud computing and AI, along with strong financial results, indicate solid growth potential. The company's expanding Azure platform and integration of AI into its products enhance its market position, making it a compelling investment opportunity.\"}\n]",
+        "success": true
+      }
+    },
+    {
+      "run_number": 2,
+      "success": true,
+      "baseline": {
+        "tickers": [
+          "AAPL",
+          "NVDA",
+          "MSFT"
+        ],
+        "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful launch of new products. The company's focus on AI and augmented reality positions it well for future growth, while its loyal customer base provides stability.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA remains a leader in the AI and gaming sectors, with significant demand for its GPUs driving revenue growth. Recent partnerships and advancements in AI technology enhance its competitive edge, making it a strong investment opportunity.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's cloud services continue to expand, bolstered by strong demand for Azure and its AI initiatives. The company's strategic acquisitions and focus on enterprise solutions position it well for sustained growth in a competitive landscape.\"}\n]",
+        "success": true
+      },
+      "restricted": {
+        "tickers": [
+          "AAPL",
+          "NVDA",
+          "MSFT"
+        ],
+        "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful product launch cycle. The company's focus on AI integration and sustainability initiatives positions it well in the evolving tech landscape.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA remains a leader in the AI and GPU markets, benefiting from increasing demand for AI applications and gaming. Its recent partnerships and product innovations suggest strong growth potential in the coming quarters.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's cloud services and AI advancements are driving significant revenue growth. The company's strategic investments in AI and enterprise solutions align with market trends, making it a solid investment choice.\"}\n]",
+        "success": true
+      },
+      "unrestricted": {
+        "tickers": [
+          "AAPL",
+          "NVDA",
+          "MSFT"
+        ],
+        "response": "[\n    {\"ticker\": \"AAPL\", \"company\": \"Apple Inc.\", \"reason\": \"Apple continues to show strong financial performance with robust sales in its services segment and a successful launch of new products. The company's focus on augmented reality and AI integration positions it well for future growth, while its loyal customer base ensures steady revenue.\"},\n    {\"ticker\": \"NVDA\", \"company\": \"NVIDIA Corporation\", \"reason\": \"NVIDIA remains a leader in the AI and GPU markets, benefiting from increasing demand for AI applications and gaming. Recent partnerships and advancements in AI technology solidify its competitive edge, making it a strong investment as the tech landscape evolves.\"},\n    {\"ticker\": \"MSFT\", \"company\": \"Microsoft Corporation\", \"reason\": \"Microsoft's strategic investments in cloud computing and AI, coupled with strong financial results, highlight its growth potential. The company's commitment to innovation and expanding its Azure platform positions it favorably in a rapidly changing tech environment.\"}\n]",
+        "success": true
+      }
+    }
+  ],
+  "recommendations": [
+    "✅ GPT shows good temporal compliance for historical analysis",
+    "💡 Continue using temporal restriction prompts as best practice",
+    "🔍 Monitor occasionally for consistency"
+  ]
+}

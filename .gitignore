@@ -1,0 +1,51 @@
+# ── secrets ───────────────────────────────────────────────────────────────
+# Never commit credentials. Keys are read from the environment via env_loader;
+# see .env.example for the variable names.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+
+# Local runner configs — these cache an API key in plaintext.
+.permutation_runner_config.json
+.portfolio_sim_perm_config.json
+.four_arm_config.json
+*_config.local.json
+
+# ── compiled bytecode ─────────────────────────────────────────────────────
+# .pyc files embed string literals from the source that produced them, so a key
+# that was once hard-coded survives in bytecode long after the source is cleaned.
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ── editor / OS ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Office lock files ─────────────────────────────────────────────────────
+~$*
+
+# ── local working area ────────────────────────────────────────────────────
+_to_delete/
+_branch_manifest.txt
+*.backup_*
+*_BACKUP_*
+*_PREV_*
+
+# ── third-party corpora (not redistributed) ───────────────────────────────
+# News and financial-report content is licensed from its providers and is not
+# redistributed with this repository; see the Data and Code Availability
+# statement in the manuscript. Retrieval scripts and date conventions are
+# included so the corpora can be rebuilt.
+merged_news_data.csv
+news_*.csv
+tech_news_backfill_*.csv
+consolidated_news_data.csv
+financial_reports_data.csv
+FINANCIAL_REPORTS/
+news_collection_archive/

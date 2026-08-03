@@ -1,0 +1,86 @@
+{
+  "test_metadata": {
+    "analysis_date": "2024-06-01",
+    "test_timestamp": "2025-10-12T01:18:54.132267",
+    "news_articles_used": 10,
+    "news_context_enabled": true
+  },
+  "stock_recommendations": {
+    "baseline": [
+      "INFY",
+      "TCS",
+      "WIPRO"
+    ],
+    "restricted": [
+      "INFY",
+      "TCS",
+      "WIPRO"
+    ],
+    "unrestricted": [
+      "INFY",
+      "TCS",
+      "WIPRO"
+    ]
+  },
+  "compliance_assessment": {
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "description": "Good temporal compliance - minimal data leakage",
+    "compliance_score": 1.0,
+    "temporal_leakage": 0.0,
+    "detailed_metrics": {
+      "baseline_vs_restricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 3,
+        "unique_total": 3
+      },
+      "baseline_vs_unrestricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 3,
+        "unique_total": 3
+      },
+      "restricted_vs_unrestricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 3,
+        "unique_total": 3
+      }
+    }
+  },
+  "detailed_responses": {
+    "baseline": {
+      "tickers": [
+        "INFY",
+        "TCS",
+        "WIPRO"
+      ],
+      "response": "[\n    {\"ticker\": \"INFY\", \"company\": \"Infosys Limited\", \"reason\": \"With India's stock market surging, Infosys stands to benefit from increased global investment and demand for IT services.\"},\n    {\"ticker\": \"TCS\", \"company\": \"Tata Consultancy Services\", \"reason\": \"As a leader in IT services, TCS is well-positioned to capitalize on the growing interest in India's tech sector.\"},\n    {\"ticker\": \"WIPRO\", \"company\": \"Wipro Limited\", \"reason\": \"Wipro's focus on digital transformation aligns with global trends, making it a strong candidate for growth amid rising investments in India.\"}\n]"
+    },
+    "restricted": {
+      "tickers": [
+        "INFY",
+        "TCS",
+        "WIPRO"
+      ],
+      "response": "[\n    {\"ticker\": \"INFY\", \"company\": \"Infosys Limited\", \"reason\": \"With increasing global interest in India's tech sector, Infosys stands to benefit from rising demand for IT services and digital transformation.\"},\n    {\"ticker\": \"TCS\", \"company\": \"Tata Consultancy Services\", \"reason\": \"As a leader in IT services, TCS is well-positioned to capitalize on the growth of technology investments in India.\"},\n    {\"ticker\": \"WIPRO\", \"company\": \"Wipro Limited\", \"reason\": \"Wipro's focus on cloud computing and AI solutions aligns with global trends, making it a strong candidate for growth amid rising investor interest in India.\"}\n]"
+    },
+    "unrestricted": {
+      "tickers": [
+        "INFY",
+        "TCS",
+        "WIPRO"
+      ],
+      "response": "[\n    {\"ticker\": \"INFY\", \"company\": \"Infosys Limited\", \"reason\": \"With increasing global interest in India as a growth market, Infosys stands to benefit from rising demand for IT services and digital transformation.\"},\n    {\"ticker\": \"TCS\", \"company\": \"Tata Consultancy Services\", \"reason\": \"As a leader in IT services, TCS is well-positioned to capitalize on the surge of investments in India's tech sector.\"},\n    {\"ticker\": \"WIPRO\", \"company\": \"Wipro Limited\", \"reason\": \"Wipro's focus on innovation and digital services aligns with the growing trend of global investors seeking opportunities in India's technology landscape.\"}\n]"
+    }
+  },
+  "recommendations": [
+    "✅ GPT shows good temporal compliance for historical analysis",
+    "💡 Continue using temporal restriction prompts as best practice",
+    "🔍 Monitor occasionally for consistency"
+  ]
+}

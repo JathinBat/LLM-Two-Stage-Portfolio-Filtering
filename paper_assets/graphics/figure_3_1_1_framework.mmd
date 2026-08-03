@@ -1,0 +1,27 @@
+flowchart LR
+    A["News articles<br/>(financial-news API)"]
+    R["Financial reports<br/>for the X candidates"]
+
+    subgraph LLM["LLM &middot; qualitative reasoning"]
+        direction LR
+        B["News relevance<br/>screening"]
+        C["Stage One<br/>Generate X candidate stocks + justifications"]
+        D["Stage Two<br/>Validate vs reports &rarr; Y held stocks"]
+        B --> C
+        C -->|"X &rarr; Y filtering<br/>30&rarr;15 &middot; 20&rarr;10 &middot; 10&rarr;5 &middot; 5&rarr;3"| D
+    end
+
+    subgraph CODE["External code &middot; quantitative"]
+        E["Portfolio construction &amp; evaluation<br/>&rarr; ROI, alpha vs S&amp;P 500"]
+    end
+
+    A --> B
+    R --> D
+    D --> E
+
+    classDef io   fill:#ECECFF,stroke:#9370DB,color:#1A1A2E;
+    classDef llm  fill:#D9D9FF,stroke:#9370DB,color:#1A1A2E;
+    classDef code fill:#E3F0E3,stroke:#5BA06B,color:#1A1A2E;
+    class A,R io;
+    class B,C,D llm;
+    class E code;

@@ -1,0 +1,80 @@
+{
+  "test_metadata": {
+    "analysis_date": "2024-06-01",
+    "test_timestamp": "2025-10-12T02:25:37.930402",
+    "news_articles_used": 10,
+    "news_context_enabled": true
+  },
+  "stock_recommendations": {
+    "baseline": [
+      "INFY",
+      "TCS"
+    ],
+    "restricted": [
+      "INFY",
+      "TCS"
+    ],
+    "unrestricted": [
+      "INFY",
+      "TCS"
+    ]
+  },
+  "compliance_assessment": {
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "description": "Good temporal compliance - minimal data leakage",
+    "compliance_score": 1.0,
+    "temporal_leakage": 0.0,
+    "detailed_metrics": {
+      "baseline_vs_restricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 2,
+        "unique_total": 2
+      },
+      "baseline_vs_unrestricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 2,
+        "unique_total": 2
+      },
+      "restricted_vs_unrestricted": {
+        "jaccard": 1.0,
+        "overlap": 1.0,
+        "order_match": 1.0,
+        "intersection_count": 2,
+        "unique_total": 2
+      }
+    }
+  },
+  "detailed_responses": {
+    "baseline": {
+      "tickers": [
+        "INFY",
+        "TCS"
+      ],
+      "response": "[\n    {\"ticker\": \"INFY\", \"company\": \"Infosys Limited\", \"reason\": \"With global investors focusing on India for growth, Infosys stands to benefit from increased demand for IT services and digital transformation.\"},\n    {\"ticker\": \"TCS\", \"company\": \"Tata Consultancy Services\", \"reason\": \"As a leading IT services provider in India, TCS is well-positioned to capitalize on the surge in global investments and digital initiatives.\"},\n    {\"ticker\": \"HCLTECH\", \"company\": \"HCL Technologies\", \"reason\": \"HCL Technologies is likely to gain from the growing interest in Indian tech firms, especially in cloud computing and AI solutions.\"}\n]"
+    },
+    "restricted": {
+      "tickers": [
+        "INFY",
+        "TCS"
+      ],
+      "response": "[\n    {\"ticker\": \"INFY\", \"company\": \"Infosys Limited\", \"reason\": \"With India's stock market surging, Infosys stands to benefit from increased global investment and demand for IT services.\"},\n    {\"ticker\": \"TCS\", \"company\": \"Tata Consultancy Services\", \"reason\": \"As a leading IT services provider, TCS is well-positioned to capitalize on the growing interest in India's tech sector.\"},\n    {\"ticker\": \"HCLTECH\", \"company\": \"HCL Technologies\", \"reason\": \"HCL Technologies is likely to gain from the influx of foreign investments in India, enhancing its growth prospects in the tech industry.\"}\n]"
+    },
+    "unrestricted": {
+      "tickers": [
+        "INFY",
+        "TCS"
+      ],
+      "response": "[\n    {\"ticker\": \"INFY\", \"company\": \"Infosys Limited\", \"reason\": \"With global investors focusing on India for growth, Infosys stands to benefit from increased demand for IT services and digital transformation.\"},\n    {\"ticker\": \"TCS\", \"company\": \"Tata Consultancy Services\", \"reason\": \"As a leading IT services firm in India, TCS is well-positioned to capitalize on the influx of foreign investment and the growing tech sector.\"},\n    {\"ticker\": \"HCLTECH\", \"company\": \"HCL Technologies\", \"reason\": \"HCL Technologies is likely to gain from the global shift towards digital solutions, supported by the positive sentiment towards India's tech market.\"}\n]"
+    }
+  },
+  "recommendations": [
+    "✅ GPT shows good temporal compliance for historical analysis",
+    "💡 Continue using temporal restriction prompts as best practice",
+    "🔍 Monitor occasionally for consistency"
+  ]
+}

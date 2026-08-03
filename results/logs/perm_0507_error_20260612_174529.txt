@@ -1,0 +1,26 @@
+============================================================
+PERMUTATION ERROR REPORT
+============================================================
+
+Timestamp  : 2026-06-12 17:45:29
+Perm ID    : 507
+Model      : gpt-4o
+Temperature: 0.3
+Period     : 12 months
+Start date : 2024-07-01
+End date   : 2025-07-01
+Filter     : 30 -> 10
+Elapsed    : 4s
+
+────────────────────────────────────────────────────────────
+ERROR
+────────────────────────────────────────────────────────────
+RuntimeError: Strategy generation failed: Unified strategy generation failed
+
+────────────────────────────────────────────────────────────
+TRACEBACK
+────────────────────────────────────────────────────────────
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\Github\ASDRP-LLM-Long-Term-Investment-Strategy\permutation_runner.py", line 625, in _run_one_perm
+    raise RuntimeError(f"Strategy generation failed: {result['error']}")
+RuntimeError: Strategy generation failed: Unified strategy generation failed

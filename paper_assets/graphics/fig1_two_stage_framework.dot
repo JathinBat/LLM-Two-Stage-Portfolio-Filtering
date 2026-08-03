@@ -1,0 +1,35 @@
+digraph {
+  rankdir=TB; bgcolor="white"; nodesep=0.30; ranksep=0.42; compound=true;
+  node [fontname="Helvetica", fontsize=12.5, style="filled", color="#333333", penwidth=1.2, shape=box];
+  edge [fontname="Helvetica", fontsize=10.5, color="#333333"];
+
+  subgraph cluster_a {
+    label="(a) Two-stage filtering (X→Y)"; labelloc="t"; labeljust="l"; fontsize=17; fontname="Helvetica-Bold"; color="white";
+    a_news [label="News articles\n(financial-news API)", fillcolor="#ECECFF"];
+    a_scr  [label="News relevance\nscreening", fillcolor="#D9D9FF"];
+    a_s1   [label="Stage One\nGenerate X candidate\nstocks + justifications", fillcolor="#D9D9FF"];
+    a_rep  [label="Financial reports\nfor the X candidates", fillcolor="#ECECFF"];
+    a_s2   [label="Stage Two\nValidate vs reports\n→ Y held stocks", fillcolor="#D9D9FF"];
+    a_ev   [label="Portfolio construction\n& evaluation\n→ ROI, excess return\nvs S&P 500", fillcolor="#E3F0E3"];
+    a_news -> a_scr; a_scr -> a_s1;
+    a_s1 -> a_s2 [label="  X → Y filtering\n  30→15 · 20→10\n  10→5 · 5→3", fontsize=9.5];
+    a_rep -> a_s2; a_s2 -> a_ev [label="Y holdings", fontsize=9.5];
+    {rank=same; a_s1; a_rep;}
+  }
+  subgraph cluster_b {
+    label="(b) Unfiltered single-pass"; labelloc="t"; labeljust="l"; fontsize=17; fontname="Helvetica-Bold"; color="white";
+    b_news [label="News articles\n+ all financial\nreports", fillcolor="#ECECFF"];
+    b_llm  [label="Single LLM prompt\n(no screening,\nno staging)\n→ Y held stocks", fillcolor="#D9D9FF"];
+    b_ev   [label="Portfolio construction\n& evaluation", fillcolor="#E3F0E3"];
+    b_news -> b_llm [label="one prompt", fontsize=9.5]; b_llm -> b_ev [label="Y holdings", fontsize=9.5];
+  }
+  subgraph cluster_c {
+    label="(c) Ranked variant"; labelloc="t"; labeljust="l"; fontsize=17; fontname="Helvetica-Bold"; color="white";
+    c_news [label="News articles\n(financial-news API)", fillcolor="#ECECFF"];
+    c_scr  [label="News relevance\nscreening", fillcolor="#D9D9FF"];
+    c_s1   [label="Single stage\nGenerate + rank all\ncandidates by conviction", fillcolor="#D9D9FF"];
+    c_top  [label="Take top Y\nby rank", fillcolor="#D9D9FF"];
+    c_ev   [label="Portfolio construction\n& evaluation", fillcolor="#E3F0E3"];
+    c_news -> c_scr; c_scr -> c_s1; c_s1 -> c_top [label="ranked list", fontsize=9.5]; c_top -> c_ev [label="Y holdings", fontsize=9.5];
+  }
+}

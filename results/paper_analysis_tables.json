@@ -1,0 +1,1557 @@
+{
+  "outputs": {
+    "xlsx": "C:\\Users\\jathi\\Documents\\ASDRP-LLM-Long-Term-Investment-Strategy\\results\\paper_analysis_tables.xlsx",
+    "json": "C:\\Users\\jathi\\Documents\\ASDRP-LLM-Long-Term-Investment-Strategy\\results\\paper_analysis_tables.json"
+  },
+  "diagnostics": {
+    "files_read": 3876,
+    "invalid_or_unreadable_files": 918,
+    "unmatched_valid_files": 119,
+    "skipped_valid_files": 0,
+    "matched_valid_runs": 2839
+  },
+  "tables": {
+    "Dataset Summary": [
+      {
+        "Metric": "Total permutations generated",
+        "Value": 2340
+      },
+      {
+        "Metric": "Total valid permutations after training-cutoff filtering",
+        "Value": 1140
+      },
+      {
+        "Metric": "Number of models",
+        "Value": 3
+      },
+      {
+        "Metric": "Number of temperatures",
+        "Value": 3
+      },
+      {
+        "Metric": "Number of evaluation windows",
+        "Value": 14
+      },
+      {
+        "Metric": "Number of holding periods",
+        "Value": 2
+      },
+      {
+        "Metric": "Number of filtering configurations",
+        "Value": 10
+      },
+      {
+        "Metric": "Total portfolio runs analyzed",
+        "Value": 2839
+      },
+      {
+        "Metric": "Matched unique permutations",
+        "Value": 1110
+      },
+      {
+        "Metric": "JSON files scanned",
+        "Value": 3876
+      },
+      {
+        "Metric": "Invalid/unreadable JSON files skipped",
+        "Value": 918
+      },
+      {
+        "Metric": "Unmatched valid JSON files skipped",
+        "Value": 119
+      }
+    ],
+    "Overall Configuration Performance": [
+      {
+        "Filter": "10->5",
+        "Mean ROI": 43.3314491357926,
+        "Median ROI": 41.23559346998338,
+        "SD": 23.321055895893863,
+        "CV": 0.5382016147858353,
+        "Min ROI": -8.73258617592157,
+        "Max ROI": 129.21374195856137,
+        "IQR": 18.625401744434072,
+        "95% CI Low": 40.76249114486647,
+        "95% CI High": 45.90040712671873,
+        "95% CI +/-": 2.5689579909261284,
+        "Sample Size": 319
+      },
+      {
+        "Filter": "20->5",
+        "Mean ROI": 42.21090613024355,
+        "Median ROI": 40.381038724071146,
+        "SD": 23.588751893180863,
+        "CV": 0.5588307396291556,
+        "Min ROI": -37.32694056242822,
+        "Max ROI": 177.70392560569803,
+        "IQR": 16.745400293971407,
+        "95% CI Low": 39.62872188997452,
+        "95% CI High": 44.79309037051258,
+        "95% CI +/-": 2.5821842402690303,
+        "Sample Size": 323
+      },
+      {
+        "Filter": "unfiltered",
+        "Mean ROI": 41.752137555767064,
+        "Median ROI": 38.12376047287903,
+        "SD": 19.96176810943492,
+        "CV": 0.4781017039612066,
+        "Min ROI": 6.094620141985888,
+        "Max ROI": 151.30120099529273,
+        "IQR": 15.482631895724673,
+        "95% CI Low": 38.04814082714158,
+        "95% CI High": 45.45613428439255,
+        "95% CI +/-": 3.7039967286254867,
+        "Sample Size": 114
+      },
+      {
+        "Filter": "10->3",
+        "Mean ROI": 41.53941586892785,
+        "Median ROI": 41.708674154854215,
+        "SD": 20.35396038472333,
+        "CV": 0.48999149263310704,
+        "Min ROI": 8.967737627405786,
+        "Max ROI": 176.95803869572936,
+        "IQR": 12.650062417703147,
+        "95% CI Low": 39.249797680046115,
+        "95% CI High": 43.82903405780958,
+        "95% CI +/-": 2.2896181888817293,
+        "Sample Size": 306
+      },
+      {
+        "Filter": "5->3",
+        "Mean ROI": 40.14582413819725,
+        "Median ROI": 41.11478241538519,
+        "SD": 19.80632217308919,
+        "CV": 0.49335946137033504,
+        "Min ROI": -8.673732279892702,
+        "Max ROI": 176.9580364912283,
+        "IQR": 11.252341441772515,
+        "95% CI Low": 37.96058159482967,
+        "95% CI High": 42.33106668156483,
+        "95% CI +/-": 2.1852425433675795,
+        "Sample Size": 318
+      },
+      {
+        "Filter": "20->10",
+        "Mean ROI": 39.971321422908254,
+        "Median ROI": 33.353505753959546,
+        "SD": 21.30086079170155,
+        "CV": 0.53290359271169,
+        "Min ROI": 3.1363170562126834,
+        "Max ROI": 123.12923910017766,
+        "IQR": 25.88588432506962,
+        "95% CI Low": 37.563258221213204,
+        "95% CI High": 42.379384624603304,
+        "95% CI +/-": 2.4080632016950476,
+        "Sample Size": 303
+      },
+      {
+        "Filter": "30->15",
+        "Mean ROI": 35.3786275571645,
+        "Median ROI": 31.65161876194161,
+        "SD": 16.377284623230153,
+        "CV": 0.46291463954524154,
+        "Min ROI": 7.995779746800927,
+        "Max ROI": 114.60514726082368,
+        "IQR": 20.24400722964905,
+        "95% CI Low": 33.508414290010656,
+        "95% CI High": 37.24884082431834,
+        "95% CI +/-": 1.8702132671538454,
+        "Sample Size": 297
+      },
+      {
+        "Filter": "ranked_final",
+        "Mean ROI": 34.129865456223655,
+        "Median ROI": 34.58598391597695,
+        "SD": 14.432521092525226,
+        "CV": 0.4228707291869334,
+        "Min ROI": 2.1960325090545485,
+        "Max ROI": 107.34429033016796,
+        "IQR": 10.712774894351782,
+        "95% CI Low": 32.47327844361348,
+        "95% CI High": 35.78645246883383,
+        "95% CI +/-": 1.6565870126101745,
+        "Sample Size": 294
+      },
+      {
+        "Filter": "30->10",
+        "Mean ROI": 30.317616721779924,
+        "Median ROI": 27.154209635763856,
+        "SD": 15.076024858667887,
+        "CV": 0.49726945877765505,
+        "Min ROI": 5.193888127855371,
+        "Max ROI": 113.08711613176759,
+        "IQR": 14.707251715320947,
+        "95% CI Low": 28.584192264463898,
+        "95% CI High": 32.05104117909595,
+        "95% CI +/-": 1.733424457316025,
+        "Sample Size": 293
+      },
+      {
+        "Filter": "30->5",
+        "Mean ROI": 29.85181652362963,
+        "Median ROI": 27.801817960634633,
+        "SD": 14.22322798711551,
+        "CV": 0.4764610547521258,
+        "Min ROI": -3.541302161894746,
+        "Max ROI": 115.6555647396428,
+        "IQR": 11.987006033433488,
+        "95% CI Low": 28.15394164209666,
+        "95% CI High": 31.549691405162598,
+        "95% CI +/-": 1.6978748815329683,
+        "Sample Size": 272
+      }
+    ],
+    "Configuration vs Unfiltered": [
+      {
+        "Filter": "10->5",
+        "Win Rate vs Unfiltered": 0.6306306306306306,
+        "Average ROI Difference": 4.753702621459459,
+        "Median ROI Difference": 3.00742552163387,
+        "Number of Comparisons": 111
+      },
+      {
+        "Filter": "20->5",
+        "Win Rate vs Unfiltered": 0.5855855855855856,
+        "Average ROI Difference": 1.7958579879729026,
+        "Median ROI Difference": 2.522356645545756,
+        "Number of Comparisons": 111
+      },
+      {
+        "Filter": "10->3",
+        "Win Rate vs Unfiltered": 0.5765765765765766,
+        "Average ROI Difference": 2.3102219307928973,
+        "Median ROI Difference": 3.338294469774091,
+        "Number of Comparisons": 111
+      },
+      {
+        "Filter": "5->3",
+        "Win Rate vs Unfiltered": 0.4954954954954955,
+        "Average ROI Difference": 0.6670645865427167,
+        "Median ROI Difference": -1.013619995001001,
+        "Number of Comparisons": 111
+      },
+      {
+        "Filter": "20->10",
+        "Win Rate vs Unfiltered": 0.4594594594594595,
+        "Average ROI Difference": 0.6769618312699175,
+        "Median ROI Difference": -1.5639425983532718,
+        "Number of Comparisons": 111
+      },
+      {
+        "Filter": "30->15",
+        "Win Rate vs Unfiltered": 0.38738738738738737,
+        "Average ROI Difference": -6.988345869971607,
+        "Median ROI Difference": -2.8029142136963188,
+        "Number of Comparisons": 111
+      },
+      {
+        "Filter": "ranked_final",
+        "Win Rate vs Unfiltered": 0.32432432432432434,
+        "Average ROI Difference": -5.760557760478907,
+        "Median ROI Difference": -4.017429157032023,
+        "Number of Comparisons": 111
+      },
+      {
+        "Filter": "30->10",
+        "Win Rate vs Unfiltered": 0.26126126126126126,
+        "Average ROI Difference": -9.558603378993306,
+        "Median ROI Difference": -8.148651480350086,
+        "Number of Comparisons": 111
+      },
+      {
+        "Filter": "30->5",
+        "Win Rate vs Unfiltered": 0.2072072072072072,
+        "Average ROI Difference": -10.187138124079427,
+        "Median ROI Difference": -9.006293298233942,
+        "Number of Comparisons": 111
+      }
+    ],
+    "Model Performance": [
+      {
+        "Model": "gpt-5.1",
+        "Mean ROI": 47.00903734143109,
+        "Median ROI": 42.92934818222554,
+        "SD": 21.772255596466586,
+        "CV": 0.46315042442440657,
+        "Min ROI": -37.32694056242822,
+        "Max ROI": 172.18248142162756,
+        "IQR": 20.706166071363285,
+        "95% CI Low": 45.30017852649023,
+        "95% CI High": 48.71789615637195,
+        "95% CI +/-": 1.7088588149408641,
+        "Sample Size": 626
+      },
+      {
+        "Model": "gpt-4o",
+        "Mean ROI": 36.79128086951677,
+        "Median ROI": 35.16076897253788,
+        "SD": 20.839677189630656,
+        "CV": 0.5664297816523498,
+        "Min ROI": -8.73258617592157,
+        "Max ROI": 177.70392560569803,
+        "IQR": 19.990497893410392,
+        "95% CI Low": 35.4720364217096,
+        "95% CI High": 38.11052531732393,
+        "95% CI +/-": 1.319244447807165,
+        "Sample Size": 961
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Mean ROI": 33.998125151676284,
+        "Median ROI": 32.850902304729956,
+        "SD": 16.13588475209453,
+        "CV": 0.47461101693423663,
+        "Min ROI": -8.673732279892702,
+        "Max ROI": 151.30120099529273,
+        "IQR": 17.098622596956506,
+        "95% CI Low": 33.103462940556796,
+        "95% CI High": 34.89278736279577,
+        "95% CI +/-": 0.8946622111194865,
+        "Sample Size": 1252
+      }
+    ],
+    "Best Configuration Per Model": [
+      {
+        "Model": "gpt-4o",
+        "Best Config": "10->5",
+        "Mean ROI": 42.273603452613045,
+        "Median ROI": 42.398148555762134,
+        "Sample Size": 112
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Best Config": "unfiltered",
+        "Mean ROI": 42.92380722636868,
+        "Median ROI": 39.39520608890501,
+        "Sample Size": 45
+      },
+      {
+        "Model": "gpt-5.1",
+        "Best Config": "20->10",
+        "Mean ROI": 60.5718149957538,
+        "Median ROI": 56.958266008741376,
+        "Sample Size": 70
+      }
+    ],
+    "Win Rates By Model": [
+      {
+        "Model": "gpt-4o",
+        "Filter": "10->3",
+        "Win Rate vs Unfiltered": 0.7142857142857143,
+        "Average ROI Difference": 6.740444467962618,
+        "Median ROI Difference": 6.000683980258093,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o",
+        "Filter": "10->5",
+        "Win Rate vs Unfiltered": 0.6428571428571429,
+        "Average ROI Difference": 7.667220682740963,
+        "Median ROI Difference": 5.183503528492055,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o",
+        "Filter": "20->5",
+        "Win Rate vs Unfiltered": 0.6428571428571429,
+        "Average ROI Difference": 7.2471049016037705,
+        "Median ROI Difference": 2.4583199670212887,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o",
+        "Filter": "5->3",
+        "Win Rate vs Unfiltered": 0.5476190476190477,
+        "Average ROI Difference": 6.3544840100937865,
+        "Median ROI Difference": 3.7916139069993657,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o",
+        "Filter": "20->10",
+        "Win Rate vs Unfiltered": 0.5238095238095238,
+        "Average ROI Difference": 2.612979865229975,
+        "Median ROI Difference": 0.7514086669097422,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o",
+        "Filter": "ranked_final",
+        "Win Rate vs Unfiltered": 0.40476190476190477,
+        "Average ROI Difference": -3.1308098810751583,
+        "Median ROI Difference": -2.4968119660131105,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o",
+        "Filter": "30->15",
+        "Win Rate vs Unfiltered": 0.38095238095238093,
+        "Average ROI Difference": -7.478753837789339,
+        "Median ROI Difference": -5.229762921707209,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o",
+        "Filter": "30->10",
+        "Win Rate vs Unfiltered": 0.35714285714285715,
+        "Average ROI Difference": -8.25903254106395,
+        "Median ROI Difference": -5.46812448399699,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o",
+        "Filter": "30->5",
+        "Win Rate vs Unfiltered": 0.35714285714285715,
+        "Average ROI Difference": -3.384713714685899,
+        "Median ROI Difference": -4.0639000893481825,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "10->5",
+        "Win Rate vs Unfiltered": 0.5238095238095238,
+        "Average ROI Difference": -2.562523747851459,
+        "Median ROI Difference": 0.7098177936997914,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "5->3",
+        "Win Rate vs Unfiltered": 0.5,
+        "Average ROI Difference": -3.2845594503502005,
+        "Median ROI Difference": -0.5288033728917867,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "20->5",
+        "Win Rate vs Unfiltered": 0.42857142857142855,
+        "Average ROI Difference": -4.270265203686035,
+        "Median ROI Difference": -2.914503648519119,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "30->15",
+        "Win Rate vs Unfiltered": 0.38095238095238093,
+        "Average ROI Difference": -8.85331682162515,
+        "Median ROI Difference": -4.437516795839574,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "10->3",
+        "Win Rate vs Unfiltered": 0.3333333333333333,
+        "Average ROI Difference": -8.19339590969345,
+        "Median ROI Difference": -3.4456320984459126,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "ranked_final",
+        "Win Rate vs Unfiltered": 0.2619047619047619,
+        "Average ROI Difference": -7.204955205370998,
+        "Median ROI Difference": -5.299342040492314,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "20->10",
+        "Win Rate vs Unfiltered": 0.16666666666666666,
+        "Average ROI Difference": -10.842767595090127,
+        "Median ROI Difference": -7.057759464269706,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "30->10",
+        "Win Rate vs Unfiltered": 0.11904761904761904,
+        "Average ROI Difference": -13.225810448384685,
+        "Median ROI Difference": -9.897082077951506,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-4o-mini",
+        "Filter": "30->5",
+        "Win Rate vs Unfiltered": 0.07142857142857142,
+        "Average ROI Difference": -14.596316860367356,
+        "Median ROI Difference": -11.401856729577474,
+        "Number of Comparisons": 42
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "20->10",
+        "Win Rate vs Unfiltered": 0.8148148148148148,
+        "Average ROI Difference": 15.584957330558783,
+        "Median ROI Difference": 16.363453791154306,
+        "Number of Comparisons": 27
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "10->5",
+        "Win Rate vs Unfiltered": 0.7777777777777778,
+        "Average ROI Difference": 11.602359989505212,
+        "Median ROI Difference": 10.067497326755749,
+        "Number of Comparisons": 27
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "10->3",
+        "Win Rate vs Unfiltered": 0.7407407407407407,
+        "Average ROI Difference": 11.757725735952093,
+        "Median ROI Difference": 6.628635675893815,
+        "Number of Comparisons": 27
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "20->5",
+        "Win Rate vs Unfiltered": 0.7407407407407407,
+        "Average ROI Difference": 2.7523321982387916,
+        "Median ROI Difference": 7.927351242697483,
+        "Number of Comparisons": 27
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "30->15",
+        "Win Rate vs Unfiltered": 0.4074074074074074,
+        "Average ROI Difference": -3.324423106349618,
+        "Median ROI Difference": -2.312426047352183,
+        "Number of Comparisons": 27
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "5->3",
+        "Win Rate vs Unfiltered": 0.4074074074074074,
+        "Average ROI Difference": -2.033061570481075,
+        "Median ROI Difference": -2.1465509872100554,
+        "Number of Comparisons": 27
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "30->10",
+        "Win Rate vs Unfiltered": 0.3333333333333333,
+        "Average ROI Difference": -5.875613685607925,
+        "Median ROI Difference": -9.05379443407201,
+        "Number of Comparisons": 27
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "ranked_final",
+        "Win Rate vs Unfiltered": 0.2962962962962963,
+        "Average ROI Difference": -7.604436214163706,
+        "Median ROI Difference": -4.2439910518505926,
+        "Number of Comparisons": 27
+      },
+      {
+        "Model": "gpt-5.1",
+        "Filter": "30->5",
+        "Win Rate vs Unfiltered": 0.18518518518518517,
+        "Average ROI Difference": -13.909964726688136,
+        "Median ROI Difference": -11.796897117954039,
+        "Number of Comparisons": 27
+      }
+    ],
+    "Temperature Analysis": [
+      {
+        "Temperature": 0.3,
+        "Mean ROI": 38.11410809499633,
+        "Median ROI": 36.45314231581739,
+        "SD": 18.559170711561762,
+        "CV": 0.4869370330089984,
+        "Min ROI": -7.234284182222855,
+        "Max ROI": 167.92929622952704,
+        "IQR": 17.934622503774825,
+        "95% CI Low": 37.00907195849537,
+        "95% CI High": 39.219144231497296,
+        "95% CI +/-": 1.1050361365009669,
+        "Sample Size": 1086,
+        "Best Configuration": "10->5",
+        "Best Config Mean ROI": 42.83595618487258
+      },
+      {
+        "Temperature": 0.4,
+        "Mean ROI": 37.15887043854929,
+        "Median ROI": 35.11351865650049,
+        "SD": 19.59179401039086,
+        "CV": 0.5272440679484696,
+        "Min ROI": -37.32694056242822,
+        "Max ROI": 176.9580364912283,
+        "IQR": 18.63064809911737,
+        "95% CI Low": 35.94493177972519,
+        "95% CI High": 38.3728090973734,
+        "95% CI +/-": 1.2139386588241043,
+        "Sample Size": 1003,
+        "Best Configuration": "unfiltered",
+        "Best Config Mean ROI": 44.4808371227428
+      },
+      {
+        "Temperature": 0.5,
+        "Mean ROI": 38.24995005361232,
+        "Median ROI": 36.060613236733346,
+        "SD": 21.6808470820813,
+        "CV": 0.5668202717047408,
+        "Min ROI": -26.609088299230088,
+        "Max ROI": 177.70392560569803,
+        "IQR": 19.29780899957739,
+        "95% CI Low": 36.695788854458605,
+        "95% CI High": 39.80411125276603,
+        "95% CI +/-": 1.5541611991537114,
+        "Sample Size": 750,
+        "Best Configuration": "10->5",
+        "Best Config Mean ROI": 43.66154187934376
+      }
+    ],
+    "Evaluation Window Analysis": [
+      {
+        "Period (mo)": 12,
+        "Start": "2024-06",
+        "End": "2025-06",
+        "Window": "Jun 2024-Jun 2025",
+        "Mean ROI": 12.225160155949846,
+        "Median ROI": 11.316877525037926,
+        "SD": 9.065865927324529,
+        "CV": 0.7415744097971817,
+        "Min ROI": -8.73258617592157,
+        "Max ROI": 56.62400383053496,
+        "IQR": 8.375049138209727,
+        "95% CI Low": 10.80964159654348,
+        "95% CI High": 13.640678715356211,
+        "95% CI +/-": 1.4155185594063657,
+        "Sample Size": 160,
+        "S&P Return": 13.090472310901088,
+        "Best Config": "30->15",
+        "Best Config Mean ROI": 22.839756146837203,
+        "Worst Config": "10->5",
+        "Worst Config Mean ROI": 4.105453708375396
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2024-07",
+        "End": "2025-07",
+        "Window": "Jul 2024-Jul 2025",
+        "Mean ROI": 16.26668521806494,
+        "Median ROI": 14.492544711189748,
+        "SD": 11.480709087489828,
+        "CV": 0.705780491451322,
+        "Min ROI": -3.137042191682831,
+        "Max ROI": 97.08033755034907,
+        "IQR": 9.165907440593573,
+        "95% CI Low": 14.507304420938063,
+        "95% CI High": 18.026066015191816,
+        "95% CI +/-": 1.7593807971268776,
+        "Sample Size": 166,
+        "S&P Return": 14.617690807800267,
+        "Best Config": "30->15",
+        "Best Config Mean ROI": 27.536000721243408,
+        "Worst Config": "5->3",
+        "Worst Config Mean ROI": 9.283230695519917
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2024-08",
+        "End": "2025-08",
+        "Window": "Aug 2024-Aug 2025",
+        "Mean ROI": 34.256011626638134,
+        "Median ROI": 32.74136193314749,
+        "SD": 14.087093868533799,
+        "CV": 0.4112298309000866,
+        "Min ROI": -0.8168829729283424,
+        "Max ROI": 133.631542932272,
+        "IQR": 9.1138500980312,
+        "95% CI Low": 32.17820172791329,
+        "95% CI High": 36.33382152536298,
+        "95% CI +/-": 2.0778098987248437,
+        "Sample Size": 179,
+        "S&P Return": 17.788078973177242,
+        "Best Config": "20->5",
+        "Best Config Mean ROI": 43.75045409387356,
+        "Worst Config": "30->5",
+        "Worst Config Mean ROI": 26.29849292981509
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2024-09",
+        "End": "2025-09",
+        "Window": "Sep 2024-Sep 2025",
+        "Mean ROI": 33.9836266733409,
+        "Median ROI": 32.87371314296014,
+        "SD": 9.568665601632995,
+        "CV": 0.28156693497163787,
+        "Min ROI": 16.749278333909295,
+        "Max ROI": 116.31039690335444,
+        "IQR": 9.074496219409152,
+        "95% CI Low": 33.03345335350796,
+        "95% CI High": 34.93379999317384,
+        "95% CI +/-": 0.9501733198329424,
+        "Sample Size": 392,
+        "S&P Return": 18.29520302222748,
+        "Best Config": "20->5",
+        "Best Config Mean ROI": 38.97023660532665,
+        "Worst Config": "30->5",
+        "Worst Config Mean ROI": 26.499388511447588
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2024-10",
+        "End": "2025-10",
+        "Window": "Oct 2024-Oct 2025",
+        "Mean ROI": 37.000066894427476,
+        "Median ROI": 38.89958081762691,
+        "SD": 7.999985246822794,
+        "CV": 0.21621542657339518,
+        "Min ROI": 13.615317103008165,
+        "Max ROI": 55.04374643531792,
+        "IQR": 11.081772371119033,
+        "95% CI Low": 35.9514294131004,
+        "95% CI High": 38.048704375754554,
+        "95% CI +/-": 1.0486374813270802,
+        "Sample Size": 226,
+        "S&P Return": 18.59776317243869,
+        "Best Config": "10->3",
+        "Best Config Mean ROI": 42.45310937072149,
+        "Worst Config": "30->5",
+        "Worst Config Mean ROI": 28.466745575086822
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2024-11",
+        "End": "2025-11",
+        "Window": "Nov 2024-Nov 2025",
+        "Mean ROI": 43.62027247892497,
+        "Median ROI": 44.429788527151274,
+        "SD": 8.958409471056077,
+        "CV": 0.20537261603270157,
+        "Min ROI": 21.17924170615446,
+        "Max ROI": 66.59585272410023,
+        "IQR": 11.493245275780247,
+        "95% CI Low": 42.4326495918989,
+        "95% CI High": 44.80789536595103,
+        "95% CI +/-": 1.1876228870260677,
+        "Sample Size": 221,
+        "S&P Return": 20.893839372635835,
+        "Best Config": "10->5",
+        "Best Config Mean ROI": 46.725032825606064,
+        "Worst Config": "30->5",
+        "Worst Config Mean ROI": 35.94405333342165
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2024-12",
+        "End": "2025-12",
+        "Window": "Dec 2024-Dec 2025",
+        "Mean ROI": 36.79049563972005,
+        "Median ROI": 37.5832976240406,
+        "SD": 10.745446743151517,
+        "CV": 0.2920712688510353,
+        "Min ROI": 9.75791601640969,
+        "Max ROI": 74.54796565690285,
+        "IQR": 14.16861900963075,
+        "95% CI Low": 35.36269395513054,
+        "95% CI High": 38.21829732430956,
+        "95% CI +/-": 1.4278016845895105,
+        "Sample Size": 220,
+        "S&P Return": 14.568384265151797,
+        "Best Config": "10->5",
+        "Best Config Mean ROI": 42.79426115671726,
+        "Worst Config": "30->5",
+        "Worst Config Mean ROI": 29.34930416839756
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2025-01",
+        "End": "2026-01",
+        "Window": "Jan 2025-Jan 2026",
+        "Mean ROI": 36.360236349546874,
+        "Median ROI": 35.24351248108955,
+        "SD": 10.843526760455125,
+        "CV": 0.2982248700534164,
+        "Min ROI": 16.080935673034183,
+        "Max ROI": 76.01140733207063,
+        "IQR": 13.92402440875422,
+        "95% CI Low": 34.92597932558074,
+        "95% CI High": 37.794493373513006,
+        "95% CI +/-": 1.4342570239661356,
+        "Sample Size": 222,
+        "S&P Return": 17.927890920056548,
+        "Best Config": "10->5",
+        "Best Config Mean ROI": 45.169748165159035,
+        "Worst Config": "30->5",
+        "Worst Config Mean ROI": 27.18549823479355
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2025-02",
+        "End": "2026-02",
+        "Window": "Feb 2025-Feb 2026",
+        "Mean ROI": 40.50403774632337,
+        "Median ROI": 38.4538912277543,
+        "SD": 19.595396991344707,
+        "CV": 0.48378873025130487,
+        "Min ROI": 7.995779746800927,
+        "Max ROI": 131.65197301905727,
+        "IQR": 23.176982025125845,
+        "95% CI Low": 37.87602878341017,
+        "95% CI High": 43.13204670923657,
+        "95% CI +/-": 2.6280089629131966,
+        "Sample Size": 216,
+        "S&P Return": 17.11793354788442,
+        "Best Config": "10->5",
+        "Best Config Mean ROI": 61.10325363953443,
+        "Worst Config": "30->15",
+        "Worst Config Mean ROI": 20.495030884764546
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2025-03",
+        "End": "2026-03",
+        "Window": "Mar 2025-Mar 2026",
+        "Mean ROI": 38.89375911343368,
+        "Median ROI": 38.312277104100914,
+        "SD": 17.354990561649295,
+        "CV": 0.4462153043894125,
+        "Min ROI": 8.593957455006493,
+        "Max ROI": 105.38725584687603,
+        "IQR": 19.94818122529363,
+        "95% CI Low": 36.577041340826064,
+        "95% CI High": 41.2104768860413,
+        "95% CI +/-": 2.316717772607617,
+        "Sample Size": 218,
+        "S&P Return": 18.890259125985562,
+        "Best Config": "20->5",
+        "Best Config Mean ROI": 48.44634720780267,
+        "Worst Config": "30->10",
+        "Worst Config Mean ROI": 23.297826031365826
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2025-04",
+        "End": "2026-04",
+        "Window": "Apr 2025-Apr 2026",
+        "Mean ROI": 37.65179932766515,
+        "Median ROI": 34.72783728930213,
+        "SD": 17.791024558678107,
+        "CV": 0.47251459097217485,
+        "Min ROI": -3.541302161894746,
+        "Max ROI": 98.77492800317134,
+        "IQR": 19.88540186422754,
+        "95% CI Low": 35.219797166333976,
+        "95% CI High": 40.08380148899633,
+        "95% CI +/-": 2.4320021613311757,
+        "Sample Size": 208,
+        "S&P Return": 17.307054121043468,
+        "Best Config": "10->5",
+        "Best Config Mean ROI": 52.854598532560495,
+        "Worst Config": "30->5",
+        "Worst Config Mean ROI": 21.636320486611993
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2025-05",
+        "End": "2026-05",
+        "Window": "May 2025-May 2026",
+        "Mean ROI": 56.1301751064496,
+        "Median ROI": 49.79917127294907,
+        "SD": 24.965405360370717,
+        "CV": 0.4447769014264501,
+        "Min ROI": 23.97783490216576,
+        "Max ROI": 172.18248142162756,
+        "IQR": 21.8577137627055,
+        "95% CI Low": 52.3726056579504,
+        "95% CI High": 59.887744554948796,
+        "95% CI +/-": 3.7575694484991953,
+        "Sample Size": 172,
+        "S&P Return": 30.360066486111215,
+        "Best Config": "10->5",
+        "Best Config Mean ROI": 73.63627113954374,
+        "Worst Config": "30->15",
+        "Worst Config Mean ROI": 42.391208056696186
+      },
+      {
+        "Period (mo)": 12,
+        "Start": "2025-06",
+        "End": "2026-06",
+        "Window": "Jun 2025-Jun 2026",
+        "Mean ROI": 52.35782103190859,
+        "Median ROI": 44.12277255897659,
+        "SD": 32.96972615329267,
+        "CV": 0.6297001193613428,
+        "Min ROI": -37.32694056242822,
+        "Max ROI": 177.70392560569803,
+        "IQR": 21.193824541154605,
+        "95% CI Low": 47.19360830493298,
+        "95% CI High": 57.522033758884206,
+        "95% CI +/-": 5.164212726975612,
+        "Sample Size": 159,
+        "S&P Return": 29.288365263065373,
+        "Best Config": "5->3",
+        "Best Config Mean ROI": 80.61622357493428,
+        "Worst Config": "20->5",
+        "Worst Config Mean ROI": 32.027219950811414
+      },
+      {
+        "Period (mo)": 24,
+        "Start": "2024-06",
+        "End": "2026-06",
+        "Window": "Jun 2024-Jun 2026",
+        "Mean ROI": 75.41851830223992,
+        "Median ROI": 73.85569150575782,
+        "SD": 18.002365457356028,
+        "CV": 0.2386995377608918,
+        "Min ROI": 49.78006010810519,
+        "Max ROI": 151.30120099529273,
+        "IQR": 21.039334424219604,
+        "95% CI Low": 71.41228811717869,
+        "95% CI High": 79.42474848730114,
+        "95% CI +/-": 4.006230185061232,
+        "Sample Size": 80,
+        "S&P Return": 47.21496068166463,
+        "Best Config": "unfiltered",
+        "Best Config Mean ROI": 92.20619617492319,
+        "Worst Config": "10->3",
+        "Worst Config Mean ROI": 60.66786091034545
+      }
+    ],
+    "S&P Comparison": [
+      {
+        "Filter": "10->5",
+        "Mean Excess Return": 23.67770510546826,
+        "Beat S&P %": 0.8871473354231975,
+        "Average Alpha": 23.67770510546826,
+        "Median Alpha": 22.536913027728893,
+        "Sample Size": 319
+      },
+      {
+        "Filter": "20->5",
+        "Mean Excess Return": 22.562047716632545,
+        "Beat S&P %": 0.9195046439628483,
+        "Average Alpha": 22.562047716632545,
+        "Median Alpha": 20.880304463484165,
+        "Sample Size": 323
+      },
+      {
+        "Filter": "10->3",
+        "Mean Excess Return": 21.805091657374497,
+        "Beat S&P %": 0.9477124183006536,
+        "Average Alpha": 21.805091657374497,
+        "Median Alpha": 22.925256469877887,
+        "Sample Size": 306
+      },
+      {
+        "Filter": "unfiltered",
+        "Mean Excess Return": 20.77958197947385,
+        "Beat S&P %": 0.956140350877193,
+        "Average Alpha": 20.77958197947385,
+        "Median Alpha": 19.27929204906687,
+        "Sample Size": 114
+      },
+      {
+        "Filter": "5->3",
+        "Mean Excess Return": 20.504586001292616,
+        "Beat S&P %": 0.8616352201257862,
+        "Average Alpha": 20.504586001292616,
+        "Median Alpha": 23.094242577579866,
+        "Sample Size": 318
+      },
+      {
+        "Filter": "20->10",
+        "Mean Excess Return": 20.199850468834118,
+        "Beat S&P %": 0.9273927392739274,
+        "Average Alpha": 20.199850468834118,
+        "Median Alpha": 14.453319007227584,
+        "Sample Size": 303
+      },
+      {
+        "Filter": "30->15",
+        "Mean Excess Return": 15.753786865628765,
+        "Beat S&P %": 0.9225589225589226,
+        "Average Alpha": 15.753786865628765,
+        "Median Alpha": 12.351680771421623,
+        "Sample Size": 297
+      },
+      {
+        "Filter": "ranked_final",
+        "Mean Excess Return": 14.420565235824977,
+        "Beat S&P %": 0.891156462585034,
+        "Average Alpha": 14.420565235824977,
+        "Median Alpha": 15.105685439174657,
+        "Sample Size": 294
+      },
+      {
+        "Filter": "30->10",
+        "Mean Excess Return": 10.906113380454956,
+        "Beat S&P %": 0.8805460750853242,
+        "Average Alpha": 10.906113380454956,
+        "Median Alpha": 8.398034720266075,
+        "Sample Size": 293
+      },
+      {
+        "Filter": "30->5",
+        "Mean Excess Return": 10.000064765312638,
+        "Beat S&P %": 0.8602941176470589,
+        "Average Alpha": 10.000064765312638,
+        "Median Alpha": 9.07504001368123,
+        "Sample Size": 272
+      }
+    ],
+    "Reliability Metrics": [
+      {
+        "Filter": "ranked_final",
+        "Mean ROI": 34.129865456223655,
+        "Median ROI": 34.58598391597695,
+        "SD": 14.432521092525226,
+        "CV": 0.4228707291869334,
+        "Min ROI": 2.1960325090545485,
+        "Max ROI": 107.34429033016796,
+        "IQR": 10.712774894351782,
+        "95% CI Low": 32.47327844361348,
+        "95% CI High": 35.78645246883383,
+        "95% CI +/-": 1.6565870126101745,
+        "Sample Size": 294
+      },
+      {
+        "Filter": "30->15",
+        "Mean ROI": 35.3786275571645,
+        "Median ROI": 31.65161876194161,
+        "SD": 16.377284623230153,
+        "CV": 0.46291463954524154,
+        "Min ROI": 7.995779746800927,
+        "Max ROI": 114.60514726082368,
+        "IQR": 20.24400722964905,
+        "95% CI Low": 33.508414290010656,
+        "95% CI High": 37.24884082431834,
+        "95% CI +/-": 1.8702132671538454,
+        "Sample Size": 297
+      },
+      {
+        "Filter": "30->5",
+        "Mean ROI": 29.85181652362963,
+        "Median ROI": 27.801817960634633,
+        "SD": 14.22322798711551,
+        "CV": 0.4764610547521258,
+        "Min ROI": -3.541302161894746,
+        "Max ROI": 115.6555647396428,
+        "IQR": 11.987006033433488,
+        "95% CI Low": 28.15394164209666,
+        "95% CI High": 31.549691405162598,
+        "95% CI +/-": 1.6978748815329683,
+        "Sample Size": 272
+      },
+      {
+        "Filter": "unfiltered",
+        "Mean ROI": 41.752137555767064,
+        "Median ROI": 38.12376047287903,
+        "SD": 19.96176810943492,
+        "CV": 0.4781017039612066,
+        "Min ROI": 6.094620141985888,
+        "Max ROI": 151.30120099529273,
+        "IQR": 15.482631895724673,
+        "95% CI Low": 38.04814082714158,
+        "95% CI High": 45.45613428439255,
+        "95% CI +/-": 3.7039967286254867,
+        "Sample Size": 114
+      },
+      {
+        "Filter": "10->3",
+        "Mean ROI": 41.53941586892785,
+        "Median ROI": 41.708674154854215,
+        "SD": 20.35396038472333,
+        "CV": 0.48999149263310704,
+        "Min ROI": 8.967737627405786,
+        "Max ROI": 176.95803869572936,
+        "IQR": 12.650062417703147,
+        "95% CI Low": 39.249797680046115,
+        "95% CI High": 43.82903405780958,
+        "95% CI +/-": 2.2896181888817293,
+        "Sample Size": 306
+      },
+      {
+        "Filter": "5->3",
+        "Mean ROI": 40.14582413819725,
+        "Median ROI": 41.11478241538519,
+        "SD": 19.80632217308919,
+        "CV": 0.49335946137033504,
+        "Min ROI": -8.673732279892702,
+        "Max ROI": 176.9580364912283,
+        "IQR": 11.252341441772515,
+        "95% CI Low": 37.96058159482967,
+        "95% CI High": 42.33106668156483,
+        "95% CI +/-": 2.1852425433675795,
+        "Sample Size": 318
+      },
+      {
+        "Filter": "30->10",
+        "Mean ROI": 30.317616721779924,
+        "Median ROI": 27.154209635763856,
+        "SD": 15.076024858667887,
+        "CV": 0.49726945877765505,
+        "Min ROI": 5.193888127855371,
+        "Max ROI": 113.08711613176759,
+        "IQR": 14.707251715320947,
+        "95% CI Low": 28.584192264463898,
+        "95% CI High": 32.05104117909595,
+        "95% CI +/-": 1.733424457316025,
+        "Sample Size": 293
+      },
+      {
+        "Filter": "20->10",
+        "Mean ROI": 39.971321422908254,
+        "Median ROI": 33.353505753959546,
+        "SD": 21.30086079170155,
+        "CV": 0.53290359271169,
+        "Min ROI": 3.1363170562126834,
+        "Max ROI": 123.12923910017766,
+        "IQR": 25.88588432506962,
+        "95% CI Low": 37.563258221213204,
+        "95% CI High": 42.379384624603304,
+        "95% CI +/-": 2.4080632016950476,
+        "Sample Size": 303
+      },
+      {
+        "Filter": "10->5",
+        "Mean ROI": 43.3314491357926,
+        "Median ROI": 41.23559346998338,
+        "SD": 23.321055895893863,
+        "CV": 0.5382016147858353,
+        "Min ROI": -8.73258617592157,
+        "Max ROI": 129.21374195856137,
+        "IQR": 18.625401744434072,
+        "95% CI Low": 40.76249114486647,
+        "95% CI High": 45.90040712671873,
+        "95% CI +/-": 2.5689579909261284,
+        "Sample Size": 319
+      },
+      {
+        "Filter": "20->5",
+        "Mean ROI": 42.21090613024355,
+        "Median ROI": 40.381038724071146,
+        "SD": 23.588751893180863,
+        "CV": 0.5588307396291556,
+        "Min ROI": -37.32694056242822,
+        "Max ROI": 177.70392560569803,
+        "IQR": 16.745400293971407,
+        "95% CI Low": 39.62872188997452,
+        "95% CI High": 44.79309037051258,
+        "95% CI +/-": 2.5821842402690303,
+        "Sample Size": 323
+      }
+    ],
+    "Headline Numbers": [
+      {
+        "Headline Metric": "Best mean ROI configuration",
+        "Value": "10->5",
+        "Statistic": 43.3314491357926
+      },
+      {
+        "Headline Metric": "Unfiltered mean ROI",
+        "Value": "unfiltered",
+        "Statistic": 41.752137555767064
+      },
+      {
+        "Headline Metric": "GPT-5.1 mean ROI",
+        "Value": "gpt-5.1",
+        "Statistic": 47.00903734143109
+      },
+      {
+        "Headline Metric": "Highest beat-rate vs unfiltered",
+        "Value": "10->5",
+        "Statistic": 0.6306306306306306
+      },
+      {
+        "Headline Metric": "Lowest CV among strong-performing configurations",
+        "Value": "unfiltered",
+        "Statistic": 0.4781017039612066
+      }
+    ],
+    "Statistical Tests": [
+      {
+        "Test": "ANOVA across Configurations",
+        "Statistic": 19.394889093022,
+        "p-value": 7.515025276757017e-32
+      },
+      {
+        "Test": "ANOVA across Models",
+        "Statistic": 98.49468405185615,
+        "p-value": 4.410726293369202e-42
+      },
+      {
+        "Test": "Welch t-test: 10->5 vs unfiltered",
+        "Statistic": 0.6925541756672113,
+        "p-value": 0.4892861310540897
+      },
+      {
+        "Test": "Welch t-test: gpt-5.1 vs gpt-4o",
+        "Statistic": 9.292114241741515,
+        "p-value": 6.206514345760996e-20
+      },
+      {
+        "Test": "Welch t-test: gpt-5.1 vs gpt-4o-mini",
+        "Statistic": 13.243395226705063,
+        "p-value": 6.045705028094813e-37
+      }
+    ],
+    "Tukey HSD Configs": [
+      {
+        "Group A": "10->5",
+        "Group B": "30->5",
+        "Mean Difference": 13.479632612162973,
+        "q statistic": 12.00952408825001,
+        "p-value": 6.029621246739225e-13,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "10->5",
+        "Group B": "30->10",
+        "Mean Difference": 13.013832414012679,
+        "q statistic": 11.825522513966938,
+        "p-value": 6.057376822354854e-13,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "20->5",
+        "Group B": "30->5",
+        "Mean Difference": 12.35908960661392,
+        "q statistic": 11.042703214220543,
+        "p-value": 9.657830091214237e-13,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "20->5",
+        "Group B": "30->10",
+        "Mean Difference": 11.893289408463627,
+        "q statistic": 10.839478570607163,
+        "p-value": 1.7025270082626776e-12,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "30->5",
+        "Mean Difference": 11.687599345298217,
+        "q statistic": 10.312601838450867,
+        "p-value": 1.8335666318591848e-11,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "30->10",
+        "Mean Difference": 11.221799147147923,
+        "q statistic": 10.094976035044597,
+        "p-value": 5.443234751822956e-11,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "30->5",
+        "Group B": "5->3",
+        "Mean Difference": -10.294007614567619,
+        "q statistic": 9.16469845898068,
+        "p-value": 4.832764965989611e-09,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "30->10",
+        "Group B": "5->3",
+        "Mean Difference": -9.828207416417325,
+        "q statistic": 8.924065869866208,
+        "p-value": 1.4476530196816384e-08,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "20->10",
+        "Group B": "30->5",
+        "Mean Difference": 10.119504899278624,
+        "q statistic": 8.90825823002145,
+        "p-value": 1.554356954258651e-08,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "20->10",
+        "Group B": "30->10",
+        "Mean Difference": 9.65370470112833,
+        "q statistic": 8.663386566492605,
+        "p-value": 4.607409576085075e-08,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "10->5",
+        "Group B": "ranked_final",
+        "Mean Difference": 9.201583679568948,
+        "q statistic": 8.368797093743893,
+        "p-value": 1.6399048663462423e-07,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "30->5",
+        "Group B": "unfiltered",
+        "Mean Difference": -11.900321032137434,
+        "q statistic": 7.842663683552094,
+        "p-value": 1.4280106710451435e-06,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "30->10",
+        "Group B": "unfiltered",
+        "Mean Difference": -11.43452083398714,
+        "q statistic": 7.616732267854523,
+        "p-value": 3.4716851102789548e-06,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "20->5",
+        "Group B": "ranked_final",
+        "Mean Difference": 8.081040674019896,
+        "q statistic": 7.371592608042666,
+        "p-value": 8.84921828192553e-06,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "10->5",
+        "Group B": "30->15",
+        "Mean Difference": 7.952821578628104,
+        "q statistic": 7.2521393103749965,
+        "p-value": 1.3812220148956555e-05,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "ranked_final",
+        "Mean Difference": 7.409550412704192,
+        "q statistic": 6.671328088412253,
+        "p-value": 0.00010869042443339971,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "20->5",
+        "Group B": "30->15",
+        "Mean Difference": 6.832278573079051,
+        "q statistic": 6.249005335435242,
+        "p-value": 0.00043693337298855717,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "30->15",
+        "Mean Difference": 6.160788311763348,
+        "q statistic": 5.56132476193743,
+        "p-value": 0.0034272843207442394,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "5->3",
+        "Group B": "ranked_final",
+        "Mean Difference": 6.0159586819735935,
+        "q statistic": 5.467364742240544,
+        "p-value": 0.004448351107304571,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "20->10",
+        "Group B": "ranked_final",
+        "Mean Difference": 5.841455966684599,
+        "q statistic": 5.246752885295992,
+        "p-value": 0.008040031395309732,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "ranked_final",
+        "Group B": "unfiltered",
+        "Mean Difference": -7.622272099543409,
+        "q statistic": 5.079747746045428,
+        "p-value": 0.012342880001736223,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "30->15",
+        "Group B": "30->5",
+        "Mean Difference": 5.5268110335348695,
+        "q statistic": 4.842201392142725,
+        "p-value": 0.022043631383533713,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "30->10",
+        "Group B": "30->15",
+        "Mean Difference": -5.061010835384575,
+        "q statistic": 4.519443744990948,
+        "p-value": 0.045730069855995925,
+        "Reject at 0.05": true
+      },
+      {
+        "Group A": "30->15",
+        "Group B": "5->3",
+        "Mean Difference": -4.767196581032749,
+        "q statistic": 4.3438915745828455,
+        "p-value": 0.06604133637968101,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "30->15",
+        "Group B": "unfiltered",
+        "Mean Difference": -6.3735099986025645,
+        "q statistic": 4.253535871151413,
+        "p-value": 0.07912951614291086,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "20->10",
+        "Group B": "30->15",
+        "Mean Difference": 4.592693865743755,
+        "q statistic": 4.135738780424868,
+        "p-value": 0.09929268573468408,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "30->5",
+        "Group B": "ranked_final",
+        "Mean Difference": -4.278048932594025,
+        "q statistic": 3.73901612584151,
+        "p-value": 0.19777457757650063,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "30->10",
+        "Group B": "ranked_final",
+        "Mean Difference": -3.812248734443731,
+        "q statistic": 3.3957158557082923,
+        "p-value": 0.32532644284984236,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->5",
+        "Group B": "20->10",
+        "Mean Difference": 3.360127712884349,
+        "q statistic": 3.0799164597932855,
+        "p-value": 0.47239837003454377,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->5",
+        "Group B": "5->3",
+        "Mean Difference": 3.1856249975953546,
+        "q statistic": 2.9559393896871535,
+        "p-value": 0.5346155668223946,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "20->10",
+        "Group B": "20->5",
+        "Mean Difference": -2.239584707335297,
+        "q statistic": 2.0590390869742,
+        "p-value": 0.9090498590999782,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "20->5",
+        "Group B": "5->3",
+        "Mean Difference": 2.065081992046302,
+        "q statistic": 1.9221390186087934,
+        "p-value": 0.9392869477227277,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "10->5",
+        "Mean Difference": -1.792033266864756,
+        "q statistic": 1.6467353271892753,
+        "p-value": 0.9775184995199659,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "20->10",
+        "Mean Difference": 1.5680944460195931,
+        "q statistic": 1.4226801977225865,
+        "p-value": 0.9919693521868848,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "5->3",
+        "Mean Difference": 1.3935917307305985,
+        "q statistic": 1.2796147216226028,
+        "p-value": 0.9963539855054161,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "20->10",
+        "Group B": "unfiltered",
+        "Mean Difference": -1.78081613285881,
+        "q statistic": 1.1917536278553977,
+        "p-value": 0.9978901542397491,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "30->15",
+        "Group B": "ranked_final",
+        "Mean Difference": 1.2487621009408443,
+        "q statistic": 1.1160908507201532,
+        "p-value": 0.9987392590081638,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "5->3",
+        "Group B": "unfiltered",
+        "Mean Difference": -1.6063134175698153,
+        "q statistic": 1.0819721648640652,
+        "p-value": 0.9990150768033323,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->5",
+        "Group B": "unfiltered",
+        "Mean Difference": 1.5793115800255393,
+        "q statistic": 1.0642246833522324,
+        "p-value": 0.9991371278722361,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->5",
+        "Group B": "20->5",
+        "Mean Difference": 1.1205430055490524,
+        "q statistic": 1.0438048406211513,
+        "p-value": 0.999261491379708,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "20->5",
+        "Mean Difference": -0.6714902613157037,
+        "q statistic": 0.618925047901161,
+        "p-value": 0.9999908648511348,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "30->10",
+        "Group B": "30->5",
+        "Mean Difference": 0.46580019815029416,
+        "q statistic": 0.4067760699264312,
+        "p-value": 0.9999997696162266,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "20->5",
+        "Group B": "unfiltered",
+        "Mean Difference": 0.4587685744764869,
+        "q statistic": 0.30964802787778084,
+        "p-value": 0.9999999795989548,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "20->10",
+        "Group B": "5->3",
+        "Mean Difference": -0.17450271528899464,
+        "q statistic": 0.15982803203665588,
+        "p-value": 0.9999999999452391,
+        "Reject at 0.05": false
+      },
+      {
+        "Group A": "10->3",
+        "Group B": "unfiltered",
+        "Mean Difference": -0.21272168683921677,
+        "q statistic": 0.1425482699229378,
+        "p-value": 0.9999999999803989,
+        "Reject at 0.05": false
+      }
+    ]
+  }
+}
