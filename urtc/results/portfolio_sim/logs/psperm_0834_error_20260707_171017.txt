@@ -1,0 +1,15 @@
+#0834 tech 12mo 2025-03->2026-03 gpt-5.1 12x 20->10
+
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\GitHub\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 577, in _run_one
+    result = SIMULATE_FN(p, api_key=self.api_key, dry_run=self.dry_run,
+                         budget=self.budget, whole_shares=self.whole_shares, rf=self.rf,
+                         stop_check=self.stop_evt.is_set)
+  File "c:\Users\jathi\Documents\GitHub\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 492, in simulate_permutation
+    run = psr.run_simulation(backend, sector=p["sector"], budget=budget, segments=segments,
+                             max_holdings=Y, whole_shares=whole_shares, rf_annual=rf)
+  File "c:\Users\jathi\Documents\GitHub\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_runner.py", line 761, in run_simulation
+    raise OverspendError(
+        f"period {i} ({as_of}): model overspent {overspend_streak} "
+        f"times in a row (last: {reason})")
+portfolio_sim_runner.OverspendError: period 4 (2025-07-01): model overspent 3 times in a row (last: buy orders total $10,438.31 exceed available cash $10,438.31 after sells (overdraw $0.00))

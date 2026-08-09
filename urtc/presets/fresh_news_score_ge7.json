@@ -1,0 +1,85 @@
+{
+  "name": "relevance threshold >=7 (12x, 20->10)",
+  "description": "Threshold arm of the relevance sweep. Identical to fresh_news_hold_winners.json except screened_corpus=tech_scored_ge7.csv and freqs=[12].",
+  "notes": [
+    "PART OF A DOSE-RESPONSE SWEEP: >=7, >=6, >=4 (plus the existing binary",
+    "screen arm and the unscreened arm as reference points).",
+    "",
+    "WHY A SWEEP AND NOT AN A/B: the earlier screened-vs-unscreened contrast",
+    "(-6.31pp, p=0.039) compared TWO DIFFERENT SELECTION MECHANISMS, not one",
+    "filter at two settings. screened=True reads tech_screened_corpus.csv with",
+    "NO keyword filter; screened=False reads the raw corpus WITH a literal",
+    "'technology' substring filter. Over a 24-month lookback those sets overlap",
+    "on only 13% of the screened corpus. That contrast cannot isolate relevance.",
+    "",
+    "score_news_relevance.py rates all 13,183 articles 1-10 on one anchored",
+    "rubric, so threshold is the ONLY variable across these arms and the result",
+    "is a dose-response rather than an apples-to-oranges comparison.",
+    "",
+    "  corpus                articles   share   worst 90d window",
+    "    binary screen         1799     13.6%      79",
+    "    >=8                   1026      7.8%      43   <- EXCLUDED, fails gate",
+    "    >=7                   1572     11.9%      66",
+    "    >=6                   2847     21.6%     114",
+    "    >=5                   3927     29.8%     155",
+    "    >=4                   4917     37.3%     201",
+    "",
+    "  THIS ARM: >=7, 1572 articles, 11.9% of corpus, worst 90-day window 66.",
+    "",
+    ">=8 IS DELIBERATELY EXCLUDED. Its thinnest decision sees 43 articles against",
+    "the min_articles=50 gate, so cells would be SKIPPED and the paired",
+    "comparison would silently break. Lowering the gate for that arm alone would",
+    "confound threshold with gate, so >=8 is simply out of the sweep.",
+    "",
+    "GATE UNCHANGED at 50/90d, and _news_dates now measures the SAME corpus the",
+    "run reads, so the gate is honest for each arm.",
+    "",
+    "COMPARE AGAINST: hold_winners @12x (binary screen, INIT 45.60%) and",
+    "unscreened_12x (raw corpus, INIT 51.91%). Read the INIT column - it is the",
+    "period-0 pick held, i.e. picks quality with the reinvestment layer removed.",
+    "",
+    "CAVEAT FOR THE PAPER: the NHSJS precision figure (100%, Wilson 94.8-100%)",
+    "was measured on the BINARY prompt and does NOT transfer to this rubric. A",
+    "threshold sweep in the paper needs its own hand-labelled validation. Also",
+    "the scorer is gpt-4o-mini while the strategy runs on gpt-5.1.",
+    "",
+    "9 windows x 3 runs = 27 runs. dry_run FALSE: this SPENDS BUDGET."
+  ],
+  "options": {
+    "feedback": true,
+    "screened_news": true,
+    "screened_corpus": "tech_scored_ge7.csv",
+    "order_mode": "weights",
+    "rebalance_mode": "hold",
+    "prompt_framing": "reset",
+    "min_articles": 50,
+    "min_articles_days": 90,
+    "txn_cost_bps": 0,
+    "results_subdir": "score_ge7_12x",
+    "runs_per_perm": 3,
+    "threads": 8,
+    "budget": 10000.0,
+    "risk_free": 0.04,
+    "whole_shares": false,
+    "dry_run": false
+  },
+  "filters": {
+    "sectors": [
+      "technology"
+    ],
+    "models": [
+      "gpt-5.1"
+    ],
+    "periods": [
+      12
+    ],
+    "freqs": [
+      12
+    ],
+    "filters": [
+      "20-10"
+    ],
+    "date_from": "2024-10",
+    "date_to": "2025-06"
+  }
+}

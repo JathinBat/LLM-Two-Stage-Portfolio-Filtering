@@ -1,0 +1,42 @@
+{
+  "name": "TODAY feedback OFF (control)",
+  "description": "Control arm for today_feedback_on.json. Identical in every setting except feedback=false and the results folder.",
+  "notes": [
+    "Run this immediately after today_feedback_on.json, changing nothing else.",
+    "",
+    "The gate (45 articles / 180 days) MUST stay identical to the ON arm. If the",
+    "corpus changes between the two arms — another backfill, a re-screen — the cells",
+    "that pass could differ, and the pairing silently breaks. Finish both arms before",
+    "touching the news data again.",
+    "",
+    "Output lands in results/portfolio_sim/feedback_off/ and every filename is tagged",
+    "'_fboff', so the arms stay distinguishable even outside their folders.",
+    "",
+    "Then: python analyze_feedback.py   (paired by window: ROI + Sharpe, sign test,",
+    "Wilcoxon, behavioral deltas, and the retained-vs-dropped winner-chasing test)"
+  ],
+  "options": {
+    "feedback": false,
+    "screened_news": true,
+    "order_mode": "weights",
+    "min_articles": 45,
+    "min_articles_days": 180,
+    "txn_cost_bps": 0,
+    "results_subdir": "feedback_off",
+    "runs_per_perm": 3,
+    "threads": 1,
+    "budget": 10000.0,
+    "risk_free": 0.04,
+    "whole_shares": false,
+    "dry_run": true
+  },
+  "filters": {
+    "sectors": ["technology"],
+    "models": ["gpt-5.1"],
+    "periods": [12],
+    "freqs": [2, 12],
+    "filters": ["20-10"],
+    "date_from": "2024-10",
+    "date_to": "2025-06"
+  }
+}

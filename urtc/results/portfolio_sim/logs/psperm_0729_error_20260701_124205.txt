@@ -1,0 +1,43 @@
+#0729 tech 12mo 2025-02->2026-02 gpt-5.1 2x 20->10
+
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 529, in _run_one
+    result = SIMULATE_FN(p, api_key=self.api_key, dry_run=self.dry_run,
+                         budget=self.budget, whole_shares=self.whole_shares, rf=self.rf,
+                         stop_check=self.stop_evt.is_set)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 444, in simulate_permutation
+    run = psr.run_simulation(backend, sector=p["sector"], budget=budget, segments=segments,
+                             max_holdings=Y, whole_shares=whole_shares, rf_annual=rf)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_runner.py", line 640, in run_simulation
+    orders = backend.decide(
+        stage=stage, sector=sector, as_of=as_of, candidates=candidates,
+        prices=prices, cash=portfolio.cash, total_value=value_before,
+        max_holdings=max_holdings, holdings_report=holdings_report,
+        retry_feedback=retry_feedback)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 385, in wrapped
+    return __orig(*a, **k)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_runner.py", line 495, in decide
+    resp = _oai_create_with_retry(self.gen.openai_client, model=model,
+                                  messages=[{"role": "user", "content": prompt}],
+                                  **self.gen._temp_kwargs(model), max_completion_tokens=2500)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\SCCUR_TESTS\investment_strategy_generator.py", line 199, in _oai_create_with_retry
+    return client.chat.completions.create(**kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_utils\_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\chat\completions\completions.py", line 925, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<43 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1034, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: upstream connect error or disconnect/reset before headers. reset reason: connection termination

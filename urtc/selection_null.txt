@@ -1,0 +1,38 @@
+SELECTION NULL — model's pick vs random draws from its OWN candidate pool
+==========================================================================
+
+runs dir      : C:\Users\jathi\Documents\GitHub\ASDRP-LLM-Long-Term-Investment-Strategy\results\portfolio_sim
+draws/period  : 10,000   seed 1234
+return basis  : adjusted close, equal-weight, held to the next rebalance
+scored        : 5275 rebalance decisions (764 runs)
+skipped       : 90 legacy runs (no candidate logging), 0 unscorable decisions
+
+A percentile of 50 means the model did no better than drawing at random
+from the shortlist it built. Above 50 = Stage Two adds value over its own
+opportunity set; below 50 = the shortlist was better than the final pick.
+
+ALL DECISIONS  (n = 5275 rebalance decisions)
+  median percentile vs own candidate pool :  52.3   (50 = no selection skill)
+  mean percentile                         :  53.4
+  beat its pool's median portfolio        : 2788/5275 (52.9%, 95% CI 51-54%)
+  mean z vs null                          : +0.145
+  Wilcoxon percentile vs 50               : p = 0.0000
+  percentile quartiles                    : 31 / 52 / 76
+
+stage = initial  (n = 764 rebalance decisions)
+  median percentile vs own candidate pool :  49.0   (50 = no selection skill)
+  mean percentile                         :  51.7
+  beat its pool's median portfolio        : 376/764 (49.2%, 95% CI 46-53%)
+  mean z vs null                          : +0.073
+  Wilcoxon percentile vs 50               : p = 0.1282
+  percentile quartiles                    : 30 / 49 / 75
+
+stage = rebalance  (n = 4511 rebalance decisions)
+  median percentile vs own candidate pool :  52.7   (50 = no selection skill)
+  mean percentile                         :  53.7
+  beat its pool's median portfolio        : 2412/4511 (53.5%, 95% CI 52-55%)
+  mean z vs null                          : +0.158
+  Wilcoxon percentile vs 50               : p = 0.0000
+  percentile quartiles                    : 32 / 53 / 76
+
+Per-decision detail: selection_null_periods.csv

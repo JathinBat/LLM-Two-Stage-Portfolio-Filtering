@@ -1,0 +1,14 @@
+#0988 tech 12mo 2025-05->2026-05 gpt-5.1 4x 20->10
+
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\GitHub\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 540, in _run_one
+    result = SIMULATE_FN(p, api_key=self.api_key, dry_run=self.dry_run,
+                         budget=self.budget, whole_shares=self.whole_shares, rf=self.rf,
+                         stop_check=self.stop_evt.is_set)
+  File "c:\Users\jathi\Documents\GitHub\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 452, in simulate_permutation
+    backend = _RealX(model=p["model"])
+  File "c:\Users\jathi\Documents\GitHub\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_runner.py", line 383, in __init__
+    from investment_strategy_generator import InvestmentStrategyGenerator
+  File "c:\Users\jathi\Documents\GitHub\ASDRP-LLM-Long-Term-Investment-Strategy\SCCUR_TESTS\investment_strategy_generator.py", line 41, in <module>
+    import openai as _openai_lib
+ModuleNotFoundError: No module named 'openai'

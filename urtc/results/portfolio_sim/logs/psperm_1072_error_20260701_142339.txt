@@ -1,0 +1,115 @@
+#1072 tech 12mo 2025-06->2026-06 gpt-5.1 4x 20->10
+
+Traceback (most recent call last):
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\http11.py", line 136, in handle_request
+    raise exc
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+        self.READ_NUM_BYTES, timeout=timeout
+    )
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_backends\sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 969, in request
+    response = self._client.send(
+        request,
+        stream=stream or self._should_stream_response_body(request=request),
+        **kwargs,
+    )
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 532, in _run_one
+    result = SIMULATE_FN(p, api_key=self.api_key, dry_run=self.dry_run,
+                         budget=self.budget, whole_shares=self.whole_shares, rf=self.rf,
+                         stop_check=self.stop_evt.is_set)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 447, in simulate_permutation
+    run = psr.run_simulation(backend, sector=p["sector"], budget=budget, segments=segments,
+                             max_holdings=Y, whole_shares=whole_shares, rf_annual=rf)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_runner.py", line 687, in run_simulation
+    orders = backend.decide(
+        stage=stage, sector=sector, as_of=as_of, candidates=candidates,
+        prices=prices, cash=portfolio.cash, total_value=value_before,
+        max_holdings=max_holdings, holdings_report=holdings_report,
+        retry_feedback=retry_feedback)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 386, in wrapped
+    return __orig(*a, **k)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_runner.py", line 530, in decide
+    resp = _oai_create_with_retry(self.gen.openai_client, model=model,
+                                  messages=[{"role": "user", "content": prompt}],
+                                  **self.gen._temp_kwargs(model), max_completion_tokens=2500)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\SCCUR_TESTS\investment_strategy_generator.py", line 199, in _oai_create_with_retry
+    return client.chat.completions.create(**kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_utils\_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\chat\completions\completions.py", line 925, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<43 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1001, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.

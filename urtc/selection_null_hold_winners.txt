@@ -1,0 +1,47 @@
+﻿Loading runs from results/portfolio_sim/hold_winners ...
+  108 runs, 648 scorable rebalance decisions
+  skipped 0 runs with no candidate logging (legacy schema)
+  82 distinct tickers, 2024-10-01 -> 2026-06-01
+Fetching prices (yfinance; local only)...
+  got 82 tickers x 427 trading days
+
+SELECTION NULL — model's pick vs random draws from its OWN candidate pool
+==========================================================================
+
+runs dir      : results/portfolio_sim/hold_winners
+draws/period  : 10,000   seed 1234
+return basis  : adjusted close, equal-weight, held to the next rebalance
+scored        : 648 rebalance decisions (108 runs)
+skipped       : 0 legacy runs (no candidate logging), 0 unscorable decisions
+
+A percentile of 50 means the model did no better than drawing at random
+from the shortlist it built. Above 50 = Stage Two adds value over its own
+opportunity set; below 50 = the shortlist was better than the final pick.
+
+ALL DECISIONS  (n = 648 rebalance decisions)
+  median percentile vs own candidate pool :  54.1   (50 = no selection skill)
+  mean percentile                         :  54.7
+  beat its pool's median portfolio        : 346/648 (53.4%, 95% CI 49-57%)
+  mean z vs null                          : +0.207
+  Wilcoxon percentile vs 50               : p = 0.0000
+  percentile quartiles                    : 32 / 54 / 79
+
+stage = initial  (n = 108 rebalance decisions)
+  median percentile vs own candidate pool :  49.8   (50 = no selection skill)
+  mean percentile                         :  54.0
+  beat its pool's median portfolio        : 54/108 (50.0%, 95% CI 40-60%)
+  mean z vs null                          : +0.159
+  Wilcoxon percentile vs 50               : p = 0.1824
+  percentile quartiles                    : 31 / 50 / 76
+
+stage = rebalance  (n = 540 rebalance decisions)
+  median percentile vs own candidate pool :  54.5   (50 = no selection skill)
+  mean percentile                         :  54.8
+  beat its pool's median portfolio        : 292/540 (54.1%, 95% CI 50-58%)
+  mean z vs null                          : +0.216
+  Wilcoxon percentile vs 50               : p = 0.0001
+  percentile quartiles                    : 32 / 54 / 79
+
+Per-decision detail: selection_null_periods.csv
+
+Wrote selection_null.txt and selection_null_periods.csv

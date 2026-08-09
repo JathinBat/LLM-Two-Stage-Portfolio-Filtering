@@ -1,0 +1,36 @@
+#0813 tech 12mo 2025-03->2026-03 gpt-5.1 2x 20->10
+
+Traceback (most recent call last):
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 502, in _run_one
+    result = SIMULATE_FN(p, api_key=self.api_key, dry_run=self.dry_run,
+                         budget=self.budget, whole_shares=self.whole_shares, rf=self.rf)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 419, in simulate_permutation
+    run = psr.run_simulation(backend, sector=p["sector"], budget=budget, segments=segments,
+                             max_holdings=Y, whole_shares=whole_shares, rf_annual=rf)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_runner.py", line 624, in run_simulation
+    candidates = backend.get_candidates(sector, as_of, max_holdings)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\portfolio_sim_permutation_runner.py", line 411, in get_candidates
+    resp = _oai_create_with_retry(self.gen.openai_client, model=model,
+                                  messages=[{"role": "user", "content": prompt}],
+                                  **self.gen._temp_kwargs(model), max_completion_tokens=1500)
+  File "c:\Users\jathi\Documents\ASDRP-LLM-Long-Term-Investment-Strategy\SCCUR_TESTS\investment_strategy_generator.py", line 199, in _oai_create_with_retry
+    return client.chat.completions.create(**kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_utils\_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\chat\completions\completions.py", line 925, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<43 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jathi\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1034, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: [11:55:4***************************************************************r 0). You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}

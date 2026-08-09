@@ -1,0 +1,48 @@
+﻿Loading runs from results/portfolio_sim/feedback_on ...
+  108 runs, 646 scorable rebalance decisions
+  skipped 0 runs with no candidate logging (legacy schema)
+  skipped 2 periods missing candidates/holdings
+  78 distinct tickers, 2024-10-01 -> 2026-06-01
+Fetching prices (yfinance; local only)...
+  got 78 tickers x 427 trading days
+
+SELECTION NULL — model's pick vs random draws from its OWN candidate pool
+==========================================================================
+
+runs dir      : results/portfolio_sim/feedback_on
+draws/period  : 10,000   seed 1234
+return basis  : adjusted close, equal-weight, held to the next rebalance
+scored        : 646 rebalance decisions (108 runs)
+skipped       : 0 legacy runs (no candidate logging), 0 unscorable decisions
+
+A percentile of 50 means the model did no better than drawing at random
+from the shortlist it built. Above 50 = Stage Two adds value over its own
+opportunity set; below 50 = the shortlist was better than the final pick.
+
+ALL DECISIONS  (n = 646 rebalance decisions)
+  median percentile vs own candidate pool :  52.1   (50 = no selection skill)
+  mean percentile                         :  53.2
+  beat its pool's median portfolio        : 343/646 (53.1%, 95% CI 49-57%)
+  mean z vs null                          : +0.150
+  Wilcoxon percentile vs 50               : p = 0.0070
+  percentile quartiles                    : 31 / 52 / 76
+
+stage = initial  (n = 108 rebalance decisions)
+  median percentile vs own candidate pool :  50.3   (50 = no selection skill)
+  mean percentile                         :  51.8
+  beat its pool's median portfolio        : 54/108 (50.0%, 95% CI 40-60%)
+  mean z vs null                          : +0.082
+  Wilcoxon percentile vs 50               : p = 0.5707
+  percentile quartiles                    : 33 / 50 / 77
+
+stage = rebalance  (n = 538 rebalance decisions)
+  median percentile vs own candidate pool :  52.4   (50 = no selection skill)
+  mean percentile                         :  53.4
+  beat its pool's median portfolio        : 289/538 (53.7%, 95% CI 49-58%)
+  mean z vs null                          : +0.164
+  Wilcoxon percentile vs 50               : p = 0.0079
+  percentile quartiles                    : 30 / 52 / 75
+
+Per-decision detail: selection_null_periods.csv
+
+Wrote selection_null.txt and selection_null_periods.csv

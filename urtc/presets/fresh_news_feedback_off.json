@@ -1,0 +1,42 @@
+{
+  "name": "fresh-news feedback OFF (control)",
+  "description": "Control arm for the Paper B headline: identical to fresh_news_feedback_on.json in every respect except feedback=false and a separate results folder.",
+  "notes": [
+    "This is the arm the study has never had. Every one of the 90 legacy runs had",
+    "feedback ON, so the self-reflection claim was untestable.",
+    "",
+    "EVERY option below must match fresh_news_feedback_on.json except 'feedback' and",
+    "'results_subdir'. If you change the gate, the cadence, the order mode or the",
+    "screening in one arm, change it in BOTH or the paired test is meaningless.",
+    "",
+    "Runs land in results/portfolio_sim/feedback_off/ and are tagged '_fboff' in the",
+    "filename, so the two arms can never be confused even if they share a folder.",
+    "",
+    "After both arms finish: python analyze_feedback.py"
+  ],
+  "options": {
+    "feedback": false,
+    "screened_news": true,
+    "order_mode": "weights",
+    "rebalance_mode": "reset",
+    "min_articles": 50,
+    "min_articles_days": 90,
+    "txn_cost_bps": 0,
+    "results_subdir": "feedback_off",
+    "runs_per_perm": 3,
+    "threads": 4,
+    "budget": 10000.0,
+    "risk_free": 0.04,
+    "whole_shares": false,
+    "dry_run": false
+  },
+  "filters": {
+    "sectors": ["technology"],
+    "models": ["gpt-5.1"],
+    "periods": [12],
+    "freqs": [2, 4, 6, 12],
+    "filters": ["20-10"],
+    "date_from": "2024-10",
+    "date_to": "2025-06"
+  }
+}

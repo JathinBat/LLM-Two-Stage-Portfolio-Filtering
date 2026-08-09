@@ -1,0 +1,2574 @@
+{
+  "sector": "technology",
+  "budget": 10000.0,
+  "max_holdings": 10,
+  "whole_shares": false,
+  "end_date": "2026-04-01",
+  "feedback": true,
+  "txn_cost_bps": 0.0,
+  "risk_free": 0.04,
+  "screened_news": true,
+  "order_mode": "weights",
+  "rebalance_mode": "hold",
+  "prompt_framing": "incumbent_invested",
+  "final_value": 13304.73,
+  "final_cash": 1903.24,
+  "total_roi_pct": 33.05,
+  "no_reinvest_baseline": {
+    "label": "INIT \u2014 hold period-0 picks, no rebalancing",
+    "final_value": 15001.98,
+    "total_roi_pct": 50.02,
+    "holdings": {
+      "MSFT": 4.756,
+      "GOOGL": 10.2282,
+      "NVDA": 11.8182,
+      "AMZN": 6.2445,
+      "AVGO": 5.9916,
+      "TXN": 5.2696,
+      "NXPI": 4.3052,
+      "MU": 6.7812,
+      "ACN": 1.6436,
+      "ADSK": 1.1337
+    },
+    "cash": 0.0,
+    "risk_metrics": {
+      "n_observations": 262,
+      "total_return": 0.5001951595706489,
+      "annualized_return": 0.47935941213305533,
+      "annualized_volatility": 0.28321058940776006,
+      "sharpe": 1.3816232592683977,
+      "sortino": 2.185743451625734,
+      "max_drawdown": -0.19128986917529567,
+      "calmar": 2.505932040205309,
+      "risk_free_annual": 0.04,
+      "beta": 1.3605912027492488,
+      "alpha_annual": 0.20313818525786403,
+      "r_squared": 0.8092646736514432
+    }
+  },
+  "vs_no_reinvest_pp": -16.97,
+  "num_rebalances": 11,
+  "periods": [
+    {
+      "period": 0,
+      "stage": "initial",
+      "as_of": "2025-04-01",
+      "window": "2025-04-01->2025-05-01",
+      "value_before": 10000.0,
+      "value_after": 10000.0,
+      "cash_after": 0.0,
+      "invested_after": 10000.0,
+      "txn_cost": 0.0,
+      "num_holdings": 10,
+      "candidates": [
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "NVDA",
+        "AVGO",
+        "AMD",
+        "IBM",
+        "ORCL",
+        "ADBE",
+        "CRM",
+        "ACN",
+        "INTU",
+        "ADSK",
+        "MU",
+        "MCHP",
+        "TXN",
+        "NXPI",
+        "QCOM"
+      ],
+      "prior_holdings_perf": {},
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 378.47
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 156.43
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 110.0
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 192.17
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 166.9
+        },
+        "TXN": {
+          "shares": 5.2696,
+          "avg_cost": 170.79,
+          "price": 170.79
+        },
+        "NXPI": {
+          "shares": 4.3052,
+          "avg_cost": 185.82,
+          "price": 185.82
+        },
+        "MU": {
+          "shares": 6.7812,
+          "avg_cost": 88.48,
+          "price": 88.48
+        },
+        "ACN": {
+          "shares": 1.6436,
+          "avg_cost": 304.21,
+          "price": 304.21
+        },
+        "ADSK": {
+          "shares": 1.1337,
+          "avg_cost": 264.61,
+          "price": 264.61
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": null
+    },
+    {
+      "period": 1,
+      "stage": "rebalance",
+      "as_of": "2025-05-01",
+      "window": "2025-05-01->2025-06-01",
+      "value_before": 10212.85,
+      "value_after": 10212.85,
+      "cash_after": 1247.22,
+      "invested_after": 8965.63,
+      "txn_cost": 0.0,
+      "num_holdings": 8,
+      "candidates": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "GOOGL",
+        "AMZN",
+        "AAPL",
+        "AVGO",
+        "CRM",
+        "ADBE",
+        "NOW",
+        "ORCL",
+        "AMD",
+        "QCOM",
+        "INTU",
+        "ADSK",
+        "PANW",
+        "SNPS",
+        "MU",
+        "TXN"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": 11.31,
+          "unrealized_pct": 11.31
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 2.7,
+          "unrealized_pct": 2.7
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 1.32,
+          "unrealized_pct": 1.32
+        },
+        "AMZN": {
+          "ret_since_prev_pct": -1.03,
+          "unrealized_pct": -1.03
+        },
+        "AVGO": {
+          "ret_since_prev_pct": 17.09,
+          "unrealized_pct": 17.09
+        },
+        "TXN": {
+          "ret_since_prev_pct": -10.32,
+          "unrealized_pct": -10.32
+        },
+        "NXPI": {
+          "ret_since_prev_pct": -4.29,
+          "unrealized_pct": -4.29
+        },
+        "MU": {
+          "ret_since_prev_pct": -12.33,
+          "unrealized_pct": -12.33
+        },
+        "ACN": {
+          "ret_since_prev_pct": -3.68,
+          "unrealized_pct": -3.68
+        },
+        "ADSK": {
+          "ret_since_prev_pct": 3.36,
+          "unrealized_pct": 3.36
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 421.26
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 160.65
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 111.45
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 190.2
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 195.43
+        },
+        "TXN": {
+          "shares": 5.2696,
+          "avg_cost": 170.79,
+          "price": 153.16
+        },
+        "MU": {
+          "shares": 6.7812,
+          "avg_cost": 88.48,
+          "price": 77.57
+        },
+        "ADSK": {
+          "shares": 1.1337,
+          "avg_cost": 264.61,
+          "price": 273.49
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "ADSK",
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "MSFT",
+          "MU",
+          "NVDA",
+          "TXN"
+        ],
+        "sold": [
+          "ACN",
+          "NXPI"
+        ],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 2,
+      "stage": "rebalance",
+      "as_of": "2025-06-01",
+      "window": "2025-06-01->2025-07-01",
+      "value_before": 11387.28,
+      "value_after": 11387.28,
+      "cash_after": 3154.38,
+      "invested_after": 8232.9,
+      "txn_cost": 0.0,
+      "num_holdings": 5,
+      "candidates": [
+        "NVDA",
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "AAPL",
+        "AVGO",
+        "TSM",
+        "AMD",
+        "IBM",
+        "ORCL",
+        "CRM",
+        "ADBE",
+        "NOW",
+        "QCOM",
+        "INTU",
+        "SNPS",
+        "PANW",
+        "INTC"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": 8.42,
+          "unrealized_pct": 20.67
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 6.47,
+          "unrealized_pct": 9.34
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 21.08,
+          "unrealized_pct": 22.67
+        },
+        "AMZN": {
+          "ret_since_prev_pct": 7.79,
+          "unrealized_pct": 6.68
+        },
+        "AVGO": {
+          "ret_since_prev_pct": 22.67,
+          "unrealized_pct": 43.64
+        },
+        "TXN": {
+          "ret_since_prev_pct": 15.54,
+          "unrealized_pct": 3.61
+        },
+        "MU": {
+          "ret_since_prev_pct": 21.46,
+          "unrealized_pct": 6.49
+        },
+        "ADSK": {
+          "ret_since_prev_pct": 8.27,
+          "unrealized_pct": 11.91
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 456.71
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 171.04
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 134.94
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 205.01
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 239.74
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [
+          "ADSK",
+          "MU",
+          "TXN"
+        ],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 3,
+      "stage": "rebalance",
+      "as_of": "2025-07-01",
+      "window": "2025-07-01->2025-08-01",
+      "value_before": 12030.11,
+      "value_after": 12030.11,
+      "cash_after": 0.0,
+      "invested_after": 12030.11,
+      "txn_cost": 0.0,
+      "num_holdings": 7,
+      "candidates": [
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "AAPL",
+        "NVDA",
+        "CRM",
+        "ADBE",
+        "AVGO",
+        "AMD",
+        "INTC",
+        "QCOM",
+        "TXN",
+        "MU",
+        "MCHP",
+        "SNPS",
+        "PANW",
+        "NET",
+        "ZS"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": 6.88,
+          "unrealized_pct": 28.98
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 2.51,
+          "unrealized_pct": 12.09
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 13.46,
+          "unrealized_pct": 39.18
+        },
+        "AMZN": {
+          "ret_since_prev_pct": 7.54,
+          "unrealized_pct": 14.72
+        },
+        "AVGO": {
+          "ret_since_prev_pct": 9.62,
+          "unrealized_pct": 57.47
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 488.15
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 175.34
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 153.1
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 220.46
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 262.81
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 716.87
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 207.0
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [],
+        "bought": [
+          "META",
+          "AAPL"
+        ],
+        "redeployed": 3154.38
+      }
+    },
+    {
+      "period": 4,
+      "stage": "rebalance",
+      "as_of": "2025-08-01",
+      "window": "2025-08-01->2025-08-31",
+      "value_before": 12690.64,
+      "value_after": 12690.64,
+      "cash_after": 0.0,
+      "invested_after": 12690.64,
+      "txn_cost": 0.0,
+      "num_holdings": 7,
+      "candidates": [
+        "AAPL",
+        "MSFT",
+        "NVDA",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "TSLA",
+        "NFLX",
+        "AVGO",
+        "AMD",
+        "CRM",
+        "ADBE",
+        "CSCO",
+        "ORCL",
+        "INTU",
+        "QCOM",
+        "TXN",
+        "MU",
+        "IBM",
+        "ARM"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": 6.52,
+          "unrealized_pct": 37.38
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 7.56,
+          "unrealized_pct": 20.56
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 13.32,
+          "unrealized_pct": 57.72
+        },
+        "AMZN": {
+          "ret_since_prev_pct": -2.59,
+          "unrealized_pct": 11.75
+        },
+        "AVGO": {
+          "ret_since_prev_pct": 9.03,
+          "unrealized_pct": 71.68
+        },
+        "META": {
+          "ret_since_prev_pct": 4.28,
+          "unrealized_pct": 4.28
+        },
+        "AAPL": {
+          "ret_since_prev_pct": -2.62,
+          "unrealized_pct": -2.62
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 519.96
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 188.59
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 173.49
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 214.75
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 286.54
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 747.56
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 201.58
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AAPL",
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "META",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 5,
+      "stage": "rebalance",
+      "as_of": "2025-08-31",
+      "window": "2025-08-31->2025-09-30",
+      "value_before": 13204.46,
+      "value_after": 13204.46,
+      "cash_after": 0.0,
+      "invested_after": 13204.46,
+      "txn_cost": 0.0,
+      "num_holdings": 7,
+      "candidates": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "AMZN",
+        "GOOGL",
+        "GOOG",
+        "AAPL",
+        "ARM",
+        "SNAP",
+        "TSLA",
+        "INTC",
+        "AMD",
+        "AVGO",
+        "ADBE",
+        "NOW",
+        "ORCL",
+        "CSCO",
+        "ACN",
+        "TXN"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": -3.17,
+          "unrealized_pct": 33.04
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 12.57,
+          "unrealized_pct": 35.72
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 0.27,
+          "unrealized_pct": 58.14
+        },
+        "AMZN": {
+          "ret_since_prev_pct": 6.64,
+          "unrealized_pct": 19.17
+        },
+        "AVGO": {
+          "ret_since_prev_pct": 3.03,
+          "unrealized_pct": 76.89
+        },
+        "META": {
+          "ret_since_prev_pct": -1.51,
+          "unrealized_pct": 2.71
+        },
+        "AAPL": {
+          "ret_since_prev_pct": 14.84,
+          "unrealized_pct": 11.83
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 503.5
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 212.3
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 173.95
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 229.0
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 295.23
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 736.29
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 231.49
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AAPL",
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "META",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 6,
+      "stage": "rebalance",
+      "as_of": "2025-09-30",
+      "window": "2025-09-30->2025-10-31",
+      "value_before": 14014.62,
+      "value_after": 14014.62,
+      "cash_after": 0.0,
+      "invested_after": 14014.62,
+      "txn_cost": 0.0,
+      "num_holdings": 7,
+      "candidates": [
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "NVDA",
+        "AAPL",
+        "TSM",
+        "INTC",
+        "AMD",
+        "AVGO",
+        "SNPS",
+        "CRM",
+        "ADBE",
+        "CSCO",
+        "PANW",
+        "ORCL",
+        "UBER",
+        "RBLX",
+        "RDDT"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": 2.22,
+          "unrealized_pct": 35.99
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 14.29,
+          "unrealized_pct": 55.1
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 7.12,
+          "unrealized_pct": 69.4
+        },
+        "AMZN": {
+          "ret_since_prev_pct": -4.12,
+          "unrealized_pct": 14.26
+        },
+        "AVGO": {
+          "ret_since_prev_pct": 11.12,
+          "unrealized_pct": 96.57
+        },
+        "META": {
+          "ret_since_prev_pct": -0.52,
+          "unrealized_pct": 2.18
+        },
+        "AAPL": {
+          "ret_since_prev_pct": 9.69,
+          "unrealized_pct": 22.66
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 514.69
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 242.63
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 186.34
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 219.57
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 328.07
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 732.47
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 253.91
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AAPL",
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "META",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [],
+        "bought": [
+          "TSM"
+        ],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 7,
+      "stage": "rebalance",
+      "as_of": "2025-10-31",
+      "window": "2025-10-31->2025-11-30",
+      "value_before": 14911.97,
+      "value_after": 14911.97,
+      "cash_after": 0.0,
+      "invested_after": 14911.97,
+      "txn_cost": 0.0,
+      "num_holdings": 7,
+      "candidates": [
+        "AAPL",
+        "MSFT",
+        "NVDA",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "INTC",
+        "CRM",
+        "NFLX",
+        "ADBE",
+        "CSCO",
+        "AVGO",
+        "TXN",
+        "MCHP",
+        "AMD",
+        "ORCL",
+        "IBM",
+        "SNPS",
+        "QCOM"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": -0.03,
+          "unrealized_pct": 35.96
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 15.67,
+          "unrealized_pct": 79.4
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 8.53,
+          "unrealized_pct": 83.85
+        },
+        "AMZN": {
+          "ret_since_prev_pct": 11.23,
+          "unrealized_pct": 27.09
+        },
+        "AVGO": {
+          "ret_since_prev_pct": 12.04,
+          "unrealized_pct": 120.23
+        },
+        "META": {
+          "ret_since_prev_pct": -11.71,
+          "unrealized_pct": -9.79
+        },
+        "AAPL": {
+          "ret_since_prev_pct": 6.18,
+          "unrealized_pct": 30.25
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 514.55
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 280.64
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 202.23
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 244.22
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 367.57
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 646.67
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 269.61
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AAPL",
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "META",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 8,
+      "stage": "rebalance",
+      "as_of": "2025-11-30",
+      "window": "2025-11-30->2025-12-31",
+      "value_before": 15086.93,
+      "value_after": 15086.93,
+      "cash_after": 0.0,
+      "invested_after": 15086.93,
+      "txn_cost": 0.0,
+      "num_holdings": 7,
+      "candidates": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "GOOGL",
+        "AMZN",
+        "AAPL",
+        "AMD",
+        "AVGO",
+        "TSM",
+        "TXN",
+        "INTC",
+        "IBM",
+        "CRM",
+        "ORCL",
+        "ADBE",
+        "NFLX",
+        "CSCO",
+        "QCOM",
+        "MCHP",
+        "SNPS"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": -4.8,
+          "unrealized_pct": 29.42
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 13.86,
+          "unrealized_pct": 104.28
+        },
+        "NVDA": {
+          "ret_since_prev_pct": -12.59,
+          "unrealized_pct": 60.7
+        },
+        "AMZN": {
+          "ret_since_prev_pct": -4.5,
+          "unrealized_pct": 21.36
+        },
+        "AVGO": {
+          "ret_since_prev_pct": 9.02,
+          "unrealized_pct": 140.09
+        },
+        "META": {
+          "ret_since_prev_pct": -0.06,
+          "unrealized_pct": -9.85
+        },
+        "AAPL": {
+          "ret_since_prev_pct": 3.23,
+          "unrealized_pct": 34.46
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 489.83
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 319.55
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 176.77
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 233.22
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 400.71
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 646.27
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 278.33
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AAPL",
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "META",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 9,
+      "stage": "rebalance",
+      "as_of": "2025-12-31",
+      "window": "2025-12-31->2026-01-30",
+      "value_before": 14713.2,
+      "value_after": 14713.2,
+      "cash_after": 0.0,
+      "invested_after": 14713.2,
+      "txn_cost": 0.0,
+      "num_holdings": 7,
+      "candidates": [
+        "MSFT",
+        "NVDA",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "AAPL",
+        "MCHP",
+        "TXN",
+        "INTC",
+        "AMD",
+        "AVGO",
+        "CRM",
+        "ADBE",
+        "ORCL",
+        "CSCO",
+        "SNPS",
+        "NFLX",
+        "IBM"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": -1.7,
+          "unrealized_pct": 27.22
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": -2.18,
+          "unrealized_pct": 99.83
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 5.37,
+          "unrealized_pct": 69.34
+        },
+        "AMZN": {
+          "ret_since_prev_pct": -1.03,
+          "unrealized_pct": 20.11
+        },
+        "AVGO": {
+          "ret_since_prev_pct": -13.95,
+          "unrealized_pct": 106.61
+        },
+        "META": {
+          "ret_since_prev_pct": 1.96,
+          "unrealized_pct": -8.09
+        },
+        "AAPL": {
+          "ret_since_prev_pct": -2.5,
+          "unrealized_pct": 31.09
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 481.48
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 312.59
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 186.27
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 230.82
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 344.83
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 658.91
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 271.36
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AAPL",
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "META",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 10,
+      "stage": "rebalance",
+      "as_of": "2026-01-30",
+      "window": "2026-01-30->2026-03-02",
+      "value_before": 14765.07,
+      "value_after": 14765.07,
+      "cash_after": 0.0,
+      "invested_after": 14765.07,
+      "txn_cost": 0.0,
+      "num_holdings": 7,
+      "candidates": [
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "AAPL",
+        "NVDA",
+        "AVGO",
+        "AMD",
+        "TSM",
+        "INTC",
+        "TXN",
+        "IBM",
+        "ORCL",
+        "CRM",
+        "ADBE",
+        "CSCO",
+        "PLTR",
+        "NFLX",
+        "SHOP",
+        "SNOW"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": -11.03,
+          "unrealized_pct": 13.19
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": 7.99,
+          "unrealized_pct": 115.79
+        },
+        "NVDA": {
+          "ret_since_prev_pct": 2.49,
+          "unrealized_pct": 73.55
+        },
+        "AMZN": {
+          "ret_since_prev_pct": 3.67,
+          "unrealized_pct": 24.53
+        },
+        "AVGO": {
+          "ret_since_prev_pct": -4.28,
+          "unrealized_pct": 97.77
+        },
+        "META": {
+          "ret_since_prev_pct": 8.55,
+          "unrealized_pct": -0.23
+        },
+        "AAPL": {
+          "ret_since_prev_pct": -4.55,
+          "unrealized_pct": 25.12
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 428.38
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 337.56
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 190.9
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 239.3
+        },
+        "AVGO": {
+          "shares": 5.9916,
+          "avg_cost": 166.9,
+          "price": 330.08
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 715.22
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 259.0
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AAPL",
+          "AMZN",
+          "AVGO",
+          "GOOGL",
+          "META",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    },
+    {
+      "period": 11,
+      "stage": "rebalance",
+      "as_of": "2026-03-02",
+      "window": "2026-03-02->2026-04-01",
+      "value_before": 13831.47,
+      "value_after": 13831.47,
+      "cash_after": 1903.24,
+      "invested_after": 11928.24,
+      "txn_cost": 0.0,
+      "num_holdings": 6,
+      "candidates": [
+        "NVDA",
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "AAPL",
+        "AMD",
+        "TSLA",
+        "CSCO",
+        "IBM",
+        "ORCL",
+        "INTC",
+        "TXN",
+        "WMT",
+        "NFLX",
+        "PLTR",
+        "RDDT",
+        "PANW"
+      ],
+      "prior_holdings_perf": {
+        "MSFT": {
+          "ret_since_prev_pct": -7.16,
+          "unrealized_pct": 5.08
+        },
+        "GOOGL": {
+          "ret_since_prev_pct": -9.31,
+          "unrealized_pct": 95.69
+        },
+        "NVDA": {
+          "ret_since_prev_pct": -4.53,
+          "unrealized_pct": 65.69
+        },
+        "AMZN": {
+          "ret_since_prev_pct": -12.92,
+          "unrealized_pct": 8.44
+        },
+        "AVGO": {
+          "ret_since_prev_pct": -3.77,
+          "unrealized_pct": 90.32
+        },
+        "META": {
+          "ret_since_prev_pct": -8.78,
+          "unrealized_pct": -8.99
+        },
+        "AAPL": {
+          "ret_since_prev_pct": 2.12,
+          "unrealized_pct": 27.77
+        }
+      },
+      "holdings": {
+        "MSFT": {
+          "shares": 4.756,
+          "avg_cost": 378.47,
+          "price": 397.69
+        },
+        "GOOGL": {
+          "shares": 10.2282,
+          "avg_cost": 156.43,
+          "price": 306.12
+        },
+        "NVDA": {
+          "shares": 11.8182,
+          "avg_cost": 110.0,
+          "price": 182.26
+        },
+        "AMZN": {
+          "shares": 6.2445,
+          "avg_cost": 192.17,
+          "price": 208.39
+        },
+        "META": {
+          "shares": 2.2001,
+          "avg_cost": 716.87,
+          "price": 652.4
+        },
+        "AAPL": {
+          "shares": 7.6193,
+          "avg_cost": 207.0,
+          "price": 264.48
+        }
+      },
+      "decision_attempts": 1,
+      "rejected_reasons": [],
+      "skipped_orders": [],
+      "hold_delta": {
+        "mode": "hold",
+        "kept": [
+          "AAPL",
+          "AMZN",
+          "GOOGL",
+          "META",
+          "MSFT",
+          "NVDA"
+        ],
+        "sold": [
+          "AVGO"
+        ],
+        "bought": [],
+        "redeployed": 0.0
+      }
+    }
+  ],
+  "final_holdings": {
+    "MSFT": {
+      "shares": 4.756,
+      "avg_cost": 378.47,
+      "end_price": 368.57
+    },
+    "GOOGL": {
+      "shares": 10.2282,
+      "avg_cost": 156.43,
+      "end_price": 297.21
+    },
+    "NVDA": {
+      "shares": 11.8182,
+      "avg_cost": 110.0,
+      "end_price": 175.55
+    },
+    "AMZN": {
+      "shares": 6.2445,
+      "avg_cost": 192.17,
+      "end_price": 210.57
+    },
+    "META": {
+      "shares": 2.2001,
+      "avg_cost": 716.87,
+      "end_price": 578.69
+    },
+    "AAPL": {
+      "shares": 7.6193,
+      "avg_cost": 207.0,
+      "end_price": 255.39
+    }
+  },
+  "benchmark_ticker": "SPY",
+  "risk_metrics": {
+    "n_observations": 262,
+    "total_return": 0.33047208965668173,
+    "annualized_return": 0.3174365483250081,
+    "annualized_volatility": 0.26083182092223833,
+    "sharpe": 1.0319170277809784,
+    "sortino": 1.630294546729325,
+    "max_drawdown": -0.16919584659078224,
+    "calmar": 1.876148585921033,
+    "risk_free_annual": 0.04,
+    "beta": 1.2742765028909866,
+    "alpha_annual": 0.09294085082185859,
+    "r_squared": 0.8368747116046653
+  },
+  "benchmark_risk_metrics": {
+    "n_observations": 262,
+    "total_return": 0.1814380704105356,
+    "annualized_return": 0.1746650076656604,
+    "annualized_volatility": 0.1872522826925462,
+    "sharpe": 0.738506651949135,
+    "sortino": 1.1251289486661042,
+    "max_drawdown": -0.12052716082515202,
+    "calmar": 1.4491754926430715,
+    "risk_free_annual": 0.04,
+    "beta": null,
+    "alpha_annual": null,
+    "r_squared": null
+  },
+  "daily_value_series": [
+    [
+      "2025-04-01",
+      10000.0221
+    ],
+    [
+      "2025-04-02",
+      10071.6983
+    ],
+    [
+      "2025-04-03",
+      9350.9951
+    ],
+    [
+      "2025-04-04",
+      8840.0656
+    ],
+    [
+      "2025-04-07",
+      9000.5806
+    ],
+    [
+      "2025-04-08",
+      8819.3394
+    ],
+    [
+      "2025-04-09",
+      10040.5359
+    ],
+    [
+      "2025-04-10",
+      9487.5416
+    ],
+    [
+      "2025-04-11",
+      9649.5439
+    ],
+    [
+      "2025-04-14",
+      9670.9167
+    ],
+    [
+      "2025-04-15",
+      9647.4252
+    ],
+    [
+      "2025-04-16",
+      9341.8471
+    ],
+    [
+      "2025-04-17",
+      9243.6875
+    ],
+    [
+      "2025-04-18",
+      9243.6875
+    ],
+    [
+      "2025-04-21",
+      9015.9615
+    ],
+    [
+      "2025-04-22",
+      9228.8524
+    ],
+    [
+      "2025-04-23",
+      9521.2134
+    ],
+    [
+      "2025-04-24",
+      9917.5005
+    ],
+    [
+      "2025-04-25",
+      10080.9903
+    ],
+    [
+      "2025-04-28",
+      10032.447
+    ],
+    [
+      "2025-04-29",
+      9968.0184
+    ],
+    [
+      "2025-04-30",
+      9961.3839
+    ],
+    [
+      "2025-05-01",
+      10212.8715
+    ],
+    [
+      "2025-05-02",
+      10416.5871
+    ],
+    [
+      "2025-05-05",
+      10361.9944
+    ],
+    [
+      "2025-05-06",
+      10315.3357
+    ],
+    [
+      "2025-05-07",
+      10325.9591
+    ],
+    [
+      "2025-05-08",
+      10449.0122
+    ],
+    [
+      "2025-05-09",
+      10472.4267
+    ],
+    [
+      "2025-05-12",
+      10958.3379
+    ],
+    [
+      "2025-05-13",
+      11172.2259
+    ],
+    [
+      "2025-05-14",
+      11287.7438
+    ],
+    [
+      "2025-05-15",
+      11247.188
+    ],
+    [
+      "2025-05-16",
+      11283.9917
+    ],
+    [
+      "2025-05-19",
+      11327.922
+    ],
+    [
+      "2025-05-20",
+      11275.7762
+    ],
+    [
+      "2025-05-21",
+      11200.2042
+    ],
+    [
+      "2025-05-22",
+      11232.7531
+    ],
+    [
+      "2025-05-23",
+      11114.7137
+    ],
+    [
+      "2025-05-26",
+      11114.7137
+    ],
+    [
+      "2025-05-27",
+      11393.0811
+    ],
+    [
+      "2025-05-28",
+      11380.0435
+    ],
+    [
+      "2025-05-29",
+      11460.0109
+    ],
+    [
+      "2025-05-30",
+      11387.3463
+    ],
+    [
+      "2025-06-02",
+      11443.5593
+    ],
+    [
+      "2025-06-03",
+      11506.9975
+    ],
+    [
+      "2025-06-04",
+      11573.1473
+    ],
+    [
+      "2025-06-05",
+      11567.3986
+    ],
+    [
+      "2025-06-06",
+      11614.4774
+    ],
+    [
+      "2025-06-09",
+      11668.6892
+    ],
+    [
+      "2025-06-10",
+      11707.3609
+    ],
+    [
+      "2025-06-11",
+      11711.0103
+    ],
+    [
+      "2025-06-12",
+      11768.2843
+    ],
+    [
+      "2025-06-13",
+      11652.7171
+    ],
+    [
+      "2025-06-16",
+      11771.1138
+    ],
+    [
+      "2025-06-17",
+      11726.64
+    ],
+    [
+      "2025-06-18",
+      11723.1013
+    ],
+    [
+      "2025-06-19",
+      11723.1013
+    ],
+    [
+      "2025-06-20",
+      11600.6167
+    ],
+    [
+      "2025-06-23",
+      11645.0466
+    ],
+    [
+      "2025-06-24",
+      11810.9089
+    ],
+    [
+      "2025-06-25",
+      11936.9958
+    ],
+    [
+      "2025-06-26",
+      12063.8535
+    ],
+    [
+      "2025-06-27",
+      12173.5562
+    ],
+    [
+      "2025-06-30",
+      12172.9247
+    ],
+    [
+      "2025-07-01",
+      12030.083
+    ],
+    [
+      "2025-07-02",
+      12150.7214
+    ],
+    [
+      "2025-07-03",
+      12294.5857
+    ],
+    [
+      "2025-07-04",
+      12294.5857
+    ],
+    [
+      "2025-07-07",
+      12214.0313
+    ],
+    [
+      "2025-07-08",
+      12170.551
+    ],
+    [
+      "2025-07-09",
+      12351.3742
+    ],
+    [
+      "2025-07-10",
+      12347.2645
+    ],
+    [
+      "2025-07-11",
+      12372.1803
+    ],
+    [
+      "2025-07-14",
+      12374.3477
+    ],
+    [
+      "2025-07-15",
+      12486.8079
+    ],
+    [
+      "2025-07-16",
+      12474.7249
+    ],
+    [
+      "2025-07-17",
+      12562.3757
+    ],
+    [
+      "2025-07-18",
+      12573.3708
+    ],
+    [
+      "2025-07-21",
+      12690.3487
+    ],
+    [
+      "2025-07-22",
+      12557.0832
+    ],
+    [
+      "2025-07-23",
+      12645.6429
+    ],
+    [
+      "2025-07-24",
+      12778.1804
+    ],
+    [
+      "2025-07-25",
+      12799.0753
+    ],
+    [
+      "2025-07-28",
+      12870.6852
+    ],
+    [
+      "2025-07-29",
+      12836.3965
+    ],
+    [
+      "2025-07-30",
+      12890.3459
+    ],
+    [
+      "2025-07-31",
+      13053.9351
+    ],
+    [
+      "2025-08-01",
+      12690.641
+    ],
+    [
+      "2025-08-04",
+      12979.257
+    ],
+    [
+      "2025-08-05",
+      12870.7673
+    ],
+    [
+      "2025-08-06",
+      13088.2218
+    ],
+    [
+      "2025-08-07",
+      13135.9235
+    ],
+    [
+      "2025-08-08",
+      13305.9015
+    ],
+    [
+      "2025-08-11",
+      13255.7121
+    ],
+    [
+      "2025-08-12",
+      13453.6658
+    ],
+    [
+      "2025-08-13",
+      13383.4573
+    ],
+    [
+      "2025-08-14",
+      13460.6266
+    ],
+    [
+      "2025-08-15",
+      13409.9713
+    ],
+    [
+      "2025-08-18",
+      13364.7569
+    ],
+    [
+      "2025-08-19",
+      13111.6868
+    ],
+    [
+      "2025-08-20",
+      12975.5094
+    ],
+    [
+      "2025-08-21",
+      12923.5764
+    ],
+    [
+      "2025-08-22",
+      13163.2274
+    ],
+    [
+      "2025-08-25",
+      13183.0706
+    ],
+    [
+      "2025-08-26",
+      13227.3247
+    ],
+    [
+      "2025-08-27",
+      13261.1126
+    ],
+    [
+      "2025-08-28",
+      13389.7245
+    ],
+    [
+      "2025-08-29",
+      13204.4216
+    ],
+    [
+      "2025-09-01",
+      13096.9054
+    ],
+    [
+      "2025-09-02",
+      13096.9054
+    ],
+    [
+      "2025-09-03",
+      13392.5279
+    ],
+    [
+      "2025-09-04",
+      13551.8791
+    ],
+    [
+      "2025-09-05",
+      13621.3301
+    ],
+    [
+      "2025-09-08",
+      13715.8591
+    ],
+    [
+      "2025-09-09",
+      13766.9718
+    ],
+    [
+      "2025-09-10",
+      13907.8494
+    ],
+    [
+      "2025-09-11",
+      13882.1068
+    ],
+    [
+      "2025-09-12",
+      13967.3509
+    ],
+    [
+      "2025-09-15",
+      14188.2217
+    ],
+    [
+      "2025-09-16",
+      14154.2912
+    ],
+    [
+      "2025-09-17",
+      13989.8624
+    ],
+    [
+      "2025-09-18",
+      14072.3794
+    ],
+    [
+      "2025-09-19",
+      14202.6346
+    ],
+    [
+      "2025-09-22",
+      14241.1044
+    ],
+    [
+      "2025-09-23",
+      14070.1409
+    ],
+    [
+      "2025-09-24",
+      14005.6327
+    ],
+    [
+      "2025-09-25",
+      13962.4765
+    ],
+    [
+      "2025-09-26",
+      13975.7574
+    ],
+    [
+      "2025-09-29",
+      13975.2065
+    ],
+    [
+      "2025-09-30",
+      14014.6365
+    ],
+    [
+      "2025-10-01",
+      14045.3113
+    ],
+    [
+      "2025-10-02",
+      14127.8139
+    ],
+    [
+      "2025-10-03",
+      14070.5623
+    ],
+    [
+      "2025-10-06",
+      14143.5006
+    ],
+    [
+      "2025-10-07",
+      14071.9562
+    ],
+    [
+      "2025-10-08",
+      14210.5598
+    ],
+    [
+      "2025-10-09",
+      14224.9954
+    ],
+    [
+      "2025-10-10",
+      13688.2048
+    ],
+    [
+      "2025-10-13",
+      14096.2557
+    ],
+    [
+      "2025-10-14",
+      13896.9015
+    ],
+    [
+      "2025-10-15",
+      14020.0776
+    ],
+    [
+      "2025-10-16",
+      14022.7838
+    ],
+    [
+      "2025-10-17",
+      14077.2872
+    ],
+    [
+      "2025-10-20",
+      14248.7963
+    ],
+    [
+      "2025-10-21",
+      14175.1644
+    ],
+    [
+      "2025-10-22",
+      14118.8909
+    ],
+    [
+      "2025-10-23",
+      14208.6263
+    ],
+    [
+      "2025-10-24",
+      14453.5532
+    ],
+    [
+      "2025-10-27",
+      14785.3909
+    ],
+    [
+      "2025-10-28",
+      15011.5828
+    ],
+    [
+      "2025-10-29",
+      15242.4374
+    ],
+    [
+      "2025-10-30",
+      14912.2017
+    ],
+    [
+      "2025-10-31",
+      14911.9862
+    ],
+    [
+      "2025-11-03",
+      14971.4524
+    ],
+    [
+      "2025-11-04",
+      14691.2183
+    ],
+    [
+      "2025-11-05",
+      14752.5051
+    ],
+    [
+      "2025-11-06",
+      14520.2488
+    ],
+    [
+      "2025-11-07",
+      14427.3726
+    ],
+    [
+      "2025-11-10",
+      14824.093
+    ],
+    [
+      "2025-11-11",
+      14779.6432
+    ],
+    [
+      "2025-11-12",
+      14687.5003
+    ],
+    [
+      "2025-11-13",
+      14351.2272
+    ],
+    [
+      "2025-11-14",
+      14392.486
+    ],
+    [
+      "2025-11-17",
+      14361.3027
+    ],
+    [
+      "2025-11-18",
+      14140.269
+    ],
+    [
+      "2025-11-19",
+      14332.8847
+    ],
+    [
+      "2025-11-20",
+      14092.2711
+    ],
+    [
+      "2025-11-21",
+      14179.611
+    ],
+    [
+      "2025-11-24",
+      14759.8073
+    ],
+    [
+      "2025-11-25",
+      14889.8694
+    ],
+    [
+      "2025-11-26",
+      14993.5518
+    ],
+    [
+      "2025-11-27",
+      14993.5518
+    ],
+    [
+      "2025-11-28",
+      15087.0669
+    ],
+    [
+      "2025-12-01",
+      14962.9098
+    ],
+    [
+      "2025-12-02",
+      15019.5867
+    ],
+    [
+      "2025-12-03",
+      14927.9811
+    ],
+    [
+      "2025-12-04",
+      14971.01
+    ],
+    [
+      "2025-12-05",
+      15076.793
+    ],
+    [
+      "2025-12-08",
+      15103.0223
+    ],
+    [
+      "2025-12-09",
+      15145.5953
+    ],
+    [
+      "2025-12-10",
+      15160.8738
+    ],
+    [
+      "2025-12-11",
+      15022.2767
+    ],
+    [
+      "2025-12-12",
+      14578.103
+    ],
+    [
+      "2025-12-15",
+      14398.5695
+    ],
+    [
+      "2025-12-16",
+      14440.0048
+    ],
+    [
+      "2025-12-17",
+      14121.1162
+    ],
+    [
+      "2025-12-18",
+      14347.5133
+    ],
+    [
+      "2025-12-19",
+      14550.4728
+    ],
+    [
+      "2025-12-22",
+      14606.9636
+    ],
+    [
+      "2025-12-23",
+      14816.2143
+    ],
+    [
+      "2025-12-24",
+      14835.6468
+    ],
+    [
+      "2025-12-25",
+      14835.6468
+    ],
+    [
+      "2025-12-26",
+      14850.7214
+    ],
+    [
+      "2025-12-29",
+      14794.5454
+    ],
+    [
+      "2025-12-30",
+      14807.6704
+    ],
+    [
+      "2025-12-31",
+      14713.2244
+    ],
+    [
+      "2026-01-01",
+      14713.2244
+    ],
+    [
+      "2026-01-02",
+      14666.7294
+    ],
+    [
+      "2026-01-05",
+      14677.6622
+    ],
+    [
+      "2026-01-06",
+      14689.5897
+    ],
+    [
+      "2026-01-07",
+      14773.8718
+    ],
+    [
+      "2026-01-08",
+      14683.9596
+    ],
+    [
+      "2026-01-09",
+      14818.5982
+    ],
+    [
+      "2026-01-12",
+      14863.0806
+    ],
+    [
+      "2026-01-13",
+      14856.8597
+    ],
+    [
+      "2026-01-14",
+      14603.0471
+    ],
+    [
+      "2026-01-15",
+      14631.5884
+    ],
+    [
+      "2026-01-16",
+      14644.8195
+    ],
+    [
+      "2026-01-19",
+      14644.8195
+    ],
+    [
+      "2026-01-20",
+      14174.1351
+    ],
+    [
+      "2026-01-21",
+      14257.8761
+    ],
+    [
+      "2026-01-22",
+      14411.7952
+    ],
+    [
+      "2026-01-23",
+      14508.3727
+    ],
+    [
+      "2026-01-26",
+      14679.1068
+    ],
+    [
+      "2026-01-27",
+      14874.83
+    ],
+    [
+      "2026-01-28",
+      14899.1561
+    ],
+    [
+      "2026-01-29",
+      14849.661
+    ],
+    [
+      "2026-01-30",
+      14765.0742
+    ],
+    [
+      "2026-02-02",
+      14804.9177
+    ],
+    [
+      "2026-02-03",
+      14516.6901
+    ],
+    [
+      "2026-02-04",
+      14285.0466
+    ],
+    [
+      "2026-02-05",
+      14090.9707
+    ],
+    [
+      "2026-02-06",
+      14254.4677
+    ],
+    [
+      "2026-02-09",
+      14448.7726
+    ],
+    [
+      "2026-02-10",
+      14317.5546
+    ],
+    [
+      "2026-02-11",
+      14220.6622
+    ],
+    [
+      "2026-02-12",
+      13908.5051
+    ],
+    [
+      "2026-02-13",
+      13715.5698
+    ],
+    [
+      "2026-02-16",
+      13715.5698
+    ],
+    [
+      "2026-02-17",
+      13801.4901
+    ],
+    [
+      "2026-02-18",
+      13904.1041
+    ],
+    [
+      "2026-02-19",
+      13875.1953
+    ],
+    [
+      "2026-02-20",
+      14095.0581
+    ],
+    [
+      "2026-02-23",
+      13947.0078
+    ],
+    [
+      "2026-02-24",
+      14019.2858
+    ],
+    [
+      "2026-02-25",
+      14227.9694
+    ],
+    [
+      "2026-02-26",
+      13968.1761
+    ],
+    [
+      "2026-02-27",
+      13793.4133
+    ],
+    [
+      "2026-03-02",
+      13831.4161
+    ],
+    [
+      "2026-03-03",
+      13796.3111
+    ],
+    [
+      "2026-03-04",
+      13901.9723
+    ],
+    [
+      "2026-03-05",
+      13889.0733
+    ],
+    [
+      "2026-03-06",
+      13699.8208
+    ],
+    [
+      "2026-03-09",
+      13866.9838
+    ],
+    [
+      "2026-03-10",
+      13908.7841
+    ],
+    [
+      "2026-03-11",
+      13927.6597
+    ],
+    [
+      "2026-03-12",
+      13732.0128
+    ],
+    [
+      "2026-03-13",
+      13546.6817
+    ],
+    [
+      "2026-03-16",
+      13713.4741
+    ],
+    [
+      "2026-03-17",
+      13772.2846
+    ],
+    [
+      "2026-03-18",
+      13603.7617
+    ],
+    [
+      "2026-03-19",
+      13529.042
+    ],
+    [
+      "2026-03-20",
+      13306.0579
+    ],
+    [
+      "2026-03-23",
+      13436.2511
+    ],
+    [
+      "2026-03-24",
+      13222.1309
+    ],
+    [
+      "2026-03-25",
+      13299.8552
+    ],
+    [
+      "2026-03-26",
+      12957.5839
+    ],
+    [
+      "2026-03-27",
+      12672.4479
+    ],
+    [
+      "2026-03-30",
+      12663.4803
+    ],
+    [
+      "2026-03-31",
+      13148.1521
+    ],
+    [
+      "2026-04-01",
+      13304.7503
+    ]
+  ],
+  "metadata": {
+    "perm_id": 918,
+    "sector": "technology",
+    "model": "gpt-5.1",
+    "period_months": 12,
+    "freq": 12,
+    "filter_X": 20,
+    "filter_Y": 10,
+    "analysis_start_date": "2025-04-01",
+    "analysis_end_date": "2026-04-01",
+    "elapsed_s": 237,
+    "dry_run": false
+  }
+}

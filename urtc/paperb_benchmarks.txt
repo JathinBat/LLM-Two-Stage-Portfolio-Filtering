@@ -1,0 +1,34 @@
+
+PAPER B BENCHMARKS — strategy vs sector, equal-weight and no-reinvest
+==============================================================================
+
+Excess return in percentage points, per run; 'wins' counts runs ahead of
+the benchmark. EW is survivorship-inflated (see module docstring).
+
+arm            n      SPY                    XLK                    QQQ                    EW                     INIT                 
+feedback_on    108    +17.88pp 106/108        +3.07pp  69/108       +10.99pp 102/108       -21.82pp  10/108        -8.90pp  33/108     
+feedback_off   108    +16.56pp 106/108        +1.74pp  61/108        +9.66pp  99/108       -23.14pp   8/108        -9.19pp  32/108     
+hold_winners   108    +22.30pp 108/108        +7.49pp  83/108       +15.41pp 105/108       -17.40pp  16/108        -3.87pp  51/108     
+
+Paired by cell (window x cadence), cell means:
+
+  -- feedback_on (36 cells)
+     vs SPY   mean +17.88pp  wins 36/36  Wilcoxon p = 0.0000
+     vs XLK   mean  +3.07pp  wins 26/36  Wilcoxon p = 0.0139
+     vs QQQ   mean +10.99pp  wins 34/36  Wilcoxon p = 0.0000
+     vs EW    mean -21.82pp  wins  3/36  Wilcoxon p = 0.0000
+     vs INIT  mean  -8.90pp  wins  9/36  Wilcoxon p = 0.0000
+
+  -- feedback_off (36 cells)
+     vs SPY   mean +16.56pp  wins 36/36  Wilcoxon p = 0.0000
+     vs XLK   mean  +1.74pp  wins 22/36  Wilcoxon p = 0.1189
+     vs QQQ   mean  +9.66pp  wins 36/36  Wilcoxon p = 0.0000
+     vs EW    mean -23.14pp  wins  2/36  Wilcoxon p = 0.0000
+     vs INIT  mean  -9.19pp  wins  9/36  Wilcoxon p = 0.0000
+
+  -- hold_winners (36 cells)
+     vs SPY   mean +22.30pp  wins 36/36  Wilcoxon p = 0.0000
+     vs XLK   mean  +7.49pp  wins 29/36  Wilcoxon p = 0.0000
+     vs QQQ   mean +15.41pp  wins 35/36  Wilcoxon p = 0.0000
+     vs EW    mean -17.40pp  wins  4/36  Wilcoxon p = 0.0000
+     vs INIT  mean  -3.87pp  wins 16/36  Wilcoxon p = 0.0668

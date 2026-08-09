@@ -1,0 +1,43 @@
+REBALANCE ATTRIBUTION — new portfolio vs simply holding the old one
+========================================================================
+
+540 rebalance decisions across 108 runs
+
+rebalance alpha (per decision, pp):
+  mean   -0.417    median +0.000
+  helped 164/540 (30.4%)   hurt 220/540
+  worst  -24.79     best +26.88
+  sum of negative alphas -501.0pp vs positive +275.6pp
+  Wilcoxon vs 0: p = 0.0001
+
+is the damage concentrated or spread?
+  worst 10% of decisions contribute -328.1pp
+  all negative decisions            -501.0pp
+
+mechanisms (mean per decision):
+  cash weight after rebalance : 6.96% (held portfolio 5.92%)
+  est. cash drag              : -0.099pp
+  names dropped / added / kept: 0.81 / 0.48 / 6.99
+  forward return of DROPPED names: +10.76%
+  forward return of ADDED   names: +5.31%
+  -> swap edge -5.45pp (SOLD THE WINNERS)
+
+by cadence:
+  freq  2x: n=  27  mean alpha -2.793pp  helped 22.2%  cash 11.7%
+  freq  4x: n=  81  mean alpha -0.946pp  helped 34.6%  cash  8.3%
+  freq  6x: n= 135  mean alpha -0.378pp  helped 33.3%  cash  7.1%
+  freq 12x: n= 297  mean alpha -0.075pp  helped 28.6%  cash  6.1%
+
+12 costliest single decisions:
+   -24.79pp  2024-10 6x p5  2025-08-01->2025-10-01  dropped [MU,AVGO] (+44.7%) added [] (+nan%)
+   -15.29pp  2025-06 2x p1  2025-11-30->2026-06-01  dropped [TSM,AVGO,AMAT] (+49.0%) added [] (+nan%)
+   -12.53pp  2025-04 6x p4  2025-11-30->2026-01-30  dropped [MU] (+75.5%) added [AVGO] (-17.6%)
+   -12.20pp  2025-04 2x p1  2025-09-30->2026-04-01  dropped [MU,KLAC] (+80.8%) added [] (+nan%)
+   -11.97pp  2025-03 6x p3  2025-08-30->2025-10-30  dropped [TSM,MU] (+60.0%) added [AMZN,META] (-6.2%)
+   -11.69pp  2025-04 6x p3  2025-09-30->2025-11-30  dropped [MU] (+41.4%) added [TSM,AVGO] (+13.3%)
+    -9.50pp  2025-04 2x p1  2025-09-30->2026-04-01  dropped [MU,ACN,ADSK] (+25.0%) added [] (+nan%)
+    -8.86pp  2024-10 4x p3  2025-07-02->2025-10-01  dropped [TSM,MU] (+36.8%) added [AAPL,META] (+10.5%)
+    -8.69pp  2024-12 4x p3  2025-09-01->2025-12-01  dropped [AVGO,QCOM,MU] (+45.8%) added [] (+nan%)
+    -8.32pp  2025-03 4x p2  2025-08-30->2025-11-30  dropped [MU] (+98.8%) added [] (+nan%)
+    -7.90pp  2025-02 4x p3  2025-11-02->2026-02-01  dropped [MU] (+85.5%) added [AVGO] (-10.2%)
+    -7.87pp  2025-03 2x p1  2025-08-30->2026-03-01  dropped [TSM,TXN,MCHP,QCOM] (+18.9%) added [] (+nan%)

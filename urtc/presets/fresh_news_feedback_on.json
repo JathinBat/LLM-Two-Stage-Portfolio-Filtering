@@ -1,0 +1,51 @@
+{
+  "name": "fresh-news feedback ON",
+  "description": "Paper B headline arm: feedback ON, LLM-screened news, weights-based orders, density-gated. Run this first, then fresh_news_feedback_off.json.",
+  "notes": [
+    "WHY THIS EXISTS: the original 90 runs made 15.3% of their decisions past the end",
+    "of the news corpus (it stopped 2025-11-12) and 78/552 decisions saw <100 articles",
+    "in the prior 90 days. Those runs cannot support the feedback claim. This preset",
+    "reruns the headline grid on the backfilled + relevance-screened corpus.",
+    "",
+    "GATE: min_articles=50 skips any cell whose THINNEST decision sees fewer than 50",
+    "screened articles in the prior 90 days. Skipped cells are marked Skipped in the",
+    "table (not silently dropped) so they can be reported in the run ledger.",
+    "The identical gate must be used for the OFF arm or the pairing is invalid.",
+    "",
+    "PREREQUISITE: finish the 2025-04..2025-09 backfill, then re-run",
+    "screen_news_relevance.py. Before that, most cells will be gated out.",
+    "",
+    "order_mode=weights: the model emits target fractions, the engine does the",
+    "arithmetic. Removes the 52% budget-violation/re-prompt rate. Note this makes",
+    "these runs NOT comparable to the legacy 90, which used dollar orders.",
+    "",
+    "dry_run was flipped to FALSE on 2026-07-31 to arm the live headline run.",
+    "This preset now SPENDS BUDGET the moment it is started. Re-set dry_run to true",
+    "before using it for any grid/coverage rehearsal."
+  ],
+  "options": {
+    "feedback": true,
+    "screened_news": true,
+    "order_mode": "weights",
+    "rebalance_mode": "reset",
+    "min_articles": 50,
+    "min_articles_days": 90,
+    "txn_cost_bps": 0,
+    "results_subdir": "feedback_on",
+    "runs_per_perm": 3,
+    "threads": 4,
+    "budget": 10000.0,
+    "risk_free": 0.04,
+    "whole_shares": false,
+    "dry_run": false
+  },
+  "filters": {
+    "sectors": ["technology"],
+    "models": ["gpt-5.1"],
+    "periods": [12],
+    "freqs": [2, 4, 6, 12],
+    "filters": ["20-10"],
+    "date_from": "2024-10",
+    "date_to": "2025-06"
+  }
+}

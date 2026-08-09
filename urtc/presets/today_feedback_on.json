@@ -1,0 +1,53 @@
+{
+  "name": "TODAY feedback ON",
+  "description": "Runnable right now: all 18 headline cells pass the density gate on the corpus as it stands (backfilled through 2025-03 + 2025-11..2026-06, relevance-screened).",
+  "notes": [
+    "STALENESS IS FIXED. The original problem was decisions made past the end of the",
+    "news corpus (it stopped 2025-11-12; 15.3% of legacy decisions fell after it).",
+    "The corpus now runs to 2026-06-30 and every window's last decision lands before",
+    "that, so ZERO decisions in this grid are stale.",
+    "",
+    "GATE = 45 screened articles per 180 days, measured on each cell's THINNEST",
+    "decision. Chosen from the data, not by feel: on today's screened corpus the",
+    "worst cell sees 47 in 180 days, so 45 clears all 18 cells with a small margin.",
+    "",
+    "WHY 180 DAYS AND NOT 90: at 90 days the 12x cadence bottoms out at 12 screened",
+    "articles for every window, because the 2025-04..2025-09 stretch is not backfilled",
+    "yet. A 180-day window is also the more defensible definition of 'recent' for a",
+    "12-month buy-and-hold strategy reading a 2-year lookback. State this in the paper",
+    "as a pre-registered density criterion, and use the SAME numbers for the OFF arm.",
+    "",
+    "REMAINING LIMITATION TO DISCLOSE: 2025-04..2025-09 is still thinner than the rest",
+    "of the corpus. The gate keeps every cell above a stated floor, but density is not",
+    "uniform across windows. Re-run with a higher gate once that backfill completes.",
+    "",
+    "order_mode=weights removes the 52% budget-violation rate but makes these runs",
+    "NOT comparable to the legacy 90 (which used dollar orders). That is intended.",
+    "",
+    "dry_run is TRUE. Untick 'Dry-run (no API)' in the GUI to actually spend budget."
+  ],
+  "options": {
+    "feedback": true,
+    "screened_news": true,
+    "order_mode": "weights",
+    "min_articles": 45,
+    "min_articles_days": 180,
+    "txn_cost_bps": 0,
+    "results_subdir": "feedback_on",
+    "runs_per_perm": 3,
+    "threads": 1,
+    "budget": 10000.0,
+    "risk_free": 0.04,
+    "whole_shares": false,
+    "dry_run": true
+  },
+  "filters": {
+    "sectors": ["technology"],
+    "models": ["gpt-5.1"],
+    "periods": [12],
+    "freqs": [2, 12],
+    "filters": ["20-10"],
+    "date_from": "2024-10",
+    "date_to": "2025-06"
+  }
+}
